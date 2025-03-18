@@ -1,0 +1,66 @@
+  #- name: Home
+  #  link: "cover"
+  #- name: Welcome
+  #  link: "welcome"
+- name: About
+  link: 
+  children: 
+  - name: Programme Committee
+    link: "members"
+  - name: Venue
+    link: "venue"
+  - name: Testimonials
+    link: "testimonials-carousel-quotes"  
+#- name: TICKETS
+#  link: "register"
+- name: 2025 Waiting List
+  link: "newsletter"
+  #- name: Call for Talks
+  #  link: "cft"
+  #- name: Call for Training
+  #  link: "banner-2"
+  #- name: Recordings
+  #  link: "recordings"
+  #- name: Public Videos
+  #  link: "video"
+#- name: Schedule
+#  link: "schedule"
+- name: Speakers
+  link: "keynotes"
+- name: Trainers
+  link: "trainers"
+#- name: Training
+#  link: "training"
+  #- name: Programme Committee
+  #  link: "members"
+# - name: Diversity
+#   link: "diversity"
+# - name: Students
+#   link: "student"
+#- name: Volunteer
+#  link: "volunteer"
+#- name: Venue
+#  link: "venue"
+  #- name: Hotels
+  #  link: "hotels"
+  #- name: COVID-19 safety
+  #  link: "covid-19"
+  #- name: Hybrid
+  #  link: "hybrid"
+  #- name: E-SHOP
+  #  link: "shop"
+  #- name: Blog
+  #  link: "blog"
+- name: Sponsors
+  link: "sponsors"
+- name: Join us
+  link: 
+  children: 
+  - name: Volunteer
+    link: "volunteer"
+  - name: Diversity Programme
+    link: "diversity"
+  - name: Student Programme
+    link: "student"
+#- name: Contact
+#  link: "contact"

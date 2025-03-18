@@ -1,0 +1,15 @@
+homepage_settings:
+  countdown:
+    show: false
+    timezone: Europe/Berlin
+    deadline: 2024-10-14 08:30
+  modal:
+    show: true
+    delay: 4000
+  testimonials:
+    show: true
+    title: "What others say"
+  gallery:
+    show: true
+    title: "Code BEAM Europe 2024"
+  tickets: false

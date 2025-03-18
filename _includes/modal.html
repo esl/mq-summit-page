@@ -1,0 +1,52 @@
+<!-- The modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <!-- modal content here -->
+    <h2 class="title">Save the date for 2025!</h2>
+    <p> Thank you for being with us for Code BEAM Europe 2024. We hope you enjoyed it as much as we did. Make sure to join us for the next conference, on 5-6 November.  </p>
+    <a id="btn-modal" class="page-scroll btn-outline btn-orange mb-4 mt-4 btn-orange inline-block" href="#newsletter" target="_blank">
+    JOIN WAITING LIST
+    </a>
+  </div>
+</div>
+
+<script>
+  // Get the modal element
+  var modal = document.getElementById("myModal");
+
+  // Get the <span> element that closes the modal
+  var closeBtn = document.getElementsByClassName("close")[0];
+  var btn = document.getElementById('btn-modal');
+
+  // Function to open the modal
+  function openModal() {
+    modal.style.display = "block";
+  }
+
+  // Function to close the modal
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
+  // Event listener to close the modal when the close button is clicked
+  closeBtn.addEventListener("click", closeModal);
+  btn.addEventListener("click", closeModal);
+
+  // Event listener to close the modal when clicking on the backdrop
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Event listener to close the modal when the "Escape" key is pressed
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
+
+  // Open the modal after given delay seconds
+  setTimeout(openModal, "{{ site.data.settings.homepage_settings.modal.delay }}");
+</script>
