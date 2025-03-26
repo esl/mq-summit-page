@@ -1,8 +1,8 @@
-title: Code BEAM Europe
+title: MQ Summit
 description: > # this means to ignore newlines until "baseurl:"
-  The Erlang and Elixir conference in Europe - 2 days of talks,discussions and networking for the BEAM community.
+  The Future of Messaging Systems - a one-day conference dedicated to exploring the latest advancements in message queuing technologies.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://codebeameurope.com" # the base hostname & protocol for your site
+url: "https://mqsummit.com" # the base hostname & protocol for your site
 
 logo: "./assets/images/logo2022.png"
 
