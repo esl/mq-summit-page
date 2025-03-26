@@ -1,7 +1,7 @@
 ---
 name: Anonymous
-role: 2022 Survey
+role: 2023 Survey
 profile_pic: /assets/images/testimonials/4.png
 ---
 
-The social mood of this community is always refreshing, wonderfully international and dynamic.
+It's a great place to meet people interested in creating fast, extremely reliable, and adaptable systems
