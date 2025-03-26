@@ -1,4 +1,5 @@
 .cft
+    padding: 4em 2em
 <<<<<<< HEAD
     background-color: linear-gradient(to right, #19f5ff, #FF00FF)
 =======
@@ -11,3 +12,29 @@
         color: #fff
     hr
         background: linear-gradient(to right, #ffffff 50%, #f15e2b 50%)
+
+    @media only screen and (min-width: 1993px)
+        margin: 0 auto
+        max-width: 1993px
+
+    @media only screen and (max-width: 1112px)
+        overflow-x: hidden
+
+    iframe
+        max-width: 600px
+
+    .cft-container
+        max-width: 1200px
+        margin: 0 auto
+        display: flex
+        gap: 3em
+    .row.align-center
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+
+        @media only screen and (max-width: 768px)
+            flex-direction: column
+
+        @media only screen and (max-width: 768px)
+            flex-direction: column
