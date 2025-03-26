@@ -3,20 +3,20 @@
   #- name: Welcome
   #  link: "welcome"
 - name: About
-  link: 
-  children: 
+  link:
+  children:
   - name: Programme Committee
     link: "members"
   - name: Venue
     link: "venue"
   - name: Testimonials
-    link: "testimonials-carousel-quotes"  
+    link: "testimonials-carousel-quotes"
 #- name: TICKETS
 #  link: "register"
 - name: 2025 Waiting List
   link: "newsletter"
-  #- name: Call for Talks
-  #  link: "cft"
+- name: Call for Talks
+  link: "cft"
   #- name: Call for Training
   #  link: "banner-2"
   #- name: Recordings
@@ -25,10 +25,10 @@
   #  link: "video"
 #- name: Schedule
 #  link: "schedule"
-- name: Speakers
-  link: "keynotes"
-- name: Trainers
-  link: "trainers"
+#- name: Speakers
+#  link: "keynotes"
+#- name: Trainers
+#  link: "trainers"
 #- name: Training
 #  link: "training"
   #- name: Programme Committee
@@ -53,14 +53,14 @@
   #  link: "blog"
 - name: Sponsors
   link: "sponsors"
-- name: Join us
-  link: 
-  children: 
-  - name: Volunteer
-    link: "volunteer"
-  - name: Diversity Programme
-    link: "diversity"
-  - name: Student Programme
-    link: "student"
-#- name: Contact
-#  link: "contact"
+#- name: Join us
+#  link:
+#  children:
+#  - name: Volunteer
+#    link: "volunteer"
+#  - name: Diversity Programme
+#    link: "diversity"
+#  - name: Student Programme
+#    link: "student"
+- name: Contact
+  link: "contact"
