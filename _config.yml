@@ -1,6 +1,6 @@
 title: MQ Summit
 description: > # this means to ignore newlines until "baseurl:"
-  The Future of Messaging Systems - a one-day conference dedicated to exploring the latest advancements in message queuing technologies.
+  A one-day conference dedicated to exploring the latest advancements in message queuing technologies.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mqsummit.com" # the base hostname & protocol for your site
 
