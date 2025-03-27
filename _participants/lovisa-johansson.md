@@ -1,9 +1,8 @@
 ---
-pic_url: "/assets/images/andrea-leopardi.jpg"
-name: Andrea Leopardi
-tagline: "Member of the Elixir Core Team"
-github: whatyouhide
-twitter: whatyouhide
+pic_url: "/assets/images/Lovisa_Johansson.jpg"
+name: Lovisa Johansson
+tagline: "CMO @ 84codes, RabbitMQ expert"
+twitter: lillajja
 
 ---
-Andrea is a human born in the ancient lands of central Italy. He loves programming, writing, and learning stuff. He's a software architect, speaker, and member of the core team of the Elixir programming language. He also co-wrote a book about testing in Elixir. His weak spot is having red hair.
+Lovisa Johansson is an accomplished expert in RabbitMQ and distributed messaging systems, known for her clear and pedagogical approach to simplifying complex concepts. With over a decade of experience, she is highly regarded for creating widely-adopted educational content that empowers developers globally. Outside of her professional endeavors, Lovisa finds joy in caring for her chickens and enjoys kite surfing adventures.
