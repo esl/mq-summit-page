@@ -356,13 +356,11 @@ a
         color: #372140
     &:hover
       box-shadow: 0 2px 6px rgba(0,0,0,.2)
-      .img
-        align-items: center
-        display: flex
-        justify-content: center
-        background-image: none !important
-        background-color: #14c2c9
-        transition: box-shadow 150ms linear
+      transition: box-shadow 150ms linear
+      .img-wrapper
+        .img
+          filter: brightness(0.9) grayscale(80%) sepia(10%)
+          transition: filter 150ms linear
         i
           color: #ffffff
           display: block
