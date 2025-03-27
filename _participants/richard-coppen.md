@@ -1,6 +1,6 @@
 ---
-pic_url: "/assets/images/speakers/Lovisa_Johansson.jpg"
-name: Lovisa Johansson
+pic_url: "/assets/images/Lovisa_Johansson.jpg"
+name: Richard Coppen
 tagline: "CMO @ 84codes, RabbitMQ expert"
 twitter: lillajja
 
