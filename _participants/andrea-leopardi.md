@@ -1,9 +1,9 @@
 ---
-pic_url: "/assets/images/andrea-leopardi.jpg"
-name: Andrea Leopardi
-tagline: "Member of the Elixir Core Team"
-github: whatyouhide
-twitter: whatyouhide
+pic_url: "/assets/images/Anders-Balter.jpg"
+name: Anders Bälter
+tagline: "CTO at 84codes (CloudAMQP, LavinMQ)"
+github: baelter
+Linkedin: /in/anders-b%C3%A4lter-66884125/
 
 ---
-Andrea is a human born in the ancient lands of central Italy. He loves programming, writing, and learning stuff. He's a software architect, speaker, and member of the core team of the Elixir programming language. He also co-wrote a book about testing in Elixir. His weak spot is having red hair.
+Anders Bälter leads the engineering efforts at 84codes (CloudAMQP, LavinMQ). He's dedicated to building a strong team culture, architecting solutions to complex technical challenges, and fostering a culture of continuous improvement. In his free time, he trades code for carving through the Swedish snow.
