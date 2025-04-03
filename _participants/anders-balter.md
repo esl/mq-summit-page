@@ -1,5 +1,5 @@
 ---
-pic_url: "/assets/images/Anders-Balter.jpg"
+pic_url: "/assets/images/speakers/Anders-Balter.jpg"
 name: Anders Bälter
 tagline: "CTO at 84codes (CloudAMQP, LavinMQ)"
 github: baelter
