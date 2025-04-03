@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; margin: 0; }
 
 p { font-family: "Montserrat", sans-serif; font-size: 100%; font-weight: normal; line-height: 1.5em; letter-spacing: 0.03rem; color: #fff; }
 
-a { font-family: 'Montserrat', sans-serif; font-size: 100%; font-weight: normal; line-height: 1.5em; letter-spacing: 0.03rem; color: #FF00FF; text-decoration: none; }
+a { font-family: 'Montserrat', sans-serif; font-size: 100%; font-weight: normal; line-height: 1.5em; letter-spacing: 0.03rem; color: #cfa25b; text-decoration: none; }
 
 .navbar-fixed-top { align-items: center; display: flex; justify-content: center; padding: .5em 0; position: fixed; top: 0; width: 100%; z-index: 9999; }
 
