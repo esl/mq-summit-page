@@ -14,12 +14,12 @@
     }
   }
   .ticket-item {
-    // background: linear-gradient(to left, #0074a9 50%, #e32dfd 50%);
+    // background: linear-gradient(to left, #0074a9 50%, #cfa25b 50%);
     padding: 3.5px;
     text-align: center;
     font-family: 'Lato';
     border-radius: 8px;
-    background: linear-gradient(-45deg, #0074a9, #e32dfd, #2aea9c, #e32dfd);
+    background: linear-gradient(-45deg, #0074a9, #cfa25b, #2aea9c, #cfa25b);
     background-size: 400% 400%;
     position: relative;
     z-index: 1;
@@ -28,7 +28,7 @@
       flex: 0 1 25%;
     }
     &:nth-child(even) {
-      background: linear-gradient(-45deg, #e32dfd, #2aea9c, #e32dfd, #0074a9);
+      background: linear-gradient(-45deg, #cfa25b, #2aea9c, #cfa25b, #0074a9);
     }
     > div {
       background-color: #fff;
