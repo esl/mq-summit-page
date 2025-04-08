@@ -19,7 +19,7 @@
     text-align: center;
     font-family: 'Lato';
     border-radius: 8px;
-    background: linear-gradient(-45deg, #80c0fa, #c8a465, #2aea9c, #c8a465);
+    background: linear-gradient(-45deg, #7abced, #c8a465, #735abf, #c8a465);
     background-size: 400% 400%;
     position: relative;
     z-index: 1;
@@ -28,7 +28,7 @@
       flex: 0 1 25%;
     }
     &:nth-child(even) {
-      background: linear-gradient(-45deg, #c8a465, #2aea9c, #c8a465, #80c0fa);
+      background: linear-gradient(-45deg, #c8a465, #735abf, #c8a465, #7abced);
     }
     > div {
       background-color: #fff;
