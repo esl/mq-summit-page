@@ -238,7 +238,7 @@ a { font-family: 'Montserrat', sans-serif; font-size: 100%; font-weight: normal;
 
 .banner-1 .text { color: #fff; font-size: 1.5em; letter-spacing: .1em; margin-right: 2em; }
 
-.banner-1 .text strong { color: #2AEA9C; }
+.banner-1 .text strong { color: #7abced; }
 
 @media only screen and (max-width: 1112px) { .banner-1 .text { font-size: 1.3em; margin: 0 0 1em 0; text-align: center; } }
 
