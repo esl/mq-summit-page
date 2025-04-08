@@ -1,18 +1,21 @@
 ---
-title: 'This is the ticket title'
-price: '1000$'
-discount: '15% off until dec 2025'
-description: 'Solis 39 urbanitas utuntur explicari adiungimus efficeretur delicata faciam errorem atomos adiungimus Albucius acri intelleges.'
-link: 'www.link.com'
+title: 'Early Bird Ticket'
+price: '€440'
+discount: 'Discounted Conference Pass'
+description: 'Available until 17 September 2025 or until they sell out'
+link: 'https://mqsummit.com/#register'
 conditions:
-  - 'Confidet desideraturam excruciant malit firmitatem tempore seditiones distinctio placet'
-  - 'Utinam aliae sero seditione appetendi tua aiebat Utrum omittantur levis!'
-  - 'Ei modum sublatum ipsius puto civitatis vellem significet consule suavitate iudicem miserum locis aliquo officiis.'
+  - "Price excludes Eventbrite fees and tax."
 ---
 
 ### FEATURES
 
-- Feature 01
-- Solis 39 urbanitas utuntur explicari adiungimus efficeretur delicata
-- Faciam errorem atomos adiungimus Albucius acri intelleges
-- Lorem ipsum dolor sit
+- Live access to all talks
+- Access to the conference app
+- Access to live Q&A sessions
+- Online networking via app
+- 3 months exclusive access to the recorded talks
+- Access to networking and exhibitors area at the venue
+- Conference souvenir
+- Lunch and beverages
+- Drinks at the reception
