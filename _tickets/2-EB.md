@@ -2,7 +2,7 @@
 title: 'Early Bird Ticket'
 price: '€440'
 discount: 'Discounted Conference Pass'
-description: 'Available until 17 September 2025 or until they sell out'
+description: 'Available from 25 June to 17 September 2025 or until they sell out'
 link: 'https://mqsummit.com/#register'
 conditions:
   - "Price excludes Eventbrite fees and tax."
