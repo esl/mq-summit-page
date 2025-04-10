@@ -10,12 +10,4 @@ conditions:
 
 ### FEATURES
 
-- Live access to all talks
-- Access to the conference app
-- Access to live Q&A sessions
-- Online networking via app
-- 3 months exclusive access to the recorded talks
-- Access to networking and exhibitors area at the venue
-- Conference souvenir
-- Lunch and beverages
-- Drinks at the reception
+- All features from the Regular Ticket
