@@ -1,8 +1,7 @@
 ---
-pic_url: "/assets/images/Lovisa_Johansson.jpg"
+pic_url: "/assets/images/speakers/richard-coppen.png"
 name: Richard Coppen
-tagline: "CMO @ 84codes, RabbitMQ expert"
-twitter: lillajja
+tagline: "Senior Software Engineer @ IBM MQ, OASIS MQTT Technical Committee Chair"
 
 ---
-Lovisa Johansson is an accomplished expert in RabbitMQ and distributed messaging systems, known for her clear and pedagogical approach to simplifying complex concepts. With over a decade of experience, she is highly regarded for creating widely-adopted educational content that empowers developers globally. Outside of her professional endeavors, Lovisa finds joy in caring for her chickens and enjoys kite surfing adventures.
+Richard leads the delivery of the developer experience strategy for IBM MQ and has extensive experience in leading development of enterprise software. Richard has chaired of a MQTT Technical Committee at OASIS since it was founded in 2013 and is a Technical Steering Committee member at AsyncAPI as maintainer of the IBM MQ binding.
