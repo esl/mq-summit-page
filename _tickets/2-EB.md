@@ -1,11 +1,11 @@
 ---
 title: 'Early Bird Ticket'
-price: '€440'
+price: '€548.69'
 discount: 'Discounted Conference Pass'
 description: 'Available from 25 June to 17 September 2025 or until they sell out'
 link: '/#register'
 conditions:
-  - "Price excludes Eventbrite fees and tax."
+  - "Price includes €21.08 Eventbrite fees and €87.61 tax."
 ---
 
 ### FEATURES

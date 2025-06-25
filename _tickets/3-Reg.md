@@ -1,11 +1,11 @@
 ---
 title: 'Regular Ticket'
-price: '€550'
+price: '€685.71'
 discount: 'Regular Conference Pass'
 description: 'Available from 18 September until 28 October 2025'
 link: '/#register'
 conditions:
-  - "Price excludes Eventbrite fees and tax."
+  - "Price includes €26.23 Eventbrite fees and €109.48 tax."
 ---
 
 ### FEATURES
