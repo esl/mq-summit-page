@@ -7,6 +7,8 @@
 - name: About
   link:
   children:
+  - name: What is this about?
+    link: "welcome"
   - name: Programme Committee
     link: "members"
   - name: Venue & Hotel
