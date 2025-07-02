@@ -3,7 +3,8 @@ tags:
   - AMQP, RabbitMQ
 level: Intermediate
 title: "Apache ActiveMQ and the coming features around cloud and management"
-speakers: - _participants/jb-onofre.md
+speakers:
+- _participants/jb-onofre.md
 
 ---
 After a quick review about state of the art on Apache ActiveMQ (and the latest releases), this talk will focus on the new important features coming in ActiveMQ, especially about the runtime, cloud integration & scalability, and observability & management.
