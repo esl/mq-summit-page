@@ -18,6 +18,7 @@ As streaming workloads grow, storage becomes the bottleneck that limits RabbitMQ
 By the end of this talk, attendees will have a clear roadmap for implementing cost-effective, scalable stream storage solutions that grow with their business needs while maintaining the reliability and performance RabbitMQ users expect - all without disrupting existing streaming workloads.
 
 **Target Audience:**
+
 Primary Audience:
 * Platform Engineers & Infrastructure Architects - Teams responsible for designing and scaling messaging infrastructure who need to solve storage capacity and cost challenges
 * RabbitMQ Operators & Site Reliability Engineers - Professionals managing RabbitMQ deployments facing storage limitations, retention requirements, or cost pressures from growing stream data
