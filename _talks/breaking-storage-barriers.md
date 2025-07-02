@@ -9,6 +9,7 @@ speakers:
 ---
 As streaming workloads grow, storage becomes the bottleneck that limits RabbitMQ deployments. This technical deep-dive explores how to break through local disk barriers using tiered storage architecture. You'll learn the fundamentals of RabbitMQ stream storage - from segment files to I/O operations - and discover how to seamlessly extend existing systems through file abstraction layers. We'll cover implementing storage backends that preserve write performance while enabling transparent reads across tiers, all without disrupting live streaming workloads.
 
+
 **Talk objectives:**
 * Understand RabbitMQ Streams storage fundamentals - Deep dive into how RabbitMQ manages segment files, indexes, and I/O operations today, providing the foundation for understanding why tiered storage can be added seamlessly
 * Master non-disruptive architecture evolution - Learn how to extend existing systems by working at the file abstraction layer rather than rewriting core streaming logic, demonstrating a surgical approach to adding major features without breaking existing functionality
@@ -16,6 +17,7 @@ As streaming workloads grow, storage becomes the bottleneck that limits RabbitMQ
 * Maintain stream performance at scale - Learn strategies for preserving write performance while enabling transparent reads across storage tiers, including manifest-based metadata management and drive abstraction patterns that work within existing RabbitMQ architecture
 
 By the end of this talk, attendees will have a clear roadmap for implementing cost-effective, scalable stream storage solutions that grow with their business needs while maintaining the reliability and performance RabbitMQ users expect - all without disrupting existing streaming workloads.
+
 
 **Target Audience:**
 
