@@ -1,9 +1,6 @@
 ---
 name: TBA
-pic_url: ''
-tagline: ''
-github: ''
-twitter: ''
+pic_url: "/assets/images/testimonials/3.png"
 
 ---
 Details to be confirmed shortly.
