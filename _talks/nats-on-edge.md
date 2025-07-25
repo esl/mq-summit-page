@@ -1,18 +1,24 @@
 ---
 tags:
-  - AMQP, RabbitMQ
-level: Intermediate
-title: "Apache ActiveMQ and the coming features around cloud and management"
+  - NATS
+  - MQTT
+level: Introductory and overview
+title: "NATS on edge - A distributed industrial mesh"
 speakers:
-- _participants/jb-onofre.md
+- _participants/jean-noel-moyne.md
+- _participants/max-arndt.md
 
 ---
-After a quick review about state of the art on Apache ActiveMQ (and the latest releases), this talk will focus on the new important features coming in ActiveMQ, especially about the runtime, cloud integration & scalability, and observability & management.
+NATS is a versatile messaging system with a sweet spot in distributed and edge deployments.
 
-Apache ActiveMQ is a largely used messaging platform, supporting multiple protocols and clients.
+NATS supports a variety of communication patterns across such a distributed architecture. It can replace REST services without the need to open firewalls or use complex API gateways, or replicate and move message streams between locations, all while allowing for security barriers between NATS clusters and secure multi-tenant application hosting.
+
+Schaeffler has harnessed the power of NATS to build a robust messaging backbone that spans over 100 plants worldwide. With multiple clusters strategically distributed across global regions, NATS enables seamless processing of billions of messages daily from thousands of clients.
+
+More than 50 custom applications, ranging from Automated Guided Vehicles (AGVs) and edge devices to distributed apps and our central SAP system, leverage NATS for efficient and secure data transmission.
 
 **Talk objectives:**
-- Introduction to Apache ActiveMQ and share about what's coming.
+- How to design a highly distributed, operationally resilient and security messaging mesh, suitable for industrial use cases.
 
 **Target Audience:**
-- ActiveMQ users and messaging architects.
+- Architects, developers.
