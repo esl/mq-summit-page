@@ -1,6 +1,6 @@
 ---
 level: Introductory and overview
-title: "Keynote: You Keep Using That Word"
+title: "You Keep Using That Word"
 speakers:
 - _participants/sam-newman.md
 

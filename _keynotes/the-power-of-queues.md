@@ -2,7 +2,7 @@
 tags:
   - Queues
 level: Introductory and overview
-title: "Keynote: The Power of Queues"
+title: "The Power of Queues"
 speakers:
 - _participants/david-ware.md
 
