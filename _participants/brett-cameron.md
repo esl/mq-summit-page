@@ -10,5 +10,3 @@ Brett Cameron is Chief Application Services Officer at VMS Software Inc. and occ
 Brett has worked extensively with Erlang and RabbitMQ for over 15 years, developing and supporting solutions using the technology set as well as delivering training and consulting, not to mention porting Erlang and RabbitMQ to several exotic operating systems.
 
 After spending several years based in Europe, Brett is now living back home in Christchurch, New Zealand. In his copious spare time Brett enjoys listening to music, playing the guitar, and drinking beer.
-
-[nats.io](https://nats.io/blog/page)
