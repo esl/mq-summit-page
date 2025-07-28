@@ -1,6 +1,6 @@
 ---
 pic_url: "/assets/images/speakers/roberto-luna-rojas.jpg"
-name: Roberto	Luna Rojas
+name: Roberto Luna Rojas
 tagline: "Software Architect at the Publishers Clearing House"
 linkedin: in/robertolunarojas/
 twitter: @RobertLunaRojas
