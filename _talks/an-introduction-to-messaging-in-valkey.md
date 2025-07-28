@@ -5,7 +5,7 @@ tags:
 level: Intermediate
 title: "An Introduction to Messaging in Valkey"
 speakers:
-- _participants/rob-parker.md
+- _participants/roberto-luna-rojas.md
 
 ---
 You’ve probably used Valkey (or its predecessor) as a cache, however, hiding below the surface is a messaging powerhouse built for both scale, low latency, and high throughput. In this session, you’ll learn about Valkey, a Linux Foundation back, high-speed, Key-Value datastore, provides both fundamental primitives and complete solutions for a variety of messaging use cases.
