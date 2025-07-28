@@ -1,6 +1,6 @@
 ---
 pic_url: "/assets/images/speakers/maximilian-schellhorn.jpeg"
-name: Maximilian	Schellhorn
+name: Maximilian Schellhorn
 tagline: "AWS, Solutions Architect"
 linkedin: in/maximilian-schellhorn-46020b162/
 twitter: @maschnetwork
