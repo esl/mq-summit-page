@@ -6,6 +6,7 @@ level: Intermediate
 title: "An Introduction to Messaging in Valkey"
 speakers:
 - _participants/roberto-luna-rojas.md
+- _participants/kyle-davis.md
 
 ---
 You’ve probably used Valkey (or its predecessor) as a cache, however, hiding below the surface is a messaging powerhouse built for both scale, low latency, and high throughput. In this session, you’ll learn about Valkey, a Linux Foundation back, high-speed, Key-Value datastore, provides both fundamental primitives and complete solutions for a variety of messaging use cases.
@@ -25,7 +26,7 @@ Attendees will learn about:
   * Sidekiq
   * KEDA
 * What performance they can expect out of Valkey
-* How to get involved with Valkey"
+* How to get involved with Valkey
 
 **Target Audience:**
 - This session targets folks interested performance in messaging as well as those looking to build lighter weight systems.
