@@ -1,7 +1,7 @@
 ---
 pic_url: "/assets/images/speakers/roberto-luna-rojas.jpg"
 name: Roberto Luna Rojas
-tagline: "Software Architect at the Publishers Clearing House"
+tagline: "Senior Developer Advocate for Valkey"
 linkedin: in/robertolunarojas/
 twitter: RobertLunaRojas
 
