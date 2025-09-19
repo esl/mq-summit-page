@@ -1,7 +1,7 @@
 ---
 pic_url: "/assets/images/speakers/Gaurav_Saxena.jpg"
 name: Gaurav Saxena
-tagline: "Director of Engineering, Ford Motors"
+tagline: "Director of Engineering, Automotive Company"
 linkedin: in/saxenags/
 
 ---
