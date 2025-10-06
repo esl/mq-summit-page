@@ -4,7 +4,6 @@ tags:
 level: Intermediate
 title: "Multi-Tenant messaging systems"
 speakers:
-- _participants/maximilian-schellhorn.md
 - _participants/dirk-froehner.md
 
 ---
