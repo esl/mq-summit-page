@@ -1,5 +1,5 @@
 ---
-pic_url: "/assets/images/speakers/maximilian-schellhorn.jpeg"
+pic_url: "/assets/images/speakers/Matt Pavlovich.jpeg"
 name: Matt Pavlovich
 tagline: "CTO @ HYTE and ActiveMQ PMC committer"
 linkedin: in/mattpavlovich/
