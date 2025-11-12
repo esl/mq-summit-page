@@ -1,6 +1,6 @@
 homepage_settings:
   countdown:
-    show: true
+    show: false
     timezone: Europe/Berlin
     deadline: 2025-11-06 08:59
   modal:
@@ -12,4 +12,4 @@ homepage_settings:
   gallery:
     show: true
     title: "How was RabbitMQ Summit?"
-  tickets: true
+  tickets: false
