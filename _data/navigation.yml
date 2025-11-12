@@ -2,8 +2,8 @@
   #  link: "cover"
   #- name: Welcome
   #  link: "welcome"
-- name: TICKETS
-  link: "tickets"
+#- name: TICKETS
+#  link: "tickets"
 - name: About
   link:
   children:
@@ -15,8 +15,6 @@
     link: "venue"
   - name: Testimonials
     link: "testimonials-carousel-quotes"
-  - name: Newsletter
-    link: "newsletter"
 #- name: 2025 Waiting List
 #  link: "newsletter"
 #- name: Call for Talks
@@ -41,8 +39,8 @@
 #   link: "diversity"
 # - name: Students
 #   link: "student"
-- name: Volunteer
-  link: "volunteer"
+#- name: Volunteer
+#  link: "volunteer"
 #- name: Venue
 #  link: "venue"
   #- name: Hotels
@@ -66,5 +64,7 @@
 #    link: "diversity"
 #  - name: Student Programme
 #    link: "student"
+- name: Newsletter
+  link: "newsletter"
 - name: Contact
   link: "contact"
