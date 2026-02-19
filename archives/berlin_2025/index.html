@@ -1,0 +1,2365 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <title>MQ Summit</title>
+  <meta content="width=device-width" name="viewport" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description" content="A one-day conference dedicated to exploring the latest advancements in message queuing technologies.
+" />
+  <link rel="canonical" href="http://0.0.0.0:4000/" />
+  <link rel="stylesheet" href=" /assets/css/styles.css">
+
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-T8RPW99');</script>
+  <!-- End Google Tag Manager -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.32/moment-timezone-with-data.min.js"></script>
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>The Future of Messaging Systems - 6 November, Berlin | MQ Summit</title>
+<meta name="generator" content="Jekyll v4.1.0" />
+<meta property="og:title" content="The Future of Messaging Systems - 6 November, Berlin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A one-day conference dedicated to exploring the latest advancements in message queuing technologies." />
+<meta property="og:description" content="A one-day conference dedicated to exploring the latest advancements in message queuing technologies." />
+<link rel="canonical" href="http://0.0.0.0:4000/" />
+<meta property="og:url" content="http://0.0.0.0:4000/" />
+<meta property="og:site_name" content="MQ Summit" />
+<meta property="og:image" content="http://0.0.0.0:4000/assets/images/MQS25%20-%20website%20banner.png" />
+<script type="application/ld+json">
+{"url":"http://0.0.0.0:4000/","@type":"WebSite","image":"http://0.0.0.0:4000/assets/images/MQS25%20-%20website%20banner.png","name":"MQ Summit","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://0.0.0.0:4000/assets/images/logo2022.png"}},"headline":"The Future of Messaging Systems - 6 November, Berlin","description":"A one-day conference dedicated to exploring the latest advancements in message queuing technologies.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <!--Remove image dragging -->
+
+<body ondragstart="return false;" ondrop="return false;">
+  <!-- Custom Fonts -->
+  <link rel="stylesheet" href=" /assets/font-awesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href=" /assets/font-awesome/css/v4-shims.min.css">
+  <link rel="stylesheet" href=" /assets/font-awesome/css/brands.min.css">
+  <link rel="stylesheet" href=" /assets/font-awesome/css/solid.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700" rel="stylesheet"
+    type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+    type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400i,700i" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+
+  <!-- WEBSITE ICON IN BROWSER -->
+  <!-- <link href="/css/2016_style/img/icon.png" rel="icon" type="image/png"> -->
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8RPW99" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+
+<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">    
+</body>
+<script>
+  (function () {
+    window.ldfdr = window.ldfdr || {};
+    (function (d, s, ss, fs) {
+      fs = d.getElementsByTagName(s)[0];
+      function ce(src) {
+        var cs = d.createElement(s);
+        cs.src = src;
+        setTimeout(function () {
+          fs.parentNode.insertBefore(cs, fs);
+        }, 1);
+      }
+      ce(ss);
+    })(
+      document,
+      "script",
+      "https://sc.lfeeder.com/lftracker_v1_bElvO73DxJE4ZMqj.js"
+    );
+  })();
+</script>
+
+
+<!-- Hotjar Tracking Code for www.elixirconf.eu -->
+<!-- <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1678389,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script> -->
+<!-- GetResponse Analytics -->
+  <script type="text/javascript">
+  (function(m, o, n, t, e, r, _){
+          m['__GetResponseAnalyticsObject'] = e;m[e] = m[e] || function() {(m[e].q = m[e].q || []).push(arguments)};
+          r = o.createElement(n);_ = o.getElementsByTagName(n)[0];r.async = 1;r.src = t;r.setAttribute('crossorigin', 'use-credentials');_.parentNode .insertBefore(r, _);
+      })(window, document, 'script', 'https://an.gr-wcon.com/script/7d8e390f-a4a7-43c7-b578-a1caa748c168/ga.js', 'GrTracking');
+  </script>
+  <!-- End GetResponse Analytics -->
+</head>
+
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NZK2LB5"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav class="navbar-fixed-top nav-menu" id="navMenu">
+  <a class="logo" href="#cover"></a>
+  <div class="toggle-menu">
+    <!-- Burger -->
+    <div class="navTrigger">
+      <i class="fa fa-bars"></i>
+    </div>
+  </div>
+  <ul class="nav navigation-bar">
+    
+    
+    <li>
+      <div class="dropdown">
+        <a class="dropbtn">About
+          <i class="fa fa-caret-down"></i>
+        </a>
+        <div class="dropdown-content">
+          
+            <a class="page-scroll" href="#welcome">What is this about?</a>
+          
+            <a class="page-scroll" href="#members">Programme Committee</a>
+          
+            <a class="page-scroll" href="#venue">Venue & Hotel</a>
+          
+            <a class="page-scroll" href="#testimonials-carousel-quotes">Testimonials</a>
+          
+        </div>
+      </div>
+    </li>
+    
+    
+    
+    <li>
+      <a class="page-scroll" href="#newsletter">2026 Waiting List</a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="page-scroll" href="#schedule">Schedule</a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="page-scroll" href="#keynotes">Speakers</a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="page-scroll" href="#sponsors">Sponsors</a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="page-scroll" href="#contact">Contact</a>
+    </li>
+    
+    
+    <li>
+      <div class="dropdown">
+        <a class="dropbtn">Archives
+          <i class="fa fa-caret-down"></i>
+        </a>
+        <div class="dropdown-content">
+          
+          <a href="https://rabbitmqsummit.com" target="_blank">RabbitMQ Summit</a>
+          
+
+        </div>
+      </div>
+    </li>
+  </ul>
+</nav> <div class="cover" id="cover" style="background-image: url('/assets/images/RMQS-cover.png');">
+  <div class="logo">
+    <img
+      src="/assets/images/MQ_Summit-vert_white.svg"
+      alt="MQ Summit logo"
+      width="90%"
+    />
+  </div>
+
+  <div class="col-right">
+    <h4 class="date" style="color: #c8a465">
+      THE FUTURE OF <br />MESSAGING SYSTEMS<br />
+      <span style="color: #fff; font-size: 22px">BERLIN | 6 NOVEMBER 2025</span>
+    </h4>
+    <p class="text-content mb-1">
+      <p>Thank you for being with us at the first MQ Summit. It was fantastic!<br /> <br />
+        Message queues and event-driven architectures power modern applications, but navigating the landscape of messaging technologies can be complex.
+        <br /><br />
+        Join us next year for an event packed with expert-led talks, in-depth discussions, and networking opportunities with peers who share your passion for scalable, reliable messaging solutions. More information about 2026 edition to be announced!
+        <br /><br />
+        <!--  <br /><br />
+        Conference and Tutorial Highlights:
+        <br />
+        <a href="/talks/refactoring-via-the-language-server-protocol/">-> Refactoring via the Language Server Protocol</a><br>
+        <a href="/talks/an-elixir-application-to-a-small-hydropower-plant-with-nerves-machines/">-> An Elixir application to a small hydropower plant with Nerves machines</a><br>
+        <a href="/talks/elixir-update/">-> Elixir Update with Andrea Leopardi</a><br>
+        <a href="/talks/deep-dive-in-nx-backends/">-> Deep dive in Nx Backends</a><br>
+        <a href="/trainings/Architecting-reactive-systems/">-> Architecting Reactive Systems with Francesco Cesarini</a>
+        </p>
+
+      <h4 class="call-for-talks">
+            <div class="talk-highlight-items">
+                <div class="highlight-item-row">
+                    <span>2</span>
+                    <span>DAYS</span>
+                </div>
+                <div class="highlight-item-row">
+                    <span>5</span>
+                    <span>TRACKS</span>
+                </div>
+                <div class="highlight-item-row">
+                    <span>50</span>
+                    <span>SPEAKERS</span>
+                </div>
+                <div class="highlight-item-row">
+                    <span>350+</span>
+                    <span>ATTENDEES</span>
+                </div>
+            </div>
+        </h4><br>-->
+        <strong>
+          If you don't want to miss the Early Bird tickets for 2026, sign up to the:</strong>
+      </p>
+        <a class="page-scroll btn-outline mb-3 btn-purple" href="#newsletter">WAITING LIST</a>
+    <!--<a class="page-scroll btn-arrow" href="#welcome">
+      <span class="fa fa-chevron-down"></span>
+    </a>-->
+  </div>
+<!--  <div class="cover-bottom">
+    <h4 class="call-for-talks" style="color: #fff; font-size: 22px">
+      <span style="color: #c8a465;">CALL FOR TALKS</span>
+      <br>
+      IS OPEN AND CLOSES ON 17 JULY 2022
+    </h4>
+  </div>-->
+</div>
+
+
+<!-- end of cover -->
+<!-- start of coundown block -->
+
+<!-- end of coundown block -->
+<div class="section welcome" id="welcome">
+     <h2 class="title">ABOUT THE EVENT</h2>
+     <hr/>
+
+     <div class="row align-center">
+       <div class="left-content col-md-6">
+           <div class="image-container">
+               <img
+                   class="welcome-image"
+                   src="/assets/images/2022 RabbitMQ Summit-CodeNode.jpg"
+                   alt="CodeNode 2022"
+               />
+           </div>
+       </div>
+         <div class="right-content">
+             <h3 class="text-title mb-1">Be Part of the First MQ Summit!</h3>
+              <p>Message queues are the backbone of modern distributed systems, ensuring seamless communication, scalability, and resilience.<br><br>
+                Building on the success of RabbitMQ Summit, MQ Summit now brings together professionals working with a wide range of messaging systems,
+                including <span style="color: #80c0fa;">RabbitMQ</span>, <span style="color: #80c0fa;">Kafka</span>, <span style="color: #80c0fa;">NATS</span>,
+                <span style="color: #80c0fa;">Apache Pulsar</span>, <span style="color: #80c0fa;">Azure Messaging Brokers</span>,
+                <span style="color: #80c0fa;">Amazon SQS</span>, <span style="color: #80c0fa;">IBM MQ</span>, and more.
+                Whether you're developing event-driven architectures, optimizing system performance,
+                or making strategic technology decisions, this conference offers valuable insights from industry experts.<br><br>
+                <span style="color: #80c0fa;">Why Attend?</span><br>
+                A. Deep Dive into Messaging – Learn about RabbitMQ, Kafka, Pulsar, Azure, NATS, Amazon SQS, Google Pub/Sub, and more.<br>
+                B. Technical & Strategic Insights – Whether you build with MQs or decide which to adopt, gain knowledge from experts.<br>
+                C. Network with Industry Leaders – Connect with peers, technology creators, and business decision-makers.<br>
+                D. Real-World Case Studies – See how messaging solutions power mission-critical applications.<br>
+
+                <br><br>
+              </p>
+         </div>
+     </div>
+ </div>
+
+<!-- end of welcome -->
+<div class="banner-1" id="banner-1">
+  <h3 class="text">
+      Get more for your business! Want to support the community and promote your brand? Contact us for more information and a sponsor prospectus</h3>
+  <a class="page-scroll btn-outline btn-purple ml-1" href="mailto:info@codesync.global" style="white-space: nowrap;">EMAIL US</a>
+</div>
+
+<!-- end of banner-1  -->
+
+<!-- end of volunteer -->
+
+<!-- end of banner-2 -->
+
+<!-- end of travelling -->
+
+<!-- end of recordings -->
+
+<!-- end of video -->
+<div class="section keynotes" id="keynotes">
+    <h2 class="title">KEYNOTES</h2>
+    <hr/>
+    <div class="items-container">
+
+        
+        
+
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/sam-newman/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/sam_newman.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Sam Newman
+                        </h4>
+                    </a>
+                    <p class="item-position">Microservices Expert & Author of Building Resilient Distributed Systems</p>
+                    
+
+
+<!-- keynote -->
+
+    
+        
+    
+        
+            <a href="/keynotes/you-keep-using-that-word/">
+                <p class="item-training">
+                    You Keep Using That Word</p>
+            </a>
+        
+    
+
+
+<!-- speaker -->
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/david-ware/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/David_Ware.png');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            David	Ware
+                        </h4>
+                    </a>
+                    <p class="item-position">CTO, IBM MQ</p>
+                    
+
+
+<!-- keynote -->
+
+    
+        
+            <a href="/keynotes/the-power-of-queues/">
+                <p class="item-training">
+                    The Power of Queues</p>
+            </a>
+        
+    
+        
+    
+
+
+<!-- speaker -->
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+    </div>
+</div>
+
+<!-- end of speakers -->
+<div class="section speakers" id="speakers">
+    <h2 class="title">SPEAKERS</h2>
+    <hr/>
+    <div class="items-container">
+
+        
+        
+
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/artem-gayardo-matrosov/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/artem-gayardo-matrosov.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Artem Gayardo-Matrosov
+                        </h4>
+                    </a>
+                    <p class="item-position">Principal Software Engineer, SQS/SNS, Amazon Web Services</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/multi-tenant-messaging-systems/">
+                <p class="item-training">
+                    Multi-Tenant messaging systems</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/brett-cameron/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/Brett_Cameron.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Brett	Cameron
+                        </h4>
+                    </a>
+                    <p class="item-position">Chief Application Services Officer at VMS Software Inc.</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/replacing-legacy-message-queueing-solutions-with-rabbitmq/">
+                <p class="item-training">
+                    Replacing legacy message queueing solutions with RabbitMQ</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/Clemens-Vasters/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/Clemens_Vasters.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Clemens	Vasters
+                        </h4>
+                    </a>
+                    <p class="item-position">Principal Architect, Messaging and Real-Time Intelligence, Microsoft</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/beyond_cloudevents/">
+                <p class="item-training">
+                    Beyond CloudEvents: Endpoints, Messages, Schemas – CNCF xRegistry</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/dirk-froehner/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/dirk-frohner.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Dirk	Fröhner
+                        </h4>
+                    </a>
+                    <p class="item-position">Principal Solutions Architect, Amazon Web Services</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/multi-tenant-messaging-systems/">
+                <p class="item-training">
+                    Multi-Tenant messaging systems</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/gaurav-saxena/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/Gaurav_Saxena.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Gaurav Saxena
+                        </h4>
+                    </a>
+                    <p class="item-position">Director of Engineering, Automotive Company</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/mqtt-and-apache-pulsar-for-iot/">
+                <p class="item-training">
+                    MQTT and Apache Pulsar for IoT: Powering the Connected Vehicle</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/jb-onofre/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/jbonofre.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            JB Onofré
+                        </h4>
+                    </a>
+                    <p class="item-position">ASF member, working on ~20 Apache projects</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+            <a href="/talks/apache-activemq-and-the-coming-features-around-cloud-and-management/">
+                <p class="item-training">
+                    Apache ActiveMQ and the coming features around cloud and management</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/jean-noel-moyne/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/Jean-Noel-Moyne.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Jean-Noel	Moyne
+                        </h4>
+                    </a>
+                    <p class="item-position">Field CTO, Synadia</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/nats-on-edge/">
+                <p class="item-training">
+                    NATS on edge - A distributed industrial mesh</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/ken-liao/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/Ken_Liao.png');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Ken	Liao
+                        </h4>
+                    </a>
+                    <p class="item-position">Senior Software Engineer at AWS</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/message_brokers_and_MCP/">
+                <p class="item-training">
+                    Message brokers and MCP - Just another protocol or more?</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/kyle-davis/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/kyle-davis.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Kyle	Davis
+                        </h4>
+                    </a>
+                    <p class="item-position">Senior Developer Advocate, Valkey</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+            <a href="/talks/an-introduction-to-messaging-in-valkey/">
+                <p class="item-training">
+                    An Introduction to Messaging in Valkey</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/matt-pavlovich/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/Matt%20Pavlovich.jpeg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Matt Pavlovich
+                        </h4>
+                    </a>
+                    <p class="item-position">CTO @ HYTE and ActiveMQ PMC committer</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/gateway-architecture3.0/">
+                <p class="item-training">
+                    Gateway Architecture 3.0</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/matteo-merli/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/Matteo-Merli.jpeg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Matteo Merli
+                        </h4>
+                    </a>
+                    <p class="item-position">Pulsar PMC Chair - CTO StreamNative</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/mqtt-and-apache-pulsar-for-iot/">
+                <p class="item-training">
+                    MQTT and Apache Pulsar for IoT: Powering the Connected Vehicle</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/max-arndt/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/Max-Arndt.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Max	Arndt
+                        </h4>
+                    </a>
+                    <p class="item-position">Schaeffler, Senior Platform Engineer</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/nats-on-edge/">
+                <p class="item-training">
+                    NATS on edge - A distributed industrial mesh</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/rob-parker/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/Rob_Parker.png');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Rob	Parker
+                        </h4>
+                    </a>
+                    <p class="item-position">Security Architect, IBM MQ</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/securing-your-messaging-networks/">
+                <p class="item-training">
+                    Securing your messaging networks: What needs protecting and how?</p>
+            </a>
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/roberto-luna-rojas/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/roberto-luna-rojas.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Roberto Luna Rojas
+                        </h4>
+                    </a>
+                    <p class="item-position">Senior Developer Advocate for Valkey</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+            <a href="/talks/an-introduction-to-messaging-in-valkey/">
+                <p class="item-training">
+                    An Introduction to Messaging in Valkey</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/simon-unge/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/simon-unge.jpeg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Simon	Unge
+                        </h4>
+                    </a>
+                    <p class="item-position">Software Developer - Amazon AWS</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/breaking-storage-barriers/">
+                <p class="item-training">
+                    Breaking Storage Barriers: How RabbitMQ Streams Scale Beyond Local Disk</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/vignesh-selvam/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/Vignesh_Selvam.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Vignesh	Selvam
+                        </h4>
+                    </a>
+                    <p class="item-position">Principal Product manager - Amazon MQ</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a href="/talks/message_brokers_and_MCP/">
+                <p class="item-training">
+                    Message brokers and MCP - Just another protocol or more?</p>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+    </div>
+</div>
+
+<!-- end of speakers -->
+
+  <div class="gallery-wrapper section">
+  
+  <h3 class="title">How was RabbitMQ Summit?</h3>
+  <hr />
+  
+  <div class="gallery-grid my-3">
+     
+    <a data-fslightbox="gallery" class="gallery-item" href="https://mqsummit.com/assets/images/gallery/1.jpg">
+      <img src="https://mqsummit.com/assets/images/gallery/1.jpg" alt="RabbitMQ Summit 2024">
+    </a>
+    
+    <a data-fslightbox="gallery" class="gallery-item" href="https://mqsummit.com/assets/images/gallery/2.jpg">
+      <img src="https://mqsummit.com/assets/images/gallery/2.jpg" alt="RabbitMQ Summit 2024">
+    </a>
+    
+    <a data-fslightbox="gallery" class="gallery-item" href="https://mqsummit.com/assets/images/gallery/3.jpg">
+      <img src="https://mqsummit.com/assets/images/gallery/3.jpg" alt="RabbitMQ Summit 2024">
+    </a>
+    
+    <a data-fslightbox="gallery" class="gallery-item" href="https://mqsummit.com/assets/images/gallery/4.jpg">
+      <img src="https://mqsummit.com/assets/images/gallery/4.jpg" alt="RabbitMQ Summit 2024">
+    </a>
+    
+    <a data-fslightbox="gallery" class="gallery-item" href="https://mqsummit.com/assets/images/gallery/5.jpg">
+      <img src="https://mqsummit.com/assets/images/gallery/5.jpg" alt="RabbitMQ Summit 2024">
+    </a>
+    
+    <a data-fslightbox="gallery" class="gallery-item" href="https://mqsummit.com/assets/images/gallery/6.jpg">
+      <img src="https://mqsummit.com/assets/images/gallery/6.jpg" alt="RabbitMQ Summit 2024">
+    </a>
+    
+    <a data-fslightbox="gallery" class="gallery-item" href="https://mqsummit.com/assets/images/gallery/7.jpg">
+      <img src="https://mqsummit.com/assets/images/gallery/7.jpg" alt="RabbitMQ Summit 2024">
+    </a>
+    
+    <a data-fslightbox="gallery" class="gallery-item" href="https://mqsummit.com/assets/images/gallery/8.jpg">
+      <img src="https://mqsummit.com/assets/images/gallery/8.jpg" alt="RabbitMQ Summit 2024">
+    </a>
+    
+  </div>
+</div>
+
+<!-- end of gallery-grid  -->
+
+<!-- end of lightningtalks -->
+<div class="section schedule" id="schedule">
+    <h2 class="title">SCHEDULE</h2>
+    <div>
+      <script type="text/javascript" src="https://sessionize.com/api/v2/pg1qqz88/view/GridSmart"></script>
+    </div>
+    </hr>
+ </div>
+
+<!-- end of schedule -->
+
+<!-- end of trainers -->
+
+<!-- end of training -->
+
+
+<!-- end of tickets -->
+
+<!-- end of register -->
+
+<!-- end of banner-3 -->
+<div class="section speakers" id="members">
+    <h2 class="title">PROGRAMME COMMITTEE</h2>
+    <hr/>
+    <div class="items-container">
+
+        
+        
+
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/anders-balter/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/Anders-Balter.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Anders Bälter
+                        </h4>
+                    </a>
+                    <p class="item-position">CTO at 84codes (CloudAMQP, LavinMQ)</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/byron-ruth/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/byron-ruth.jpeg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Byron Ruth
+                        </h4>
+                    </a>
+                    <p class="item-position">VP of Product/Eng @ Synadia</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/charlotte-henkle/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/Charlotte-Henkle.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Charlotte Henkle
+                        </h4>
+                    </a>
+                    <p class="item-position">Amazon MQ team @ Amazon</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/jb-onofre/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/jbonofre.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            JB Onofré
+                        </h4>
+                    </a>
+                    <p class="item-position">ASF member, working on ~20 Apache projects</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/richard-coppen/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/richard-coppen.png');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Richard Coppen
+                        </h4>
+                    </a>
+                    <p class="item-position">Senior Software Engineer @ IBM MQ, OASIS MQTT Technical Committee Chair</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/scott-corrigan/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/scott-corrigan.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Scott Corrigan
+                        </h4>
+                    </a>
+                    <p class="item-position">Vice President, Technology Services @ meshIQ</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/stefan-moser/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/Stefan-Moser.jpeg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Stefan Moser
+                        </h4>
+                    </a>
+                    <p class="item-position">Principal Engineer @ AWS, Amazon MQ</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+            
+            
+            
+                <div class="item">
+                    <a href="/participants/viktor-gamov/" class="item-head-link">
+                        <div class="img" style="background-image: url('/assets/images/speakers/Viktor%20Gamov.jpg');">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <h4 class="item-name">
+                            Viktor Gamov
+                        </h4>
+                    </a>
+                    <p class="item-position">Principal Developer Advocate @ Confluent, Kafka in Action co-author</p>
+                    
+
+
+<!-- keynote -->
+
+
+<!-- speaker -->
+
+
+
+<!-- speaker -->
+
+                </div>
+            
+        
+    </div>
+</div>
+
+<!-- end of members  -->
+<div
+  class="section welcome"
+  id="cft"
+  style="background-image: url('/assets/images/background-gradient.png'); background-size: 100% 100%;"
+>
+  <h2 class="title">CALL FOR TALKS</h2>
+  <div class="call-for-talks">
+    <h3 class="text-title mb-1" style="color: #ffffff">
+    CFT is closed for 2025!
+    </h3>
+    <p class="text-content mb-2" align="left" style="color: white">
+      MQ Summit is where messaging experts, developers, and decision-makers come together to explore the future of message queues and event-driven architectures. We’re looking for insightful talks that dive into real-world use cases, best practices, and the latest advancements in messaging technologies. CFT
+      closes: <strong>6 July (extended) 2025</strong><br /><br />
+      What We’re Looking For:
+    </p>
+
+    <ul class="text-content mb-2" style="color: white; margin: 0; padding-left: 1.2em; list-style-position: outside;">
+    <li>Deep dives into messaging systems like RabbitMQ, Kafka, Pulsar, NATS, Amazon SQS, Google Cloud Pub/Sub, and more</li>
+    <li>Case studies of large-scale implementations, performance tuning, and troubleshooting</li>
+    <li>Innovations in messaging, event-driven architectures, and hybrid cloud strategies</li>
+    <li>Security, observability, and best practices for running reliable messaging infrastructure</li>
+    <li>Tooling, interoperability, and evolving standards in the MQ ecosystem</li>
+    <li>
+      Trends in how messaging tech is enabling:
+      <ul class="sublist">
+        <li>Cloud-to-edge architectures</li>
+        <li>AI-powered systems</li>
+        <li>Smart manufacturing</li>
+        <li>Connected vehicles</li>
+      </ul>
+    </li>
+    <li>
+      Exploring messaging patterns in a point-to-point centric world:
+      <ul class="sublist">
+        <li>Pub/Sub, M:N, push vs. pull</li>
+        <li>Messaging core vs. HTTP shell</li>
+        <li>Art of the possible with modern message exchange approaches</li>
+      </ul>
+    </li>
+    </ul>
+    <p class="text-content mb-5" align="center" style="margin-top: 3em">
+    <a
+      class="page-scroll btn-outline btn-purple mb-5 btn-purple"
+      href="https://sessionize.com/mq-summit-2025/"
+      >SUBMISSION FORM</a>
+    </p>
+  </div>
+</div>
+
+<!-- end of cft  -->
+
+<!-- end of diversity -->
+
+<!-- end of students -->
+<style>
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .left-content {
+        flex: 1;
+        padding: 20px;
+    }
+    .right-content {
+        flex: 1;
+        padding: 20px;
+    }
+    @media (max-width: 768px) {
+        .left-content, .right-content {
+            flex: 100%;
+        }
+    }
+</style>
+
+<div class="section venue" id="venue" style="background-image: url('/assets/images/venue-background-Estrel.jpeg');">
+   <div class="row">
+        <div class="left-content">
+            <h2 class="title">CONFERENCE VENUE</h2>
+            <hr/>
+            <p class="venue-subtitle">ESTREL</p>
+            <p class="venue-text">Sonnenallee 225<br>
+                12057 Berlin<br>
+                Germany<br><br>
+                <strong><a href="https://www.estrel.com/en/contact-location-and-directions#location-and-directions">LOCATION & DIRECTIONS</a><br></p>
+               <h2 class="venue-subtitle">ACCOMMODATION</h2>
+                <p class="venue-text">
+                <p>We have secured rooms at Estrel from €178 a night (+ €25 breakfast). To book, please follow <a href="https://bookings.travelclick.com/17417?groupID=4301855#/guestsandrooms" style="color: #c8a465">this link</a>. Please mind the cancellation policy.</p>
+
+        </div>
+        <div class="right-content">
+            <br/>
+             <br/>
+              <br/>
+              <br/>
+               <br/>
+                <br/>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBf-F7nBzxi_73uI9QUxRQ-cNihYtlZ_AA"></script>
+<div>
+    <div id="gmap_canvas"></div>
+</div>
+<script type="text/javascript">
+    function init_map() {
+        var myOptions = {
+            zoom: 14,
+            scrollwheel: false,
+            center: new google.maps.LatLng(52.4736275, 13.4588496),
+            mapTypeId: google
+                .maps
+                .MapTypeId
+                .ROADMAP,
+            styles: [
+                {
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#f5f5f5"
+                        }
+                    ]
+                }, {
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                }, {
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#616161"
+                        }
+                    ]
+                }, {
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                        {
+                            "color": "#f5f5f5"
+                        }
+                    ]
+                }, {
+                    "featureType": "administrative.land_parcel",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#bdbdbd"
+                        }
+                    ]
+                }, {
+                    "featureType": "poi",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#eeeeee"
+                        }
+                    ]
+                }, {
+                    "featureType": "poi",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#757575"
+                        }
+                    ]
+                }, {
+                    "featureType": "poi.park",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#e5e5e5"
+                        }
+                    ]
+                }, {
+                    "featureType": "poi.park",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#9e9e9e"
+                        }
+                    ]
+                }, {
+                    "featureType": "road",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        }
+                    ]
+                }, {
+                    "featureType": "road.arterial",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#757575"
+                        }
+                    ]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#dadada"
+                        }
+                    ]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#616161"
+                        }
+                    ]
+                }, {
+                    "featureType": "road.local",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#9e9e9e"
+                        }
+                    ]
+                }, {
+                    "featureType": "transit.line",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#e5e5e5"
+                        }
+                    ]
+                }, {
+                    "featureType": "transit.station",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#eeeeee"
+                        }
+                    ]
+                }, {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#c9c9c9"
+                        }
+                    ]
+                }, {
+                    "featureType": "water",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#9e9e9e"
+                        }
+                    ]
+                }
+            ]
+        };
+        map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
+        marker = new google.maps.Marker({
+            map: map,
+            position: new google.maps.LatLng(52.4736275, 13.4588496)
+        });
+        infowindow = new google.maps.InfoWindow({content: "<span><strong>ESTREL</strong><br>Sonnenallee 225, 12057 Berlin, Germany<br><span>"});
+        google
+            .maps
+            .event
+            .addListener(marker, "click", function () {
+                infowindow.open(map, marker);
+            });
+        infowindow.open(map, marker);
+    }
+    google
+        .maps
+        .event
+        .addDomListener(window, "load", init_map);
+</script>
+
+        </div>
+    </div>
+</div>
+
+<!-- end of venue -->
+
+<!-- end of tutorialvenue -->
+
+<!-- end of hotels -->
+
+<!-- end of covid-19 -->
+
+<!-- end of hybrid -->
+
+<!-- end of shop -->
+
+<!-- end of blog -->
+<!-- start of  testimonials  block -->
+
+  
+
+
+<!-- Slider main container -->
+<div class="section section--carousel">
+<div class="carousel-wrapper">
+ <h3 class="title">What others said about RabbitMQ Summit</h3>
+<hr/>
+  <div id="testimonials-carousel-quotes" class="owl-carousel owl-theme"> 
+    
+<figure class="testimonial-item item">
+  <blockquote>
+   <p>It’s a great place to meet people interested in creating fast, extremely reliable, and adaptable systems</p>
+
+    <div class="arrow"></div>
+  </blockquote>
+    <img src="/assets/images/testimonials/4.png" alt="Anonymous">
+  <div class="author">
+    <h5>Anonymous <span> 2023 Survey</span></h5>
+  </div>
+</figure>
+   
+    
+<figure class="testimonial-item item">
+  <blockquote>
+   <p>It’s a fantastic opportunity to gain exposure to the current technologies and practices industry experts are using alongside RabbitMQ - I always come away with multiple pages of things to try out.</p>
+
+    <div class="arrow"></div>
+  </blockquote>
+    <img src="/assets/images/testimonials/1.png" alt="Anonymous">
+  <div class="author">
+    <h5>Anonymous <span> 2022 Survey</span></h5>
+  </div>
+</figure>
+   
+    
+<figure class="testimonial-item item">
+  <blockquote>
+   <p>It’s is a very nice conference if you have the interest to know more about the message system universe, like: how to deal with troubles, hot to get a better performance on your application and also what expect in the next versions.</p>
+
+    <div class="arrow"></div>
+  </blockquote>
+    <img src="/assets/images/testimonials/3.png" alt="Anonymous">
+  <div class="author">
+    <h5>Anonymous <span> 2021 Survey</span></h5>
+  </div>
+</figure>
+   
+    
+<figure class="testimonial-item item">
+  <blockquote>
+   <p>RabbitMQ Summit was an amazing experience. With huge technical details, approaches, better usage, tips from configuration to usage and so on.</p>
+
+    <div class="arrow"></div>
+  </blockquote>
+    <img src="/assets/images/testimonials/2.png" alt="Anonymous">
+  <div class="author">
+    <h5>Anonymous <span> 2021 Survey</span></h5>
+  </div>
+</figure>
+   
+    
+
+  </div>
+</div>
+</div>
+
+
+
+<!-- end of  testimonials  block -->
+<div class="section sponsor" id="sponsors">
+    <h2 class="title">SPONSORS</h2>
+    <hr/>
+    <!-- <p class="section-text">
+        Nulla a tellus at turpis gravida congue non  et malesuada fames ac
+                                                                                            ante ipsum primis
+    </p> -->
+
+    <div class="row sponsors">
+
+<!--         <h2 class="sponsor-title">Diversity & Inclusion Sponsor</h2>
+
+            <a href="https://www.erlang-solutions.com/" target="_blank">
+                <img src="/assets/images/erlang-solutions-logo_erlang-solutions-logo-black.png" alt="erlang solutions" />
+            </a>
+-->
+            <h2 class="sponsor-title">Platinum Sponsors</h2>
+
+            <a href="https://aws.amazon.com" target="_blank">
+              <img src="/assets/images/sponsors/aws-logo3.png" alt="AWS"/>
+            </a>
+
+            <a href="https://www.meshiq.com" target="_blank">
+                <img src="/assets/images/sponsors/meshiq_logo.png" alt="MeshIQ"/>
+            </a>
+
+            <a href="https://lavinmq.com" target="_blank">
+                <img src="/assets/images/sponsors/lavinmq-logo-dark.svg" alt="LavinMQ"/>
+            </a>
+
+            <a href="https://streamnative.io" target="_blank">
+                <img src="/assets/images/sponsors/streamnative-150px.svg" alt="StreamNative"/>
+            </a>
+
+            <a href="https://www.emqx.com/en" target="_blank">
+                <img src="/assets/images/sponsors/EMQ - v1.png" alt="EMQ"/>
+            </a>
+
+            <a href="https://www.ibm.com/products/mq" target="_blank">
+                <img src="/assets/images/sponsors/IBM-logo5.png" alt="IBM"/>
+            </a>
+
+         <h2 class="sponsor-title">Gold Sponsor</h2>
+
+         <a href="https://www.cloudamqp.com/" target="_blank">
+             <img src="/assets/images/sponsors/CloudAMQP-300.png" alt="CloudAMQP"/>
+         </a>
+
+         <a href="https://seventhstate.io" target="_blank">
+            <img src="/assets/images/sponsors/7S_PORT.Primary (1).png" alt="Seventh State"/>
+          </a>
+
+          <a href="https://www.synadia.com" target="_blank">
+             <img src="/assets/images/sponsors/synadia-logo-dark.png" alt="Synadia"/>
+           </a>
+         <h2 class="sponsor-title">Community Partners</h2>
+
+        <a href="https://www.meetup.com/Elixir-Krakow/" target="_blank">
+            <img src="/assets/images/sponsors/gtj-rectangle.png" alt="German Tech Jobs" />
+        </a>
+<!--
+  <h2 class="sponsor-title">Student Tickets Sponsor</h2>
+
+        <a href="https://erlef.org" target="_blank">
+            <img src="/assets/images/EEF logo blk 2021.png" alt="EEF" />
+        </a>
+
+ <h2 class="sponsor-title">Community Partners</h2>
+
+        <a href="https://germantechjobs.de/" target="_blank">
+            <img src="/assets/images/sponsors/gtj-rectangle.png" alt="Erlang and Elixir Kraków meetup" />
+        </a>
+
+
+        <!-- Sponsors Carousel -->
+                    <!-- <div id="testimonials-carousel" class="sponsor-testimonial">
+      
+      <h3 class="name">Johnatan Doe</h3>
+
+      
+      <h3 class="name">Adam Smith</h3>
+
+      
+      <h3 class="name">Irene Warner</h3>
+
+      
+      <h3 class="name">Richard Ryan</h3>
+
+      
+    </div> -->
+    </div>
+</div>
+
+<!-- end of sponsors -->
+<div class="section newsletter" id="newsletter">
+    <h2 class="title">WAITING LIST</h2>
+    <hr/>
+    <p class="section-text mb-3">
+       Be the first to get access to discounted tickets and news about the event! 
+       Just subscribe to the event mailing list. (if you can't see the form below, change your browser)
+    </p>
+    <div class="form-container">
+<!-- NEWSLETTER FORM
+<getresponse-form form-id="1230b307-9ea9-4adb-be30-65c6e5782bb7" e="0"></getresponse-form> -->
+<getresponse-form form-id="1abbc723-8690-4e67-b308-19afaa358681" e="0"></getresponse-form>
+
+    </div>
+</div>
+
+<!-- end of newsletter -->
+<div class="section contact" id="contact">
+    <h2 class="title">CONTACT US</h2>
+    <hr/>
+    <p class="section-text mb-3">
+        For additional information
+    </p>
+    <!--<a href="mailto:info@codesync.global?Subject=Enquiry%20from%20Code%20BEAM%20Europe%20Website" target="_top">Send us an email</a>-->
+    <div class="form-container">
+    <getresponse-form form-id="e5a3eaf2-6607-47f9-a7f2-d3b31c354483" e="0"></getresponse-form>
+    </div>
+</div>
+
+<!-- end of contact -->
+
+
+<!-- modal block -->
+
+ <div class="footer" id="footer">
+    <div class="social-icons">
+        <a href="https://www.youtube.com/c/CodeSync" target="_blank">
+            <svg
+                aria-hidden="true"
+                data-prefix="fab"
+                data-icon="youtube"
+                class="svg-inline--fa fa-youtube fa-w-18"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512"
+                height="24"
+                width="24"
+            >
+                <path
+                    fill="#c8a465"
+                    d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+                ></path>
+            </svg>
+        </a>
+        <a href="https://x.com/MQSummit?lang=en" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" height="24" fill="#c8a465">
+              <path d="M98.2 9.3H83.4L60.1 45.6 36.6 9.3H21.8L51.3 54.3 19.5 102.5h15.1l23.3-35.8 23.9 35.8h14.8L69.2 56.2z"/>
+            </svg>
+        </a>
+        <a href="https://bsky.app/profile/mqsummit.bsky.social" target="_blank">
+            <svg
+                aria-hidden="true"
+                data-prefix="fab"
+                data-icon="bluesky"
+                class="svg-inline--fa fa-bluesky fa-w-16"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 64 57"
+                height="24"
+                width="24"
+            >
+                <path
+                    fill="#c8a465"
+                    d="M13.873 3.805C21.21 9.332 29.103 20.537 32 26.55v15.882c0-.338-.13.044-.41.867-1.512 4.456-7.418 21.847-20.923 7.944-7.111-7.32-3.819-14.64 9.125-16.85-7.405 1.264-15.73-.825-18.014-9.015C1.12 23.022 0 8.51 0 6.55 0-3.268 8.579-.182 13.873 3.805ZM50.127 3.805C42.79 9.332 34.897 20.537 32 26.55v15.882c0-.338.13.044.41.867 1.512 4.456 7.418 21.847 20.923 7.944 7.111-7.32 3.819-14.64-9.125-16.85 7.405 1.264 15.73-.825 18.014-9.015C62.88 23.022 64 8.51 64 6.55c0-9.818-8.578-6.732-13.873-2.745Z"
+                />
+            </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/mqsummit/" target="_blank">
+            <svg
+                aria-hidden="true"
+                data-prefix="fab"
+                data-icon="linkedin-in"
+                class="svg-inline--fa fa-linkedin-in fa-w-14"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                height="24"
+                width="24"
+            >
+                <path
+                    fill="#c8a465"
+                    d="M100.3 448H7.4V148.9h92.9V448zM53.8 108.1C24.1 108.1 0 83.5 0 53.8S24.1 0 53.8 0s53.8 24.1 53.8 53.8-24.1 54.3-53.8 54.3zM448 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448h-.1z"
+                ></path>
+            </svg>
+        </a>
+    </div>
+    <hr />
+    <p>All Rights Reserved</p>
+    <p>
+        Code Sync
+        © 2025 Copyright
+    </p>
+    <p>
+        Organised by
+        <a href="https://codesync.global">Code Sync</a>
+    </p>
+
+    <p>
+        <br />
+
+        <a href="https://codesync.global/terms_and_conditions/">
+            Terms of use</a
+        >
+        |
+        <a href="https://codesync.global/about-us/#Conduct"> Code of Conduct</a>
+        |
+        <a href="https://codesync.global/privacy_policy/"> Privacy Policy</a>
+        |
+        <a href="https://codesync.global/page/18/"> Anti-Slavery Policy</a>
+    </p>
+</div>
+
+    <!-- jQuery Version 1.11.0 -->
+<script src=" /assets/js/jquery-1.11.0.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src=" /assets/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src=" /assets/js/jquery.easing.min.js"></script>
+<script src=" /assets/js/classie.js"></script>
+<script src=" /assets/js/cbpAnimatedHeader.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src=" /assets/js/agency.js"></script>
+
+<!-- Owl Carousel -->
+<script src="/assets/js/owl.carousel.min.js" charset="utf-8"></script>
+
+<!-- Parallaxing & SmoothScroll -->
+<script src="/assets/js/scrollax.min.js" charset="utf-8"></script>
+
+
+
+<script src="/assets/js/fslightbox.js" charset="utf-8"></script>
+
+
+<!-- Main JS -->
+<script src="/assets/js/main.js" charset="utf-8"></script>
+<script type="text/javascript">
+  piAId = '24452';
+  piCId = '63005';
+  piHostname = 'pi.pardot.com';
+
+  (function () {
+    function async_load() {
+      var s = document.createElement('script'); s.type = 'text/javascript';
+      s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+      var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+    }
+    if (window.attachEvent) { window.attachEvent('onload', async_load); }
+    else { window.addEventListener('load', async_load, false); }
+  })();
+</script>
+  </body>
+</html>
