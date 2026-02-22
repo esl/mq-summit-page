@@ -1,20 +1,20 @@
   #- name: Home
   #  link: "cover"
-  #- name: Welcome
-  #  link: "welcome"
+- name: Welcome
+  link: "welcome"
 #- name: TICKETS
 #  link: "tickets"
-- name: About
-  link:
-  children:
-  - name: What is this about?
-    link: "welcome"
-  - name: Programme Committee
-    link: "members"
-  - name: Venue & Hotel
-    link: "venue"
-  - name: Testimonials
-    link: "testimonials-carousel-quotes"
+#- name: About
+#  link:
+#  children:
+#  - name: What is this about?
+#    link: "welcome"
+#  - name: Programme Committee
+#    link: "members"
+#  - name: Venue & Hotel
+#    link: "venue"
+#  - name: Testimonials
+#    link: "testimonials-carousel-quotes"
 - name: 2026 Waiting List
   link: "newsletter"
 #- name: Call for Talks
@@ -25,10 +25,10 @@
   #  link: "recordings"
   #- name: Public Videos
   #  link: "video"
-- name: Schedule
-  link: "schedule"
-- name: Speakers
-  link: "keynotes"
+#- name: Schedule
+#  link: "schedule"
+#- name: Speakers
+#  link: "keynotes"
 #- name: Trainers
 #  link: "trainers"
 #- name: Training
@@ -41,8 +41,8 @@
 #   link: "student"
 #- name: Volunteer
 #  link: "volunteer"
-#- name: Venue
-#  link: "venue"
+- name: Venue
+  link: "venue"
   #- name: Hotels
   #  link: "hotels"
   #- name: COVID-19 safety
@@ -53,8 +53,10 @@
   #  link: "shop"
   #- name: Blog
   #  link: "blog"
-- name: Sponsors
-  link: "sponsors"
+- Sponsor
+  link: "banner-1"
+#- name: Sponsors
+#  link: "sponsors"
 #- name: Join us
 #  link:
 #  children:
