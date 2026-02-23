@@ -1,6 +1,6 @@
 ---
 name: Anonymous
-role: 2021 Survey
+role: 2021 RabbitMQ Summit Survey
 profile_pic: /assets/images/testimonials/3.png
 ---
 
