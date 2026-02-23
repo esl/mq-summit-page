@@ -21,8 +21,8 @@
 #  link: "cft"
   #- name: Call for Training
   #  link: "banner-2"
-  #- name: Recordings
-  #  link: "recordings"
+- name: 2025 Recordings
+  link: "video"
   #- name: Public Videos
   #  link: "video"
 #- name: Schedule
