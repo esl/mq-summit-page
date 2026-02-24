@@ -1,7 +1,7 @@
 ---
-name: Anonymous
-role: 2021 RabbitMQ Summit Survey
+name: Marcel Bil
+role: IT Integration Consultant ∙ MQ Specialist ∙ Middleware ∙ Infrastructure Designer/Developer
 profile_pic: /assets/images/testimonials/3.png
 ---
 
-It's is a very nice conference if you have the interest to know more about the message system universe, like: how to deal with troubles, hot to get a better performance on your application and also what expect in the next versions.
+Food for thought and an inspiration regarding #MQ #messaging solutions. I also had the opportunity to have a chat with a few speakers/organizations later this day in between sessions. Great and helpful! History has been written today. There was an atmosphere of collaboration. Healthy discussions and apart from some comical references no ‘vendor war’.
