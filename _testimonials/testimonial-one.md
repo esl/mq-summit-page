@@ -1,7 +1,7 @@
 ---
-name: Anonymous
-role: 2025 Survey
+name: Marcel Bil
+role: IT Integration Consultant ∙ MQ Specialist ∙ Middleware ∙ Infrastructure Designer/Developer
 profile_pic: /assets/images/testimonials/1.png
 ---
 
-A historical day in the world of MQ where all ‘flavors’ met each other. There was collaboration instead of opposition. Just like messaging.
+Food for thought and an inspiration regarding #MQ #messaging solutions. I also had the opportunity to have a chat with a few speakers/organizations later this day in between sessions. Great and helpful! History has been written today. There was an atmosphere of collaboration. Healthy discussions and apart from some comical references no ‘vendor war’.
