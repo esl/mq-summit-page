@@ -8,7 +8,7 @@ homepage_settings:
     delay: 4000
   testimonials:
     show: true
-    title: "What others said about RabbitMQ Summit"
+    title: "What others said about MQ Summit"
   gallery:
     show: true
     title: "How was it in 2025?"
