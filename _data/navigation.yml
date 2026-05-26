@@ -53,20 +53,20 @@
   #  link: "shop"
   #- name: Blog
   #  link: "blog"
-- name: Sponsor!
-  link: "banner-1"
-#- name: Sponsors
-#  link: "sponsors"
-#- name: Join us
-#  link:
-#  children:
-#  - name: Volunteer
-#    link: "volunteer"
+- name: Sponsors
+  link: "sponsors"
+- name: Join us
+  link:
+  children:
+  - name: Sponsor!
+    link: "banner-1"
+  - name: Volunteer
+    link: "volunteer"
+  - name: Stay informed
+    link: "newsletter"
 #  - name: Diversity Programme
 #    link: "diversity"
 #  - name: Student Programme
 #    link: "student"
-#- name: Newsletter
-#  link: "newsletter"
 - name: Contact
   link: "contact"
