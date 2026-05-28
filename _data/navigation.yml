@@ -13,8 +13,8 @@
     link: "members"
 #  - name: Venue & Hotel
 #    link: "venue"
-#  - name: Testimonials
-#    link: "testimonials-carousel-quotes"
+  - name: Testimonials
+    link: "testimonials-carousel-quotes"
 - name: 2026 Waiting List
   link: "newsletter"
 - name: Call for Talks
