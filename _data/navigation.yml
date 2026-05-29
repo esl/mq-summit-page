@@ -15,14 +15,14 @@
 #    link: "venue"
   - name: Testimonials
     link: "testimonials-carousel-quotes"
+  - name: 2025 Recordings
+    link: "video"
 - name: 2026 Waiting List
   link: "newsletter"
 - name: Call for Talks
   link: "cft"
   #- name: Call for Training
   #  link: "banner-2"
-- name: 2025 Recordings
-  link: "video"
   #- name: Public Videos
   #  link: "video"
 #- name: Schedule
