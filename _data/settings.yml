@@ -12,4 +12,4 @@ homepage_settings:
   gallery:
     show: true
     title: "How was it in 2025?"
-  tickets: false
+  tickets: true
