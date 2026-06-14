@@ -1,6 +1,6 @@
 ---
 title: 'One-day In-person Conference Ticket'
-price: '€398'
+price: 'from €398'
 discount: 'Want to join us just for one day? This ticket is for you!'
 description: 'Available from 16 June 2026 until until they sell out.'
 link: '/#register'
