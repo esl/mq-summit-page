@@ -2,13 +2,13 @@
   #  link: "cover"
 #- name: Welcome
 #  link: "welcome"
-#- name: TICKETS
-#  link: "tickets"
+- name: TICKETS
+  link: "tickets"
 - name: About
   link:
   children:
-#  - name: What is this about?
-#    link: "welcome"
+  - name: What is this about?
+    link: "welcome"
   - name: Programme Committee
     link: "members"
 #  - name: Venue & Hotel
