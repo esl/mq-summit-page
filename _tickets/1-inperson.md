@@ -11,10 +11,10 @@ conditions:
 ### INCLUDED
 
 - Live access to all talks during 2 days of the event
-- Access to the conference app and streaming
+- Access to the conference app and streaming (doesn't include labs)
 - Access to labs (3rd track)
 - Access to the in-person Code BEAM conference tracks
 - 3 months exclusive access to the recorded talks
 - Access to networking and exhibitors area at the venue
 - Lunch and beverages
-- Invitation to the reception
+- Invitation to the reception on 21 October
