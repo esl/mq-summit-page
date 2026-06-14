@@ -1,6 +1,9 @@
 <div class="section register" id="register">
     <h2 class="title">REGISTER</h2>
-    <hr/>
+    <hr />
+    <br /><br />
+    <p>IN-PERSON TICKETS</p>
+    <hr />
 <div class="register-widget" id="eventbrite-widget-container-1422058498249">&nbsp;</div>
 
 <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
@@ -21,4 +24,35 @@
         onOrderComplete: exampleCallback  // Method called when an order has successfully completed
     });
 </script>
+<div class="section register" id="register-virtual">
+    <hr />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <p>VIRTUAL TICKETS</p>
+    <hr />
+    <div
+        class="register-widget"
+        id="eventbrite-widget-container-1991788371637"
+    >
+        &nbsp;
+    </div>
+
+    <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+
+    <script type="text/javascript">
+        var exampleCallback = function () {
+            console.log("Order complete!");
+        };
+
+        window.EBWidgets.createWidget({
+            // Required
+            widgetType: "checkout",
+            eventId: "1991788371637",
+            iframeContainerId: "eventbrite-widget-container-1991788371637",
+
+            // Optional
+            iframeContainerHeight: 825, // Widget height in pixels. Defaults to a minimum of 425px if not provided
+            onOrderComplete: exampleCallback, // Method called when an order has successfully completed
+        });
+    </script>
+</div>
 </div>
