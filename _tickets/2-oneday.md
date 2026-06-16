@@ -1,11 +1,11 @@
 ---
 title: 'One-day In-person Conference Ticket'
-price: 'from €398'
+price: 'from €490'
 discount: 'Want to join us just for one day? This ticket is for you!'
-description: 'Available from 16 June 2026 until until they sell out.'
+description: 'Price excludes Eventbrite fees and tax.'
 link: '/#register'
 conditions:
-  - "Price excludes Eventbrite fees and tax."
+  - "Available from 16 June 2026 until until they sell out."
 ---
 
 ### INCLUDED
