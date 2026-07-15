@@ -7,7 +7,7 @@ title: "Bringing infinite streaming to RabbitMQ"
 speakers: -_participants/michael-davis.md
 
 ---
-At MQ Summit 2025, we (Amazon MQ) talked about our plans to make storage for RabbitMQ streams practically bottomless. Since then we've created an open-source RabbitMQ plugin `rabbitmq-stream-s3` which bridges streams and S3 storage. This talk will explain the plugin's motivation and concepts, and then we will take a look back at how the design has evolved and examine the challenges and pitfalls we've faced.
+At MQ Summit 2025, we (Amazon MQ) talked about our plans to make storage for RabbitMQ streams practically bottomless. Since then we've created an open-source RabbitMQ plugin "rabbitmq-stream-s3" which bridges streams and S3 storage. This talk will explain the plugin's motivation and concepts, and then we will take a look back at how the design has evolved and examine the challenges and pitfalls we've faced.
 
 **Key Takeaways:**
 - The audience will walk away knowing:
