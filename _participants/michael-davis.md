@@ -2,8 +2,8 @@
 pic_url: "/assets/images/speakers/Michael_Davis.jpg"
 name: Michael	Davis
 tagline: "Open Source RabbitMQ @ Amazon MQ"
-linkedin: in/mattpavlovich/
-github: Michael Davis
+github: the-mikedavis
+Michael Davis
 
 ---
 "I've been a RabbitMQ engineer since 2022, working at VMware, Broadcom and now AWS. I'm knowledgeable about the nitty gritty details of Khepri, Quorum Queues and Streams. I love digging deep into performance and correctness, and I'm a Raft zealot.
