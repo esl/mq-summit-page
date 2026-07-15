@@ -1,6 +1,6 @@
 ---
-pic_url: "/assets/images/speakers/Anders-Balter.jpg"
-name: Anders Bälter
+pic_url: "/assets/images/speakers/adi-polak.jpeg"
+name: Adi Polak
 tagline: "Data & AI @ Confluent • Keynote Speaker • Databricks MVP • Best-Selling Author • Technical Storyteller •  Help you become a better builder"
 github: baelter
 linkedin: in/polak-adi/
