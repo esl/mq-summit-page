@@ -6,6 +6,7 @@ level: Intermediate
 title: "5 Capabilities Your Broker Needs for Agentic Workloads"
 speakers:
 - _participants/stefan-moser.md
+- _participants/vignesh-selvam.md
 
 ---
 Most messaging systems look reliable until the network stops behaving like a network.
