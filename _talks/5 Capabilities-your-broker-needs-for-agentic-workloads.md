@@ -1,6 +1,6 @@
 ---
 tags:
-  - cloud, edge, IoT, AI
+  - AI
   - Operating, optimizing and scaling
 level: Intermediate
 title: "5 Capabilities Your Broker Needs for Agentic Workloads"
