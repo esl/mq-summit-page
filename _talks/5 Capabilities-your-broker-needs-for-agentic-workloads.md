@@ -9,23 +9,12 @@ speakers:
 - _participants/vignesh-selvam.md
 
 ---
-Most messaging systems look reliable until the network stops behaving like a network.
-In autonomous maritime environments, connectivity becomes intermittent, bandwidth-constrained, high-latency, and sometimes unavailable entirely. Telemetry arrives from drones, vessels, sensors, CAN bus, AIS, LTE, SATCOM, and edge systems , each with different protocols, schemas, delivery guarantees, and operational constraints.
-
-This talk shares lessons from MAPS Messaging’s NATO DIANA 2026 work validating resilient messaging architectures for autonomous maritime systems operating across degraded networks.
-
-The session examines trade-offs that determine whether distributed systems remain operational under failure conditions: protocol mediation versus broker bridging, buffering versus dropping, filtering versus forwarding, and replay recovery versus replay storms.
-
-Attendees will leave with practical patterns for designing messaging systems that degrade gracefully instead of failing catastrophically.
+Every agent framework is quietly reimplementing broker capabilities from scratch. Routing? Reimplemented per-framework. Retries? Each one rolls its own. Discovery, fan-out, backpressure, dead-lettering, durable execution: all reinvented in application code, inside a single process, with predictable results. Message brokers have solved these problems for decades, but today's brokers weren't designed for consumers that are stateless, non-deterministic, and expensive to invoke. Both sides need to evolve. This talk identifies the five properties a message broker must take on to serve agentic workloads natively, so agent frameworks can stop pretending to be infrastructure and get back to being applications.
 
 **Key Takeaways:**
-* Why “message delivered” becomes an incomplete guarantee under degraded, intermittent, or bandwidth-constrained connectivity.
-* How protocol mediation differs from broker bridging and point-to-point integration — and where each approach breaks down.
-* The operational trade-offs between transforming, filtering, down-sampling, buffering, and forwarding telemetry.
-* How to design replay and recovery mechanisms without overwhelming downstream systems after reconnection.
-* Why the failure modes exposed by autonomous maritime systems increasingly apply to cloud, edge, IoT, industrial, and AI-driven distributed architectures.
-* Practical patterns for building messaging systems that degrade gracefully instead of failing catastrophically.
+* Attendees will learn to recognize where agent orchestration frameworks are reimplementing messaging infrastructure,
+* understand the specific demands that agentic workloads place on brokers that today's designs do not address,
+* and leave with a clear picture of the capabilities their broker must gain to support this new class of consumer.
 
 **Target Audience:**
-* Architects, senior engineers, SREs, DevOps engineers, platform teams, messaging practitioners, and IoT/edge system designers building or operating distributed systems in production. Also relevant for technical leaders responsible for interoperability, resilience, and long-term messaging architecture decisions.
-* The talk is especially applicable to teams working with event-driven systems, heterogeneous protocols, edge deployments, intermittent connectivity, or mission-critical messaging environments.
+* Messaging engineers, architects, and technical leaders who operate message brokers in production and are starting to see agent-driven workloads arrive on their infrastructure. No prior AI or agent framework experience required.
