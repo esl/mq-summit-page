@@ -1,4 +1,5 @@
 ---
+published: false
 tags:
   - xRegistry, Microsoft Azure
 level: Advanced

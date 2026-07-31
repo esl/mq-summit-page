@@ -1,4 +1,5 @@
 ---
+published: false
 level: Intermediate
 title: "Gateway Architecture 3.0"
 speakers:

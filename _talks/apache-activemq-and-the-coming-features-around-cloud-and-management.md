@@ -1,4 +1,5 @@
 ---
+published: false
 tags:
   - AMQP, RabbitMQ
 level: Intermediate

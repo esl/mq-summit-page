@@ -1,9 +1,8 @@
 ---
 name: David Ansari
-pic_url: "/assets/images/david_ansari.jpg"
-tagline: Software Engineer, VMware
-github: ansd
-twitter: david1ansari
+pic_url: "/assets/images/speakers/David_Ansari.jpg"
+tagline: "Technical Lead, RabbitMQ Core, Broadcom"
+linkedin: in/ansd
 
 ---
-David Ansari is a software engineer at VMware. He joined the RabbitMQ team three years ago. In the past, he was a Cloud Foundry core contributor. David gave talks at KubeCon + CloudNativeCon, RabbitMQ Summit, Cloud Foundry Summit, VMware EMEA Tech Talk, and OOP Conference.
+David Ansari is the Technical Lead of RabbitMQ Core, working within the VMware Tanzu division at Broadcom. Since joining the RabbitMQ core engineering team in 2019, he has contributed major new features to the project, including support for AMQP 1.0, MQTT 5.0, and JMS. Previously a Cloud Foundry contributor, David has spoken at conferences such as KubeCon + CloudNativeCon, Cloud Foundry Summit, Code BEAM, RabbitMQ Summit, VMware EMEA Tech Talk, and OOP Conference.
