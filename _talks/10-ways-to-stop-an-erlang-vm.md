@@ -3,7 +3,8 @@ tags:
   - kill erlang vm
 level: Introductory and overview
 title: "10 Ways to Stop an Erlang VM"
-speakers: -_participants/brujo-benavides.md
+speakers:
+- _participants/brujo-benavides.md
 
 ---
 Erlang systems are meant to be running non-stop. But sometimes you just need to get out of the VM and that may be a little… let's say… unintuitive.
