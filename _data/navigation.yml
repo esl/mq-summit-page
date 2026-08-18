@@ -53,6 +53,8 @@
   #  link: "shop"
   #- name: Blog
   #  link: "blog"
+- name: Accommodation
+  link: "accommodation"
 - name: Sponsors
   link: "sponsors"
 - name: Join us
