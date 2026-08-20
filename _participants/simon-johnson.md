@@ -1,8 +1,9 @@
 ---
 name: Simon Johnson
 pic_url: "/assets/images/speakers/Simon_Johnson.png"
-tagline: "Principal Engineer, Office of the CTO @ HiveMQ · MQTT-SN Technical Committee Chair"
+tagline: "Distinguished Engineer, HiveMQ | Chair & Editor, OASIS MQTT Technical Committee"
 linkedin: in/simon-mqtt
 
 ---
-Simon Johnson is a member of the OASIS MQTT Technical Committee and Chair of the MQTT-SN subcommittee, where he leads standardization of MQTT’s variant for constrained devices. As Principal Engineer at HiveMQ, he drives strategic development efforts for scalable, interoperable IoT infrastructure. Simon has played a pivotal role in shaping the MQTT ecosystem through open source contributions and community engagement, particularly around sensor networks and industrial messaging. With nearly two decades of experience in embedded systems, protocols, and IIoT architecture, Simon is recognised for bridging deep technical insight with real-world industrial implementation.
+Simon Johnson is a Distinguished Engineer at HiveMQ and a leading contributor to the evolution of MQTT and industrial IoT. With more than 20 years of experience building connected and distributed systems, Simon serves as Co-Chair & Editor of the OASIS MQTT Technical Committee, helping shape the future of one of the world’s most widely adopted IoT messaging standards.
+At HiveMQ, Simon works at the intersection of Industrial IoT, distributed systems and Agentic AI, exploring how trusted real-time data architectures can enable the next generation of intelligent and autonomous industrial systems.
