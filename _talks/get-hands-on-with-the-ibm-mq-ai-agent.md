@@ -5,6 +5,7 @@ level: Intermediate
 title: "Get Hands-on with the IBM MQ AI Agent (lab)"
 speakers:
 - _participants/richard-coppen.md
+- _participants/jon-rumsey.md
 - _participants/chris-leonard.md
 
 ---
