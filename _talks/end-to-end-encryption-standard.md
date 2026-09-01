@@ -6,6 +6,7 @@ level: Advanced
 title: "End-to-End Encryption Standard (lab)"
 speakers:
 - _participants/matt-pavlovich.md
+- _participants/rob-parker.md
 
 ---
 This session will bring together technical leaders looking to publish a standard (or quasi-standard) for performing end-to-end encryption across various messaging platforms.
