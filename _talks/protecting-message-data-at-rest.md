@@ -1,9 +1,9 @@
 ---
 tags:
-  - security
+  - Sczyecurity
   - Operating, optimizing and scaling
 level: Intermediate
-title: "Protecting Message Data at Rest: Why Do It, the Options and Challenges"
+title: "The quantum threat is here... Is your messaging ready?"
 speakers:
 - _participants/rob-parker.md
 
@@ -17,4 +17,4 @@ Moving data reliably, securely and at scale is a difficult problem, but that is 
 * The challenges with implementing these protections.
 
 **Target Audience:**
-* Application developers, messaging network administrators, those who love security
+* Administrators or application developers concerned about internet security
