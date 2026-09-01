@@ -1,5 +1,5 @@
 ---
-name: Matt Leming
+name: Matt Leming (Online)
 pic_url: "/assets/images/speakers/Matt_Leming.jpg"
 tagline: "STSM, Chief Architect IBM MQ"
 linkedin: in/matt-leming-b1024a68/
