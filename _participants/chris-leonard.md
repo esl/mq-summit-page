@@ -1,5 +1,5 @@
 ---
-name: Chris Leonard
+name: Chris Leonard (Online)
 pic_url: "/assets/images/speakers/Chris_Leonard.png"
 tagline: "STSM, AI Technologies, IBM MQ"
 linkedin: in/chris-leonard-uk/
