@@ -5,7 +5,6 @@ tags:
 level: Intermediate
 title: "5 Capabilities Your Broker Needs for Agentic Workloads"
 speakers:
-- _participants/stefan-moser.md
 - _participants/vignesh-selvam.md
 
 ---
