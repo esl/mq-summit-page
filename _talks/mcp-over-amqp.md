@@ -10,7 +10,7 @@ speakers:
 - _participants/Clemens-Vasters.md
 
 ---
-Amazon proposed using the AMQP messaging protocol as a transport for MCP at the inaugural MQ Summit in 2025. Ken Liao’s talk and demo sparked significant interest and follow-on discussion at last year’s summit leading to consensus to engage the AMQP community and ambition to extend the reach of the OASIS standard. Join Clemens, Stefan and Richard for an update on what's been going on behind the scenes to take this vision to the next level and, most importantly, learn how you can get involved.
+Amazon proposed using the AMQP messaging protocol as a transport for MCP at the inaugural MQ Summit in 2025. Ken Liao’s talk and demo sparked significant interest and follow-on discussion at last year’s summit leading to consensus to engage the AMQP community and ambition to extend the reach of the OASIS standard. Join Clemens, Stefan and Matt for an update on what’s been going on behind the scenes to take this vision to the next level and, most importantly, learn how you can get involved.
 
 **Key Takeaways:**
 * Provide the MQ Summit with an update on the MCP/AMQP success story from last year's event.
