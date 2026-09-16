@@ -6,6 +6,18 @@ homepage_settings:
   modal:
     show: false
     delay: 4000
+  offer_modal:
+    show: true
+    delay: 1500                      # ms before the popup opens after the page loads
+    code: MQS20                      # discount code shown in the popup (change to the real code)
+    inperson_old_price: "€1,380.61"  # in-person current price, shown crossed out
+    inperson_new_price: "€1,105"     # in-person price after the code
+    virtual_old_price: "€99"         # virtual current price, shown crossed out
+    virtual_new_price: "€79"         # virtual price after the code
+    # Countdown deadline in the timezone below. Offer runs until this moment
+    # (23:59 = end of the day). Currently: next Friday, end of day CEST.
+    deadline: 2026-09-25 23:59:59
+    timezone: Europe/Berlin
   testimonials:
     show: true
     title: "What others said about MQ Summit"

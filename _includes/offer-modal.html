@@ -1,0 +1,118 @@
+{% assign offer = site.data.settings.homepage_settings.offer_modal %}
+<!-- Limited offer popup -->
+<div id="offerModal" class="offer-modal">
+  <div class="offer-modal-content">
+    <span class="offer-close" id="offer-close">&times;</span>
+
+    <div class="offer-badge">LIMITED OFFER</div>
+
+    <h2 class="offer-headline">
+      <span class="offer-big">-20%</span>
+      <span class="offer-with-code">with code</span>
+      <span class="offer-big offer-code">{{ offer.code }}</span>
+    </h2>
+
+    <div class="offer-prices">
+      <div class="offer-price-row">
+        <span class="offer-price-label">In person</span>
+        <span class="offer-old-price">{{ offer.inperson_old_price }}</span>
+        <span class="offer-arrow">&rarr;</span>
+        <span class="offer-new-price">{{ offer.inperson_new_price }}</span>
+      </div>
+      <div class="offer-price-row">
+        <span class="offer-price-label">Virtual</span>
+        <span class="offer-old-price">{{ offer.virtual_old_price }}</span>
+        <span class="offer-arrow">&rarr;</span>
+        <span class="offer-new-price">{{ offer.virtual_new_price }}</span>
+      </div>
+    </div>
+
+    <p class="offer-availability">Available until</p>
+
+    <div class="offer-countdown" id="offer-countdown">
+      <div class="offer-countdown-content">
+        <div class="offer-countdown-square"><span id="offer-days">0</span></div>
+        <div class="offer-countdown-title">Days</div>
+      </div>
+      <div class="offer-countdown-content">
+        <div class="offer-countdown-square"><span id="offer-hours">0</span></div>
+        <div class="offer-countdown-title">Hours</div>
+      </div>
+      <div class="offer-countdown-content">
+        <div class="offer-countdown-square"><span id="offer-minutes">0</span></div>
+        <div class="offer-countdown-title">Minutes</div>
+      </div>
+      <div class="offer-countdown-content">
+        <div class="offer-countdown-square"><span id="offer-seconds">0</span></div>
+        <div class="offer-countdown-title">Seconds</div>
+      </div>
+    </div>
+
+    <p class="offer-availability offer-availability--sub">or until sold out</p>
+
+    <a id="offer-cta" class="page-scroll offer-cta-button" href="#register">
+      REGISTER
+    </a>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var modal = document.getElementById("offerModal");
+    var closeBtn = document.getElementById("offer-close");
+    var cta = document.getElementById("offer-cta");
+
+    function openOfferModal() {
+      modal.style.display = "block";
+    }
+
+    function closeOfferModal() {
+      modal.style.display = "none";
+      try { sessionStorage.setItem("offerModalDismissed", "1"); } catch (e) {}
+    }
+
+    closeBtn.addEventListener("click", closeOfferModal);
+    cta.addEventListener("click", closeOfferModal);
+
+    window.addEventListener("click", function (event) {
+      if (event.target === modal) { closeOfferModal(); }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") { closeOfferModal(); }
+    });
+
+    // ---- Countdown ----
+    var timezone = "{{ offer.timezone }}";
+    var targetDate = moment.tz("{{ offer.deadline }}", timezone).valueOf();
+
+    var offerInterval = setInterval(function () {
+      var now = moment.utc().valueOf();
+      var timeRemaining = targetDate - now;
+
+      if (timeRemaining <= 0) {
+        clearInterval(offerInterval);
+        var cd = document.getElementById("offer-countdown");
+        if (cd) { cd.innerHTML = '<div class="offer-expired">Offer ended</div>'; }
+        return;
+      }
+
+      var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+      document.getElementById("offer-days").innerHTML = days;
+      document.getElementById("offer-hours").innerHTML = hours;
+      document.getElementById("offer-minutes").innerHTML = minutes;
+      document.getElementById("offer-seconds").innerHTML = seconds;
+    }, 1000);
+
+    // Open the popup shortly after the page loads, unless already dismissed this session.
+    var dismissed = false;
+    try { dismissed = sessionStorage.getItem("offerModalDismissed") === "1"; } catch (e) {}
+    if (!dismissed) {
+      setTimeout(openOfferModal, {{ offer.delay | default: 1500 }});
+    }
+  })();
+</script>

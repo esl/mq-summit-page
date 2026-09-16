@@ -87,7 +87,12 @@ image: assets/images/MQS26 - website banner.png
 <!-- end of contact -->
 
 
-<!-- modal block -->
+<!-- modal block (old popup — kept but hidden via settings.homepage_settings.modal.show) -->
 {% if site.data.settings.homepage_settings.modal.show %}
   {% include modal.html %}
+{% endif %}
+
+<!-- limited offer popup -->
+{% if site.data.settings.homepage_settings.offer_modal.show %}
+  {% include offer-modal.html %}
 {% endif %}
