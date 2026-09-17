@@ -23,4 +23,4 @@ We will also look at basic Patterns, how to distribute heavy background tasks am
 This is a back-to-basics session designed for developers who want a solid, technical foundation in how RabbitMQ operates.
 
 **Key Takeaways:**
-* They will learn the basics of message queueing with RabbtiMQ
+* Learn the basics of message queueing with RabbtiMQ
