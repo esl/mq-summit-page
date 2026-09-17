@@ -6,6 +6,7 @@ level: Introductory and overview
 title: "Introduction to RabbitMQ: What Is a Message Queue and How Does It Work? (lab)"
 speakers:
 - _participants/lois_soto_lopez.md
+- _participants/johan_rhodin.md
 
 ---
 When you start building applications, it’s standard practice to have services talk directly to each other via synchronous HTTP requests. But what happens when a service slows down, goes offline, or experiences a sudden traffic spike? This is where message queues come into play.
