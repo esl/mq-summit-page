@@ -3,7 +3,7 @@ tags:
   - RabbitMQ
   - AI devlopments in messaging and streaming
 level: Intermediate
-title: "How Do You Eliminate a RabbitMQ Engineer? Addressing the Elephant in the Room…"
+title: "How Do You Eliminate an MQ Engineer? Addressing the Elephant in the Room…"
 speakers:
 - _participants/john-samuel.md
 - _participants/lajos-gerecs.md
