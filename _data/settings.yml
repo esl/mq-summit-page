@@ -7,7 +7,7 @@ homepage_settings:
     show: false
     delay: 4000
   offer_modal:
-    show: true
+    show: false
     delay: 1500                      # ms before the popup opens after the page loads
     code: MQS20                      # discount code shown in the popup (change to the real code)
     inperson_old_price: "€1,380.61"  # in-person current price, shown crossed out
