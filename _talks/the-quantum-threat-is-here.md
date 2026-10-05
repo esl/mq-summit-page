@@ -6,7 +6,6 @@ level: Intermediate
 title: "The quantum threat is here... Is your messaging ready?"
 speakers:
 - _participants/rob-parker.md
-published: false
 
 ---
 Quantum computers are emerging from science fiction into reality. Current industry predictions forecast that a quantum computer will break key encryption standards that protect today's data within just eight years. Messaging systems are trusted to transport mission critical data and are therefore an obvious target for bad actors armed with these futuristic quantum tools.
