@@ -343,7 +343,7 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
       parts.push(why.join('\n'));
       var t = PRICES[state.ticket];
       var ticketLabel = state.ticket === 'full' ? 'two-day' : 'one-day';
-      parts.push('Cost: ' + t.net + ' (' + t.vat + ' incl. VAT) for the ' + ticketLabel + ' ticket with the MQS2026 promo code (-20%), including lunch and recordings. Travel and accommodation are not included.' + " If that doesn't fit the budget, the virtual ticket (" + PRICES.online.net + ', ' + PRICES.online.vat + ' incl. VAT) is a good fallback.');
+      parts.push('Cost: ' + t.net + ' (' + t.vat + ' incl. VAT) for the ' + ticketLabel + ' ticket with the MQS2026 promo code (-20%), including lunch and recordings. The ticket covers the conference itself, so travel and accommodation would need to be arranged separately.' + " If that doesn't fit the budget, the virtual ticket (" + PRICES.online.net + ', ' + PRICES.online.vat + ' incl. VAT) is a good fallback.');
       parts.push("Afterwards I'll write up what's relevant to our setup and share the recordings with the team" + (state.session ? ", and I'll run a short session for the team." : '.'));
     } else {
       parts.push('The virtual ticket is ' + PRICES.online.net + ' (' + PRICES.online.vat + ' incl. VAT) with the MQS2026 promo code (-20%) and includes the live stream, live Q&A with speakers and 3 months of recordings.');
