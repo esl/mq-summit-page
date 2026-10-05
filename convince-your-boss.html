@@ -119,32 +119,19 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
       <div class="cyb-grid" style="margin-top:18px">
         <button type="button" class="cyb-card cyb-mode" data-mode="online" aria-pressed="true">
           <span class="cyb-name">Online</span>
-          <span class="cyb-price">from €79 <small>(€95.59 incl. VAT)</small></span>
+          <span class="cyb-price">€63.20 <small>(€76.47 incl. VAT) with MQS2026 promo code (-20%)</small></span>
           <span class="cyb-what">Live stream of the talks, live Q&amp;A, online networking and 3 months of recordings. The easiest yes for any budget.</span>
         </button>
         <button type="button" class="cyb-card cyb-mode" data-mode="person" aria-pressed="false">
           <span class="cyb-name">In person</span>
-          <span class="cyb-price">from €880 · one day €490 <small>(€1,064.80 / €592.90 incl. VAT)</small></span>
+          <span class="cyb-price">€880 · one day €520 <small>(€1,064.80 / €629.20 incl. VAT) with MQS2026 promo code (-20%)</small></span>
           <span class="cyb-what">Everything online, plus the hands-on labs (not streamed), the Code BEAM tracks, lunch and the reception on 21 October.</span>
         </button>
       </div>
     </section>
 
     <section class="cyb-step" aria-labelledby="s2">
-      <h2 id="s2"><span>02</span>Pick 2–3 sessions for your stack</h2>
-      <p class="cyb-hint">A few well-chosen sessions convince better than the whole agenda. Selected: <span id="count">0</span></p>
-      <div class="cyb-pills" role="group" aria-label="Filter by stack" id="stacks"></div>
-      <div class="cyb-list" id="talks"></div>
-    </section>
-
-    <section class="cyb-step cyb-person-only" aria-labelledby="s2b" hidden>
-      <h2 id="s2b"><span>02b</span>Add a hands-on lab</h2>
-      <p class="cyb-hint">Labs aren't streamed, so they're the strongest reason to be there in person.</p>
-      <div class="cyb-list" id="labs"></div>
-    </section>
-
-    <section class="cyb-step" aria-labelledby="s3">
-      <h2 id="s3" style="margin-bottom:18px"><span>03</span>Add your context</h2>
+      <h2 id="s2" style="margin-bottom:18px"><span>02</span>Add your context</h2>
       <div class="cyb-grid">
         <div class="cyb-field"><label for="f-boss">Your boss's first name</label><input id="f-boss" type="text" placeholder="Anna" autocomplete="off"></div>
         <div class="cyb-field"><label for="f-name">Your name</label><input id="f-name" type="text" placeholder="Sam" autocomplete="name"></div>
@@ -161,7 +148,7 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
             <span class="cyb-label">Ticket</span>
             <div class="cyb-pills" style="margin:0">
               <button type="button" class="cyb-pill" data-ticket="full" aria-pressed="true">Two days · €880 (€1,064.80 incl. VAT)</button>
-              <button type="button" class="cyb-pill" data-ticket="day" aria-pressed="false">One day · €490 (€592.90 incl. VAT)</button>
+              <button type="button" class="cyb-pill" data-ticket="day" aria-pressed="false">One day · €520 (€629.20 incl. VAT)</button>
             </div>
           </div>
           <div class="cyb-field"><label for="f-travel">Travel + hotel estimate (€)</label><input id="f-travel" type="text" inputmode="numeric" placeholder="450"></div>
@@ -169,6 +156,20 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
       </div>
       <button type="button" class="cyb-check" id="f-session" aria-pressed="false"><span class="cyb-box" aria-hidden="true">✓</span><span>I'll also run a short session for the team afterwards</span></button>
     </section>
+
+    <section class="cyb-step" aria-labelledby="s3">
+      <h2 id="s3"><span>03</span>Pick 2–3 sessions for your stack</h2>
+      <p class="cyb-hint">A few well-chosen sessions convince better than the whole agenda. Selected: <span id="count">0</span></p>
+      <div class="cyb-pills" role="group" aria-label="Filter by stack" id="stacks"></div>
+      <div class="cyb-list" id="talks"></div>
+    </section>
+
+    <section class="cyb-step cyb-person-only" aria-labelledby="s3b" hidden>
+      <h2 id="s3b"><span>03b</span>Add a hands-on lab</h2>
+      <p class="cyb-hint">Labs aren't streamed, so they're the strongest reason to be there in person.</p>
+      <div class="cyb-list" id="labs"></div>
+    </section>
+
   </div>
 
   <aside class="cyb-preview" aria-labelledby="pv">
@@ -180,7 +181,7 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
       <a class="cyb-btn cyb-btn-ghost" id="mailto" href="mailto:">Open in email app</a>
     </div>
     <p class="cyb-err" id="copy-err" hidden>Your browser blocked copying. Select the text above and copy it manually.</p>
-    <p class="cyb-note">Prices are the lowest current tiers. Amounts incl. VAT assume 21% Dutch VAT and exclude Eventbrite booking fees. Check the exact amount at checkout before you send.</p>
+    <p class="cyb-note">Prices include the MQS2026 promo code (-20%) and 21% Dutch VAT. Eventbrite adds a small booking fee at checkout.</p>
   </aside>
 </main>
 
@@ -192,6 +193,7 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
       <div><h3>"Can't you just watch the recordings?"</h3><p>You can: every ticket includes 3 months of recordings. The labs aren't streamed, though, and neither are the conversations with speakers between sessions.</p></div>
       <div><h3>"Isn't this a vendor event?"</h3><p>It's organised by Code Sync, not by a broker vendor. Speakers come from competing projects (RabbitMQ, Kafka, IBM MQ, NATS, MQTT, ActiveMQ), so you can compare approaches side by side.</p></div>
       <div><h3>"How big is it?"</h3><p>The first edition in Berlin (2025) had 350+ attendees across 5 tracks. Small enough to actually talk to people.</p></div>
+      <div><h3>"Is there a discount?"</h3><p>Yes: the promo code <strong>MQS2026</strong> takes 20% off at checkout. The prices above already include it.</p></div>
       <div><h3>"Invoices, group tickets?"</h3><p>Write to <a href="mailto:info@codesync.global">info@codesync.global</a> and the team will help.</p></div>
     </div>
   </div>
@@ -203,9 +205,9 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
 (function () {
   // ---- Content: edit here when the programme changes ----
   var PRICES = {
-    online: { net: '€79', vat: '€95.59' },
+    online: { net: '€63.20', vat: '€76.47' },
     full:   { net: '€880', vat: '€1,064.80' },
-    day:    { net: '€490', vat: '€592.90' }
+    day:    { net: '€520', vat: '€629.20' }
   };
   var STACKS = [
     { id: 'all', label: 'All' },
@@ -319,7 +321,7 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
         subject: 'MQ Summit online: ' + PRICES.online.net + ', 21–22 Oct',
         body: 'Hi ' + boss + ',\n\n'
           + "I'd like to join MQ Summit online (21–22 October). It's a two-day conference focused only on messaging. " + intro + '\n\n'
-          + 'The virtual ticket is ' + PRICES.online.net + ' (' + PRICES.online.vat + ' incl. VAT) and includes the live stream, live Q&A with speakers and 3 months of recordings.\n\n'
+          + 'The virtual ticket is ' + PRICES.online.net + ' (' + PRICES.online.vat + ' incl. VAT) with the MQS2026 promo code (-20%) and includes the live stream, live Q&A with speakers and 3 months of recordings.\n\n'
           + why + '\n\n'
           + "I'll block the time for these sessions, share the recordings with the team and write up what's relevant to our setup" + follow + '\n\n'
           + 'Thanks,\n' + me
@@ -343,7 +345,7 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
         + labLine + '\n'
         + "- Direct access to the speakers: I'll prepare our questions on " + question + ' in advance\n'
         + '- Comparing approaches with teams running other brokers in production, without anyone selling us one\n\n'
-        + 'Cost: ' + t.net + ' (' + t.vat + ' incl. VAT) for the ' + ticketLabel + ' ticket, which includes lunch and recordings, plus about ' + travel + " for travel and hotel. If that doesn't fit the budget, the virtual ticket (" + PRICES.online.net + ', ' + PRICES.online.vat + ' incl. VAT) is a good fallback.\n\n'
+        + 'Cost: ' + t.net + ' (' + t.vat + ' incl. VAT) with the MQS2026 promo code (-20%) for the ' + ticketLabel + ' ticket, which includes lunch and recordings, plus about ' + travel + " for travel and hotel. If that doesn't fit the budget, the virtual ticket (" + PRICES.online.net + ', ' + PRICES.online.vat + ' incl. VAT) is a good fallback.\n\n'
         + "Afterwards I'll write up what's relevant to our setup and share the recordings with the team" + follow + '\n\n'
         + 'Thanks,\n' + me
     };
