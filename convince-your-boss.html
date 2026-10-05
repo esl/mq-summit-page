@@ -1,0 +1,399 @@
+---
+layout: null
+permalink: /convince-your-boss/
+title: Convince your boss | MQ Summit 2026
+description: Need sign-off to attend MQ Summit? Pick online or in person, choose the sessions that match your stack and get a ready-to-send email for your manager.
+---
+<!DOCTYPE html>
+<html>
+{% include imports/head.html %}
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  .cyb{
+    --black:#000101; --white:#FFFFFF; --text:#EEEEEE; --muted:#B9B6C6; --soft:#D8D6E0;
+    --purple:#735ABF; --plum:#311241; --card:#1C1830; --card-on:#2E2546; --line:#3A3354; --field-line:#6B6780;
+    --gold:#C8A465; --gold-dark:#9C7A3F; --gold-text:#7A5C27; --navy:#10202F; --blue:#80C0FA; --paper:#FAFAFA;
+  }
+  .cyb, .cyb *{box-sizing:border-box}
+  .cyb{background:var(--black);color:var(--text);font-family:'Lato',sans-serif;font-size:16px;line-height:1.5;letter-spacing:normal;text-align:left}
+  .cyb h1,.cyb h2,.cyb h3,.cyb p{text-transform:none}
+  .cyb a{color:var(--blue)} .cyb a:hover{color:#B5DAFC}
+  .cyb button{font:inherit;cursor:pointer}
+  .cyb :focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+  .cyb .cyb-wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+  .cyb .cyb-mono{font-family:'Roboto Mono',monospace}
+  .cyb .cyb-mont{font-family:'Montserrat',sans-serif}
+  .cyb .cyb-btn{display:inline-block;font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;letter-spacing:.02em;background:var(--gold);color:var(--navy);text-decoration:none;padding:13px 22px;border-radius:10px;border:0;min-height:44px}
+  .cyb .cyb-btn:hover{background:#D6B67D;color:var(--navy)}
+  .cyb .cyb-btn-ghost{background:transparent;color:var(--gold-text);border:1.5px solid var(--gold-dark)}
+  .cyb .cyb-btn-ghost:hover{background:rgba(200,164,101,.18);color:var(--gold-text)}
+  .cyb .cyb-divider{width:80px;height:5px;background:linear-gradient(to right,var(--blue) 50%,var(--gold) 50%)}
+
+  .cyb .cyb-top{border-bottom:1px solid #2A2540}
+  .cyb .cyb-top .cyb-wrap{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+  .cyb .cyb-top .cyb-date{font-family:'Montserrat',sans-serif;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+  .cyb .cyb-logo{display:inline-flex;align-items:center;min-height:44px}
+
+  .cyb .cyb-hero{background:var(--purple);color:var(--white)}
+  .cyb .cyb-hero .cyb-wrap{padding-top:140px;padding-bottom:64px}
+  .cyb .cyb-eyebrow{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px}
+  .cyb .cyb-hero h1{font-family:'Montserrat',sans-serif;font-weight:700;font-size:clamp(34px,5.5vw,60px);line-height:1.08;letter-spacing:-.01em;margin:0 0 24px;max-width:880px}
+  .cyb .cyb-hero .cyb-divider{margin-bottom:24px}
+  .cyb .cyb-hero p{font-size:20px;line-height:1.55;letter-spacing:.02em;max-width:720px;margin:0}
+
+  .cyb .cyb-layout{display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;padding-top:56px;padding-bottom:72px}
+  .cyb .cyb-form{flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:48px}
+  .cyb .cyb-step h2{font-family:'Montserrat',sans-serif;font-weight:600;font-size:24px;letter-spacing:.04em;color:var(--white);margin:0 0 8px;display:flex;gap:14px;align-items:baseline}
+  .cyb .cyb-step h2 span{font-size:15px;color:var(--gold);letter-spacing:.1em}
+  .cyb .cyb-step .cyb-hint{margin:0 0 18px;font-size:16px;color:var(--muted)}
+  .cyb .cyb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+
+  .cyb .cyb-card{text-align:left;display:flex;flex-direction:column;gap:6px;width:100%;padding:18px 20px;border-radius:12px;min-height:44px;color:var(--text);background:var(--card);border:2px solid var(--line)}
+  .cyb .cyb-card[aria-pressed="true"]{background:var(--card-on);border-color:var(--gold)}
+  .cyb .cyb-card .cyb-row{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+  .cyb .cyb-card .cyb-title{font-family:'Montserrat',sans-serif;font-weight:600;font-size:17px;line-height:1.4;color:var(--white)}
+  .cyb .cyb-card .cyb-who{font-size:15px;color:var(--blue)}
+  .cyb .cyb-card .cyb-what{font-size:16px;line-height:1.5;color:var(--soft)}
+  .cyb .cyb-badge{flex:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;color:var(--gold);border:1px solid var(--gold)}
+  .cyb .cyb-card[aria-pressed="true"] .cyb-badge{background:var(--gold);color:var(--navy)}
+  .cyb .cyb-mode{padding:22px;gap:8px;border-color:var(--purple)}
+  .cyb .cyb-mode .cyb-name{font-family:'Montserrat',sans-serif;font-size:22px;font-weight:600;color:var(--white)}
+  .cyb .cyb-mode .cyb-price{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:500;color:var(--gold)}
+  .cyb .cyb-mode .cyb-price small{color:var(--muted);font-weight:400;font-size:14px}
+
+  .cyb .cyb-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+  .cyb .cyb-pill{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:600;letter-spacing:.02em;padding:10px 18px;min-height:44px;border-radius:999px;background:transparent;color:var(--text);border:1.5px solid var(--field-line)}
+  .cyb .cyb-pill[aria-pressed="true"]{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+  .cyb .cyb-list{display:flex;flex-direction:column;gap:12px}
+
+  .cyb .cyb-field{display:flex;flex-direction:column;gap:6px}
+  .cyb .cyb-field label,.cyb .cyb-field .cyb-label{font-weight:700;font-size:15px}
+  .cyb .cyb-field .cyb-sub{font-size:15px;color:var(--muted)}
+  .cyb .cyb-field input,.cyb .cyb-field textarea{font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--field-line);border-radius:10px;background:var(--card);color:var(--white);min-height:46px}
+  .cyb .cyb-field textarea{resize:vertical}
+  .cyb ::placeholder{color:#8A879C}
+  .cyb .cyb-mt{margin-top:16px}
+  .cyb .cyb-check{margin-top:18px;display:flex;align-items:center;gap:12px;background:transparent;border:0;padding:8px 0;min-height:44px;font-size:16px;color:var(--text);text-align:left}
+  .cyb .cyb-check .cyb-box{flex:none;width:22px;height:22px;border-radius:5px;display:inline-flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;border:2px solid #8A879C;color:transparent}
+  .cyb .cyb-check[aria-pressed="true"] .cyb-box{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+  .cyb [hidden]{display:none !important}
+
+  .cyb .cyb-preview{flex:1 1 400px;min-width:0;background:var(--paper);color:var(--navy);border-radius:12px;border-top:5px solid var(--gold);padding:24px;display:flex;flex-direction:column;gap:16px}
+  .cyb .cyb-preview h2{font-family:'Montserrat',sans-serif;font-weight:700;font-size:20px;letter-spacing:.04em;margin:0}
+  .cyb .cyb-preview .cyb-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+  .cyb .cyb-preview .cyb-head span{font-size:14px;color:#5A5E6B}
+  .cyb .cyb-preview .cyb-block{border-top:1px solid #D3D3D3;padding-top:16px}
+  .cyb .cyb-preview .cyb-lbl{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#5A5E6B;margin-bottom:6px}
+  .cyb #subject{font-family:'Roboto Mono',monospace;font-size:15px;font-weight:500}
+  .cyb #body{font-family:'Roboto Mono',monospace;font-size:14px;line-height:1.7;white-space:pre-wrap;color:#1F2A36;overflow-wrap:anywhere}
+  .cyb .cyb-actions{display:flex;gap:12px;flex-wrap:wrap}
+  .cyb .cyb-note{margin:0;font-size:14px;line-height:1.5;color:#5A5E6B}
+  .cyb .cyb-err{margin:0;font-size:14px;color:#9A3412}
+
+  .cyb .cyb-faq{background:var(--plum)}
+  .cyb .cyb-faq .cyb-wrap{padding-top:64px;padding-bottom:72px}
+  .cyb .cyb-faq h2{font-family:'Montserrat',sans-serif;font-weight:600;font-size:30px;letter-spacing:.08em;color:var(--white);margin:0 0 16px}
+  .cyb .cyb-faq .cyb-divider{margin-bottom:32px}
+  .cyb .cyb-faq .cyb-grid{gap:32px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .cyb .cyb-faq h3{font-family:'Montserrat',sans-serif;font-weight:600;font-size:17px;color:var(--white);margin:0 0 10px}
+  .cyb .cyb-faq p{margin:0;font-size:16px;line-height:1.6;color:#E2DCEA}
+</style>
+
+<body>
+  {% include navigation_2.html %}
+<div class="cyb">
+<section class="cyb-hero">
+  <div class="cyb-wrap">
+    <div class="cyb-eyebrow">Convince your boss</div>
+    <h1>Get the email to your boss written in two minutes.</h1>
+    <div class="cyb-divider" aria-hidden="true"></div>
+    <p>Messaging is the part of the stack nobody notices until it breaks. Choose how you want to attend and the sessions that match your stack, add one line about what you're working on, and copy a ready-to-send email.</p>
+  </div>
+</section>
+
+<main class="cyb-wrap cyb-layout">
+  <div class="cyb-form">
+
+    <section class="cyb-step" aria-labelledby="s1">
+      <h2 id="s1"><span>01</span>How do you want to attend?</h2>
+      <div class="cyb-grid" style="margin-top:18px">
+        <button type="button" class="cyb-card cyb-mode" data-mode="online" aria-pressed="true">
+          <span class="cyb-name">Online</span>
+          <span class="cyb-price">from €79 <small>(€95.59 incl. VAT)</small></span>
+          <span class="cyb-what">Live stream of the talks, live Q&amp;A, online networking and 3 months of recordings. The easiest yes for any budget.</span>
+        </button>
+        <button type="button" class="cyb-card cyb-mode" data-mode="person" aria-pressed="false">
+          <span class="cyb-name">In person</span>
+          <span class="cyb-price">from €880 · one day €490 <small>(€1,064.80 / €592.90 incl. VAT)</small></span>
+          <span class="cyb-what">Everything online, plus the hands-on labs (not streamed), the Code BEAM tracks, lunch and the reception on 21 October.</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="cyb-step" aria-labelledby="s2">
+      <h2 id="s2"><span>02</span>Pick 2–3 sessions for your stack</h2>
+      <p class="cyb-hint">A few well-chosen sessions convince better than the whole agenda. Selected: <span id="count">0</span></p>
+      <div class="cyb-pills" role="group" aria-label="Filter by stack" id="stacks"></div>
+      <div class="cyb-list" id="talks"></div>
+    </section>
+
+    <section class="cyb-step cyb-person-only" aria-labelledby="s2b" hidden>
+      <h2 id="s2b"><span>02b</span>Add a hands-on lab</h2>
+      <p class="cyb-hint">Labs aren't streamed, so they're the strongest reason to be there in person.</p>
+      <div class="cyb-list" id="labs"></div>
+    </section>
+
+    <section class="cyb-step" aria-labelledby="s3">
+      <h2 id="s3" style="margin-bottom:18px"><span>03</span>Add your context</h2>
+      <div class="cyb-grid">
+        <div class="cyb-field"><label for="f-boss">Your boss's first name</label><input id="f-boss" type="text" placeholder="Anna" autocomplete="off"></div>
+        <div class="cyb-field"><label for="f-name">Your name</label><input id="f-name" type="text" placeholder="Sam" autocomplete="name"></div>
+      </div>
+      <div class="cyb-field cyb-mt">
+        <label for="f-problem">What are you working on right now?</label>
+        <span class="cyb-sub" id="f-problem-hint">Finish the sentence "we're working on…". This one line is what makes the email convincing.</span>
+        <textarea id="f-problem" rows="2" aria-describedby="f-problem-hint" placeholder="moving our order events from RabbitMQ classic queues to quorum queues"></textarea>
+      </div>
+      <div class="cyb-person-only" hidden>
+        <div class="cyb-field cyb-mt"><label for="f-question">A question you'd ask the speakers</label><input id="f-question" type="text" placeholder="how to size quorum queues for our message rate"></div>
+        <div class="cyb-grid cyb-mt" style="align-items:end">
+          <div class="cyb-field" role="group" aria-label="Ticket">
+            <span class="cyb-label">Ticket</span>
+            <div class="cyb-pills" style="margin:0">
+              <button type="button" class="cyb-pill" data-ticket="full" aria-pressed="true">Two days · €880 (€1,064.80 incl. VAT)</button>
+              <button type="button" class="cyb-pill" data-ticket="day" aria-pressed="false">One day · €490 (€592.90 incl. VAT)</button>
+            </div>
+          </div>
+          <div class="cyb-field"><label for="f-travel">Travel + hotel estimate (€)</label><input id="f-travel" type="text" inputmode="numeric" placeholder="450"></div>
+        </div>
+      </div>
+      <button type="button" class="cyb-check" id="f-session" aria-pressed="false"><span class="cyb-box" aria-hidden="true">✓</span><span>I'll also run a short session for the team afterwards</span></button>
+    </section>
+  </div>
+
+  <aside class="cyb-preview" aria-labelledby="pv">
+    <div class="cyb-head"><h2 id="pv">Your email</h2><span>updates as you type</span></div>
+    <div class="cyb-block"><div class="cyb-lbl">Subject</div><div id="subject"></div></div>
+    <div class="cyb-block" id="body" aria-live="polite"></div>
+    <div class="cyb-block cyb-actions">
+      <button type="button" class="cyb-btn" id="copy">Copy email</button>
+      <a class="cyb-btn cyb-btn-ghost" id="mailto" href="mailto:">Open in email app</a>
+    </div>
+    <p class="cyb-err" id="copy-err" hidden>Your browser blocked copying. Select the text above and copy it manually.</p>
+    <p class="cyb-note">Prices are the lowest current tiers. Amounts incl. VAT assume 21% Dutch VAT and exclude Eventbrite booking fees. Check the exact amount at checkout before you send.</p>
+  </aside>
+</main>
+
+<section class="cyb-faq" aria-labelledby="faq-h">
+  <div class="cyb-wrap">
+    <h2 id="faq-h">Questions your boss might ask</h2>
+    <div class="cyb-divider" aria-hidden="true"></div>
+    <div class="cyb-grid">
+      <div><h3>"Can't you just watch the recordings?"</h3><p>You can: every ticket includes 3 months of recordings. The labs aren't streamed, though, and neither are the conversations with speakers between sessions.</p></div>
+      <div><h3>"Isn't this a vendor event?"</h3><p>It's organised by Code Sync, not by a broker vendor. Speakers come from competing projects (RabbitMQ, Kafka, IBM MQ, NATS, MQTT, ActiveMQ), so you can compare approaches side by side.</p></div>
+      <div><h3>"How big is it?"</h3><p>The first edition in Berlin (2025) had 350+ attendees across 5 tracks. Small enough to actually talk to people.</p></div>
+      <div><h3>"Invoices, group tickets?"</h3><p>Write to <a href="mailto:info@codesync.global">info@codesync.global</a> and the team will help.</p></div>
+    </div>
+  </div>
+</section>
+</div>
+  {% include footer.html %}
+  {% include imports/js.html %}
+<script>
+(function () {
+  // ---- Content: edit here when the programme changes ----
+  var PRICES = {
+    online: { net: '€79', vat: '€95.59' },
+    full:   { net: '€880', vat: '€1,064.80' },
+    day:    { net: '€490', vat: '€592.90' }
+  };
+  var STACKS = [
+    { id: 'all', label: 'All' },
+    { id: 'rabbit', label: 'RabbitMQ', name: 'RabbitMQ' },
+    { id: 'kafka', label: 'Kafka & streaming', name: 'Kafka' },
+    { id: 'ibm', label: 'IBM MQ', name: 'IBM MQ' },
+    { id: 'edge', label: 'NATS, MQTT & edge', name: 'NATS and MQTT' },
+    { id: 'ops', label: 'Operations & cost' },
+    { id: 'ai', label: 'AI workloads' }
+  ];
+  var TALKS = [
+    { id: 'r1', stack: 'rabbit', title: 'Bringing infinite streaming to RabbitMQ', speaker: 'Michael Davis, Amazon MQ', blurb: 'tiered storage for RabbitMQ streams on S3' },
+    { id: 'r2', stack: 'rabbit', title: 'Bringing JMS to RabbitMQ: AMQP 1.0 and Cross-Broker Interoperability', speaker: 'David Ansari, RabbitMQ core team (Broadcom)', blurb: 'running JMS applications on RabbitMQ over AMQP 1.0' },
+    { id: 'r3', stack: 'rabbit', title: 'The Return of the Message: Why the AI Boom Needs Message Queues', speaker: 'Lovisa Johansson, 84codes', blurb: 'queues as the buffer for spiky, rate-limited AI workloads' },
+    { id: 'k1', stack: 'kafka', title: 'Controlling the Norwegian Power Grid in Real Time with Apache Kafka', speaker: 'Herman Jakobsen, Statnett', blurb: 'Kafka in a real-time, high-stakes control system' },
+    { id: 'k2', stack: 'kafka', title: 'From API Polling to Event Streaming: Lessons Learned at PostNL', speaker: 'Guy Hagemans (AppyThings), Jeroen van Disseldorp (Axual)', blurb: 'moving from API polling to Kafka events, including schemas and governance' },
+    { id: 'k3', stack: 'kafka', title: 'Queues vs. Logs: Choosing the Right Backbone for Event-Driven Architectures', speaker: 'Ali Alemi, AWS', blurb: 'a decision framework for when to use queues and when to use streams' },
+    { id: 'k4', stack: 'kafka', title: 'From Queues to Logs and Back Again', speaker: 'Viktor Gamov, Confluent', blurb: 'how RabbitMQ, Kafka, NATS and Pulsar compare by capability' },
+    { id: 'i1', stack: 'ibm', title: 'Resilient Messaging… How Hard Can It Be?', speaker: 'Jon Rumsey, IBM MQ', blurb: 'persistence, high availability and Raft-based replication' },
+    { id: 'i2', stack: 'ibm', title: 'The quantum threat is here… Is your messaging ready?', speaker: 'Rob Parker, IBM MQ', blurb: 'preparing messaging for post-quantum cryptography' },
+    { id: 'n1', stack: 'edge', title: 'Pub/Sub as an RPC Backbone: Rebuilding gRPC Patterns on NATS', speaker: 'Christopher Coco, Verrus', blurb: 'broker-backed RPC on NATS as an alternative to gRPC' },
+    { id: 'n2', stack: 'edge', title: 'When the Network Stops Behaving: Messaging Lessons from Autonomous Systems at Sea', speaker: 'Alex Kritikos, MAPS Messaging', blurb: 'messaging over degraded, intermittent networks' },
+    { id: 'n3', stack: 'edge', title: 'The Future of MQTT: An Update from the Technical Committee', speaker: 'Richard Coppen (IBM MQ), Simon Johnson (HiveMQ)', blurb: 'where the MQTT standard is heading' },
+    { id: 'o1', stack: 'ops', title: 'The Hidden Operational Cost of Messaging Platforms', speaker: 'Scott Corrigan, meshIQ', blurb: 'why messaging gets expensive to run at scale, and what to do about it' },
+    { id: 'o2', stack: 'ops', title: 'Panel: The Future of the Open Source Messaging Ecosystem', speaker: 'JB Onofré (ASF), Matt Pavlovich (HYTE, ActiveMQ PMC)', blurb: 'where open source brokers are heading' },
+    { id: 'a1', stack: 'ai', title: '5 Capabilities Your Broker Needs for Agentic Workloads', speaker: 'Vignesh Selvam, Amazon MQ', blurb: 'what brokers need to handle AI agents as consumers' },
+    { id: 'a2', stack: 'ai', title: 'Powering Asynchronous AI Agent Communication with MCP over AMQP', speaker: 'Clemens Vasters (Microsoft), Stefan Moser (AWS), Matt Leming (IBM MQ)', blurb: 'using AMQP as a transport for MCP' }
+  ];
+  var LABS = [
+    { id: 'l1', title: 'Get Hands-on with the IBM MQ AI Agent', speaker: 'Chris Leonard, Jon Rumsey, Richard Coppen (IBM MQ)' },
+    { id: 'l2', title: 'Introducing JSON Structure', speaker: 'Clemens Vasters, Microsoft' },
+    { id: 'l3', title: 'Hands-on with Agent Mesh: AI Coordination with Events', speaker: 'Hari Rangarajan, Solace' },
+    { id: 'l4', title: 'Introduction to RabbitMQ (for newcomers)', speaker: 'Johan Rhodin, Lois Soto López (84codes)' },
+    { id: 'l5', title: 'End-to-End Encryption Standard', speaker: 'Matt Pavlovich (HYTE), Rob Parker (IBM MQ)' }
+  ];
+
+  // ---- State ----
+  var state = { mode: 'online', stack: 'all', picked: [], labs: [], ticket: 'full', session: false };
+  var $ = function (id) { return document.getElementById(id); };
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+  function toggle(list, id) {
+    var i = list.indexOf(id);
+    if (i >= 0) list.splice(i, 1); else list.push(id);
+  }
+  function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1) + '.'; }
+
+  function card(item, on, onClick, withBlurb) {
+    var b = el('button', 'cyb-card');
+    b.type = 'button';
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    var row = el('span', 'cyb-row');
+    row.appendChild(el('span', 'cyb-title', item.title));
+    row.appendChild(el('span', 'cyb-badge', on ? 'Added' : 'Add'));
+    b.appendChild(row);
+    b.appendChild(el('span', 'cyb-who', item.speaker));
+    if (withBlurb) b.appendChild(el('span', 'cyb-what', cap(item.blurb)));
+    b.addEventListener('click', onClick);
+    return b;
+  }
+
+  function renderLists() {
+    var stacks = $('stacks'); stacks.innerHTML = '';
+    STACKS.forEach(function (s) {
+      var b = el('button', 'cyb-pill', s.label);
+      b.type = 'button';
+      b.setAttribute('aria-pressed', state.stack === s.id ? 'true' : 'false');
+      b.addEventListener('click', function () { state.stack = s.id; renderLists(); });
+      stacks.appendChild(b);
+    });
+    var talks = $('talks'); talks.innerHTML = '';
+    TALKS.filter(function (t) { return state.stack === 'all' || t.stack === state.stack; }).forEach(function (t) {
+      talks.appendChild(card(t, state.picked.indexOf(t.id) >= 0, function () { toggle(state.picked, t.id); renderLists(); renderEmail(); }, true));
+    });
+    var labs = $('labs'); labs.innerHTML = '';
+    LABS.forEach(function (l) {
+      labs.appendChild(card(l, state.labs.indexOf(l.id) >= 0, function () { toggle(state.labs, l.id); renderLists(); renderEmail(); }, false));
+    });
+    $('count').textContent = String(state.picked.length);
+  }
+
+  function val(id) { return ($(id).value || '').trim().replace(/\.$/, ''); }
+
+  function buildEmail() {
+    var boss = val('f-boss') || '{Name}';
+    var me = val('f-name') || '{Your name}';
+    var problem = val('f-problem') || '[what we are working on]';
+    var picked = TALKS.filter(function (t) { return state.picked.indexOf(t.id) >= 0; });
+    var names = [];
+    picked.forEach(function (t) {
+      var s = STACKS.filter(function (x) { return x.id === t.stack; })[0];
+      if (s && s.name && names.indexOf(s.name) < 0) names.push(s.name);
+    });
+    var stackText = 'RabbitMQ, Kafka, IBM MQ and NATS';
+    if (names.length === 1) stackText = names[0];
+    if (names.length > 1) stackText = names.slice(0, -1).join(', ') + ' and ' + names[names.length - 1];
+    var talkLines = picked.length
+      ? picked.map(function (t) { return '- ' + t.title + ' (' + t.speaker + '): ' + t.blurb; }).join('\n')
+      : '- [pick 2–3 sessions]';
+    var intro = 'Most speakers are engineers from the teams that build ' + stackText + '.';
+    var why = "Why it's useful for us: we're working on " + problem + ', and I believe these sessions will help me to achieve its goals:\n' + talkLines;
+    var follow = state.session ? ", and I'll run a short session for the team." : '.';
+
+    if (state.mode === 'online') {
+      return {
+        subject: 'MQ Summit online: ' + PRICES.online.net + ', 21–22 Oct',
+        body: 'Hi ' + boss + ',\n\n'
+          + "I'd like to join MQ Summit online (21–22 October). It's a two-day conference focused only on messaging. " + intro + '\n\n'
+          + 'The virtual ticket is ' + PRICES.online.net + ' (' + PRICES.online.vat + ' incl. VAT) and includes the live stream, live Q&A with speakers and 3 months of recordings.\n\n'
+          + why + '\n\n'
+          + "I'll block the time for these sessions, share the recordings with the team and write up what's relevant to our setup" + follow + '\n\n'
+          + 'Thanks,\n' + me
+      };
+    }
+    var t = PRICES[state.ticket];
+    var ticketLabel = state.ticket === 'full' ? 'two-day' : 'one-day';
+    var travelNum = ($('f-travel').value || '').replace(/[^0-9.,]/g, '');
+    var travel = travelNum ? '€' + travelNum : '€[estimate]';
+    var question = val('f-question') || '[our open question]';
+    var labs = LABS.filter(function (l) { return state.labs.indexOf(l.id) >= 0; });
+    var labLine = labs.length
+      ? '- Hands-on labs (not streamed): ' + labs.map(function (l) { return l.title; }).join('; ') + ', worked through with the people who built them'
+      : "- Hands-on labs, which aren't streamed, worked through with the people who built the tools";
+    return {
+      subject: 'MQ Summit in Haarlem, 21–22 Oct: ' + t.net + ' + travel',
+      body: 'Hi ' + boss + ',\n\n'
+        + "I'd like to attend MQ Summit in person (21–22 October, Haarlem, near Amsterdam). It's a small conference (~350 people) focused only on messaging. " + intro + '\n\n'
+        + why + '\n\n'
+        + 'Why in person rather than online:\n'
+        + labLine + '\n'
+        + "- Direct access to the speakers: I'll prepare our questions on " + question + ' in advance\n'
+        + '- Comparing approaches with teams running other brokers in production, without anyone selling us one\n\n'
+        + 'Cost: ' + t.net + ' (' + t.vat + ' incl. VAT) for the ' + ticketLabel + ' ticket, which includes lunch and recordings, plus about ' + travel + " for travel and hotel. If that doesn't fit the budget, the virtual ticket (" + PRICES.online.net + ', ' + PRICES.online.vat + ' incl. VAT) is a good fallback.\n\n'
+        + "Afterwards I'll write up what's relevant to our setup and share the recordings with the team" + follow + '\n\n'
+        + 'Thanks,\n' + me
+    };
+  }
+
+  function renderEmail() {
+    var e = buildEmail();
+    $('subject').textContent = e.subject;
+    $('body').textContent = e.body;
+    $('mailto').href = 'mailto:?subject=' + encodeURIComponent(e.subject) + '&body=' + encodeURIComponent(e.body);
+    $('copy').textContent = 'Copy email';
+  }
+
+  function setMode(mode) {
+    state.mode = mode;
+    document.querySelectorAll('[data-mode]').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-mode') === mode ? 'true' : 'false'); });
+    document.querySelectorAll('.cyb-person-only').forEach(function (n) { n.hidden = mode !== 'person'; });
+    renderEmail();
+  }
+
+  document.querySelectorAll('[data-mode]').forEach(function (b) {
+    b.addEventListener('click', function () { setMode(b.getAttribute('data-mode')); });
+  });
+  document.querySelectorAll('[data-ticket]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      state.ticket = b.getAttribute('data-ticket');
+      document.querySelectorAll('[data-ticket]').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      renderEmail();
+    });
+  });
+  $('f-session').addEventListener('click', function () {
+    state.session = !state.session;
+    this.setAttribute('aria-pressed', state.session ? 'true' : 'false');
+    renderEmail();
+  });
+  ['f-boss', 'f-name', 'f-problem', 'f-question', 'f-travel'].forEach(function (id) { $(id).addEventListener('input', renderEmail); });
+  $('copy').addEventListener('click', function () {
+    var e = buildEmail();
+    var text = 'Subject: ' + e.subject + '\n\n' + e.body;
+    var ok = function () { $('copy').textContent = 'Copied'; $('copy-err').hidden = true; };
+    var fail = function () { $('copy-err').hidden = false; };
+    try { navigator.clipboard.writeText(text).then(ok, fail); } catch (err) { fail(); }
+  });
+
+  // Optional deep link: /convince-your-boss/?mode=person
+  if (/[?&]mode=person\b/.test(location.search)) setMode('person');
+
+  renderLists();
+  renderEmail();
+})();
+</script>
+</body>
+</html>
