@@ -121,7 +121,7 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
         <button type="button" class="cyb-card cyb-mode" data-mode="online" aria-pressed="true">
           <span class="cyb-name">Online</span>
           <span class="cyb-price">€83.40 <small>(€100.08 incl. VAT) with MQS2026 promo code (-20%)</small></span>
-          <span class="cyb-what">Live stream of the talks, live Q&amp;A, online networking and 3 months of recordings. The easiest yes for any budget.</span>
+          <span class="cyb-what">Live stream of the talks, live Q&amp;A, online networking and lifetime access to the recordings. The easiest yes for any budget.</span>
         </button>
         <button type="button" class="cyb-card cyb-mode" data-mode="person" aria-pressed="false">
           <span class="cyb-name">In person</span>
@@ -193,7 +193,7 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
     <h2 id="faq-h">Questions your boss might ask</h2>
     <div class="cyb-divider" aria-hidden="true"></div>
     <div class="cyb-grid">
-      <div><h3>"Can't you just watch the recordings?"</h3><p>You can: every ticket includes 3 months of recordings. The labs aren't streamed, though, and neither are the conversations with speakers between sessions.</p></div>
+      <div><h3>"Can't you just watch the recordings?"</h3><p>You can: every ticket includes lifetime access to the recordings. The labs aren't streamed, though, and neither are the conversations with speakers between sessions.</p></div>
       <div><h3>"Isn't this a vendor event?"</h3><p>It's organised by Code Sync, not by a broker vendor. Speakers come from competing projects (RabbitMQ, Kafka, IBM MQ, NATS, MQTT, ActiveMQ), so you can compare approaches side by side.</p></div>
       <div><h3>"How big is it?"</h3><p>The first edition in Berlin (2025) had 350+ attendees across 5 tracks. Small enough to actually talk to people.</p></div>
       <div><h3>"Is there a discount?"</h3><p>Yes: the promo code <strong>MQS2026</strong> takes 20% off at checkout. The prices above already include it.</p></div>
@@ -343,10 +343,10 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
       parts.push(why.join('\n'));
       var t = PRICES[state.ticket];
       var ticketLabel = state.ticket === 'full' ? 'two-day' : 'one-day';
-      parts.push('Cost: ' + t.net + ' (' + t.vat + ' incl. VAT) for the ' + ticketLabel + ' ticket with the MQS2026 promo code (-20%), including lunch and recordings. The ticket covers the conference itself, so travel and accommodation would need to be arranged separately.' + " If that doesn't fit the budget, the virtual ticket (" + PRICES.online.net + ', ' + PRICES.online.vat + ' incl. VAT) is a good fallback.');
+      parts.push('Cost: ' + t.net + ' (' + t.vat + ' incl. VAT) for the ' + ticketLabel + ' ticket with the MQS2026 promo code (-20%), including lunch and lifetime access to the recordings. The ticket covers the conference itself, so travel and accommodation would need to be arranged separately.' + " If that doesn't fit the budget, the virtual ticket (" + PRICES.online.net + ', ' + PRICES.online.vat + ' incl. VAT) is a good fallback.');
       parts.push("Afterwards I'll write up what's relevant to our setup and share the recordings with the team" + (state.session ? ", and I'll run a short session for the team." : '.'));
     } else {
-      parts.push('The virtual ticket is ' + PRICES.online.net + ' (' + PRICES.online.vat + ' incl. VAT) with the MQS2026 promo code (-20%) and includes the live stream, live Q&A with speakers and 3 months of recordings.');
+      parts.push('The virtual ticket is ' + PRICES.online.net + ' (' + PRICES.online.vat + ' incl. VAT) with the MQS2026 promo code (-20%) and includes the live stream, live Q&A with speakers and lifetime access to the recordings.');
       parts.push("I'll block the time for the sessions, share the recordings with the team and write up what's relevant to our setup" + (state.session ? ", and I'll run a short session for the team." : '.'));
     }
     if (state.cc) parts.push("I've copied the MQ Summit organisers (info@codesync.global), so they can answer any questions about tickets or invoices.");
