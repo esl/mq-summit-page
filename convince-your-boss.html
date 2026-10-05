@@ -153,7 +153,6 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
               <button type="button" class="cyb-pill" data-ticket="day" aria-pressed="false">One day · €544.83 (€659.24 incl. VAT)</button>
             </div>
           </div>
-          <div class="cyb-field"><label for="f-travel">Travel + hotel estimate (€)</label><input id="f-travel" type="text" inputmode="numeric" placeholder="450"></div>
         </div>
       </div>
       <button type="button" class="cyb-check" id="f-session" aria-pressed="false"><span class="cyb-box" aria-hidden="true">✓</span><span>I'll also run a short session for the team afterwards</span></button>
@@ -344,8 +343,7 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
       parts.push(why.join('\n'));
       var t = PRICES[state.ticket];
       var ticketLabel = state.ticket === 'full' ? 'two-day' : 'one-day';
-      var travelNum = ($('f-travel').value || '').replace(/[^0-9.,]/g, '');
-      parts.push('Cost: ' + t.net + ' (' + t.vat + ' incl. VAT) for the ' + ticketLabel + ' ticket with the MQS2026 promo code (-20%), including lunch and recordings, plus ' + (travelNum ? 'about €' + travelNum + ' for ' : '') + "travel and hotel. If that doesn't fit the budget, the virtual ticket (" + PRICES.online.net + ', ' + PRICES.online.vat + ' incl. VAT) is a good fallback.');
+      parts.push('Cost: ' + t.net + ' (' + t.vat + ' incl. VAT) for the ' + ticketLabel + ' ticket with the MQS2026 promo code (-20%), including lunch and recordings. Travel and accommodation are not included.' + " If that doesn't fit the budget, the virtual ticket (" + PRICES.online.net + ', ' + PRICES.online.vat + ' incl. VAT) is a good fallback.');
       parts.push("Afterwards I'll write up what's relevant to our setup and share the recordings with the team" + (state.session ? ", and I'll run a short session for the team." : '.'));
     } else {
       parts.push('The virtual ticket is ' + PRICES.online.net + ' (' + PRICES.online.vat + ' incl. VAT) with the MQS2026 promo code (-20%) and includes the live stream, live Q&A with speakers and 3 months of recordings.');
@@ -396,7 +394,7 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
     this.setAttribute('aria-pressed', state.cc ? 'true' : 'false');
     renderEmail();
   });
-  ['f-boss', 'f-name', 'f-problem', 'f-question', 'f-travel'].forEach(function (id) { $(id).addEventListener('input', renderEmail); });
+  ['f-boss', 'f-name', 'f-problem', 'f-question'].forEach(function (id) { $(id).addEventListener('input', renderEmail); });
   $('copy').addEventListener('click', function () {
     var e = buildEmail();
     var text = (state.cc ? 'CC: info@codesync.global\n' : '') + 'Subject: ' + e.subject + '\n\n' + e.body;
