@@ -1,0 +1,86 @@
+<!-- Promo popup: MQS2026 code + countdown to the event. Shown once per browser session. -->
+<div id="mqs-promo" class="mqs-promo" hidden>
+  <style>
+    .mqs-promo{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(0,1,1,.72);font-family:'Lato',sans-serif}
+    .mqs-promo[hidden]{display:none}
+    .mqs-promo *{box-sizing:border-box}
+    .mqs-promo .mqs-card{position:relative;width:100%;max-width:480px;background:#1C1830;color:#EEEEEE;border:2px solid #735ABF;border-radius:14px;padding:36px 28px 28px;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+    .mqs-promo .mqs-close{position:absolute;top:10px;right:10px;width:44px;height:44px;border:0;border-radius:10px;background:transparent;color:#EEEEEE;font-size:26px;line-height:1;cursor:pointer}
+    .mqs-promo .mqs-close:hover{background:rgba(238,238,238,.1)}
+    .mqs-promo .mqs-eyebrow{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#80C0FA;margin:0 0 10px;padding:0 40px}
+    .mqs-promo h2{font-family:'Montserrat',sans-serif;font-weight:700;font-size:30px;line-height:1.15;letter-spacing:.02em;color:#FFFFFF;margin:0 0 14px;text-transform:none}
+    .mqs-promo .mqs-divider{width:80px;height:5px;margin:0 auto 18px;background:linear-gradient(to right,#80C0FA 50%,#C8A465 50%)}
+    .mqs-promo p{font-size:16px;line-height:1.5;color:#D8D6E0;margin:0 0 18px;letter-spacing:normal}
+    .mqs-promo .mqs-code{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 auto 22px;flex-wrap:wrap}
+    .mqs-promo .mqs-code span{font-family:'Montserrat',sans-serif;font-weight:700;font-size:24px;letter-spacing:.14em;color:#C8A465;border:2px dashed #C8A465;border-radius:10px;padding:8px 18px}
+    .mqs-promo .mqs-copy{font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;letter-spacing:.04em;background:transparent;color:#EEEEEE;border:1.5px solid #6B6780;border-radius:10px;padding:10px 14px;min-height:44px;cursor:pointer}
+    .mqs-promo .mqs-copy:hover{border-color:#C8A465}
+    .mqs-promo .mqs-timer{display:flex;justify-content:center;gap:10px;margin:0 0 8px}
+    .mqs-promo .mqs-unit{min-width:64px;background:#FFFFFF;color:#10202F;border-radius:8px;padding:8px 6px}
+    .mqs-promo .mqs-unit b{display:block;font-family:'Montserrat',sans-serif;font-size:24px;font-weight:700;line-height:1.1}
+    .mqs-promo .mqs-unit small{display:block;font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#4A4F59}
+    .mqs-promo .mqs-when{font-size:14px;color:#B9B6C6;margin:0 0 22px}
+    .mqs-promo .mqs-cta{display:inline-block;font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;background:#C8A465;color:#10202F;text-decoration:none;padding:15px 30px;border-radius:10px}
+    .mqs-promo .mqs-cta:hover{background:#D6B67D;color:#10202F}
+    .mqs-promo button:focus-visible,.mqs-promo a:focus-visible{outline:3px solid #80C0FA;outline-offset:2px}
+    @media (max-width:420px){.mqs-promo .mqs-card{padding:32px 18px 22px}.mqs-promo h2{font-size:25px}.mqs-promo .mqs-unit{min-width:56px}}
+  </style>
+  <div class="mqs-card" role="dialog" aria-modal="true" aria-labelledby="mqs-promo-title">
+    <button type="button" class="mqs-close" aria-label="Close">&times;</button>
+    <div class="mqs-eyebrow">MQ Summit 2026 · Haarlem &amp; online</div>
+    <h2 id="mqs-promo-title">20% off your ticket</h2>
+    <div class="mqs-divider" aria-hidden="true"></div>
+    <p>Use this promo code at checkout. It works for in-person and virtual tickets.</p>
+    <div class="mqs-code"><span>MQS2026</span><button type="button" class="mqs-copy">Copy code</button></div>
+    <div class="mqs-timer" aria-live="off">
+      <div class="mqs-unit"><b data-u="d">00</b><small>Days</small></div>
+      <div class="mqs-unit"><b data-u="h">00</b><small>Hours</small></div>
+      <div class="mqs-unit"><b data-u="m">00</b><small>Minutes</small></div>
+      <div class="mqs-unit"><b data-u="s">00</b><small>Seconds</small></div>
+    </div>
+    <p class="mqs-when">until MQ Summit starts on 21 October</p>
+    <a class="mqs-cta" href="#tickets">Get your ticket</a>
+  </div>
+  <script>
+  (function () {
+    var START = new Date('2026-10-21T09:00:00+02:00').getTime();
+    var KEY = 'mqs-promo-seen';
+    var root = document.getElementById('mqs-promo');
+    if (!root || Date.now() >= START) return;
+    try { if (sessionStorage.getItem(KEY)) return; } catch (e) {}
+    var lastFocus = null, timer = null;
+    function pad(n) { return (n < 10 ? '0' : '') + n; }
+    function tick() {
+      var d = Math.max(0, START - Date.now());
+      var s = Math.floor(d / 1000);
+      root.querySelector('[data-u=d]').textContent = pad(Math.floor(s / 86400));
+      root.querySelector('[data-u=h]').textContent = pad(Math.floor(s % 86400 / 3600));
+      root.querySelector('[data-u=m]').textContent = pad(Math.floor(s % 3600 / 60));
+      root.querySelector('[data-u=s]').textContent = pad(s % 60);
+    }
+    function close() {
+      root.hidden = true;
+      clearInterval(timer);
+      document.removeEventListener('keydown', onKey);
+      try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+    function onKey(e) { if (e.key === 'Escape') close(); }
+    function open() {
+      lastFocus = document.activeElement;
+      tick(); timer = setInterval(tick, 1000);
+      root.hidden = false;
+      document.addEventListener('keydown', onKey);
+      root.querySelector('.mqs-close').focus();
+    }
+    root.addEventListener('click', function (e) { if (e.target === root) close(); });
+    root.querySelector('.mqs-close').addEventListener('click', close);
+    root.querySelector('.mqs-cta').addEventListener('click', close);
+    root.querySelector('.mqs-copy').addEventListener('click', function () {
+      var b = this;
+      try { navigator.clipboard.writeText('MQS2026').then(function () { b.textContent = 'Copied'; }); } catch (e) {}
+    });
+    setTimeout(open, 2500);
+  })();
+  </script>
+</div>
