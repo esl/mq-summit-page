@@ -344,10 +344,10 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
       var t = PRICES[state.ticket];
       var ticketLabel = state.ticket === 'full' ? 'two-day' : 'one-day';
       parts.push('Cost: ' + t.net + ' (' + t.vat + ' incl. VAT) for the ' + ticketLabel + ' ticket with the MQS2026 promo code (-20%), including lunch and lifetime access to the recordings. The ticket covers the conference itself, so travel and accommodation would need to be arranged separately.' + " If that doesn't fit the budget, the virtual ticket (" + PRICES.online.net + ', ' + PRICES.online.vat + ' incl. VAT) is a good fallback.');
-      parts.push("Afterwards I'll write up what's relevant to our setup and share the recordings with the team" + (state.session ? ", and I'll run a short session for the team." : '.'));
+      parts.push("Afterwards I'll share the knowledge with the team" + (state.session ? ", for example in a short session." : '.'));
     } else {
       parts.push('The virtual ticket is ' + PRICES.online.net + ' (' + PRICES.online.vat + ' incl. VAT) with the MQS2026 promo code (-20%) and includes the live stream, live Q&A with speakers and lifetime access to the recordings.');
-      parts.push("I'll block the time for the sessions, share the recordings with the team and write up what's relevant to our setup" + (state.session ? ", and I'll run a short session for the team." : '.'));
+      parts.push("I'll block the time for the sessions and share the knowledge with the team" + (state.session ? ", for example in a short session." : '.'));
     }
     if (state.cc) parts.push("I've copied the MQ Summit organisers (info@codesync.global), so they can answer any questions about tickets or invoices.");
     parts.push(me ? 'Thanks,\n' + me : 'Thanks');
