@@ -314,11 +314,12 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
     if (names.length > 1) stackText = names.slice(0, -1).join(', ') + ' and ' + names[names.length - 1];
     var person = state.mode === 'person';
     var parts = [];
+    var about = "It's a two-day conference focused only on messaging. Most speakers are engineers who build and run " + stackText + ' in production, along with people from AWS, IBM, Microsoft and Confluent.';
 
     parts.push(boss ? 'Hi ' + boss + ',' : 'Hi,');
     parts.push(person
-      ? "I'd like to attend MQ Summit in person (21–22 October, Haarlem, near Amsterdam). It's a small conference (~350 people) focused only on messaging. Most speakers are engineers who build and run " + stackText + ' in production.'
-      : "I'd like to join MQ Summit online (21–22 October). It's a two-day conference focused only on messaging. Most speakers are engineers who build and run " + stackText + ' in production.');
+      ? "I'd like to attend MQ Summit (21–22 October, Haarlem, near Amsterdam). " + about
+      : "I'd like to join MQ Summit online (21–22 October). " + about);
 
     if (picked.length) {
       var lead = problem
@@ -332,24 +333,25 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
     if (person) {
       var labs = LABS.filter(function (l) { return state.labs.indexOf(l.id) >= 0; });
       var question = val('f-question');
-      var why = ['Why in person rather than online:'];
+      var why = ['I think attending in person would be the best option, because:'];
       why.push(labs.length
-        ? '- Hands-on labs (not streamed): ' + labs.map(function (l) { return l.title; }).join('; ')
-        : "- Hands-on labs, which aren't streamed");
+        ? '- The hands-on labs are only available on site: ' + labs.map(function (l) { return l.title; }).join('; ')
+        : '- The hands-on labs are only available on site, they are not streamed');
       why.push(question
-        ? "- Direct access to the speakers: I'll prepare our questions on " + question + ' in advance'
-        : "- Direct access to the speakers, to ask questions the docs don't answer");
-      why.push('- Comparing approaches with teams running other brokers in production, without anyone selling us one');
+        ? "- I can talk to the speakers directly and bring our questions on " + question
+        : "- I can talk to the speakers directly and ask the questions the docs don't answer");
+      why.push('- I can compare approaches with teams running other brokers in production');
       parts.push(why.join('\n'));
       var t = PRICES[state.ticket];
       var ticketLabel = state.ticket === 'full' ? 'two-day' : 'one-day';
-      parts.push('Cost: ' + t.net + ' (' + t.vat + ' incl. VAT) for the ' + ticketLabel + ' ticket with the MQS2026 promo code (-20%), including lunch and 3 months of exclusive access to the recordings. The ticket covers the conference itself, so travel and accommodation would need to be arranged separately.' + " If that doesn't fit the budget, the virtual ticket (" + PRICES.online.net + ', ' + PRICES.online.vat + ' incl. VAT) is a good fallback.');
-      parts.push("Afterwards I'll share the knowledge with the team" + (state.session ? ", for example in a short session." : '.'));
+      parts.push('The cost is ' + t.net + ' (' + t.vat + ' incl. VAT) for the ' + ticketLabel + ' ticket with the MQS2026 promo code (-20%), including lunch and 3 months of exclusive access to the recordings. The ticket covers the conference itself, so travel and accommodation would need to be arranged separately. If that doesn\'t fit the budget, the virtual ticket (' + PRICES.online.net + ', ' + PRICES.online.vat + ' incl. VAT) is a good fallback.');
+      parts.push("Afterwards I'll share the knowledge with the team" + (state.session ? ', for example in a short session.' : '.'));
     } else {
-      parts.push('The virtual ticket is ' + PRICES.online.net + ' (' + PRICES.online.vat + ' incl. VAT) with the MQS2026 promo code (-20%) and includes the live stream, live Q&A with speakers and 3 months of exclusive access to the recordings.');
-      parts.push("I'll block the time for the sessions and share the knowledge with the team" + (state.session ? ", for example in a short session." : '.'));
+      parts.push('The cost is ' + PRICES.online.net + ' (' + PRICES.online.vat + ' incl. VAT) for the virtual ticket with the MQS2026 promo code (-20%), which includes the live stream, live Q&A with speakers and 3 months of exclusive access to the recordings.');
+      parts.push("I'll block the time for the sessions and share the knowledge with the team" + (state.session ? ', for example in a short session.' : '.'));
     }
     if (state.cc) parts.push("I've copied the MQ Summit organisers (info@codesync.global), so they can answer any questions about tickets or invoices.");
+    parts.push('Please let me know if you have any questions or need more details.');
     parts.push(me ? 'Thanks,\n' + me : 'Thanks');
 
     return {
