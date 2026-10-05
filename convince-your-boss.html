@@ -84,6 +84,7 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
   .cyb .cyb-preview .cyb-head span{font-size:14px;color:#5A5E6B}
   .cyb .cyb-preview .cyb-block{border-top:1px solid #D3D3D3;padding-top:16px}
   .cyb .cyb-preview .cyb-lbl{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#5A5E6B;margin-bottom:6px}
+  .cyb #cc{font-family:'Roboto Mono',monospace;font-size:15px}
   .cyb #subject{font-family:'Roboto Mono',monospace;font-size:15px;font-weight:500}
   .cyb #body{font-family:'Roboto Mono',monospace;font-size:14px;line-height:1.7;white-space:pre-wrap;color:#1F2A36;overflow-wrap:anywhere}
   .cyb .cyb-actions{display:flex;gap:12px;flex-wrap:wrap}
@@ -155,6 +156,7 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
         </div>
       </div>
       <button type="button" class="cyb-check" id="f-session" aria-pressed="false"><span class="cyb-box" aria-hidden="true">✓</span><span>I'll also run a short session for the team afterwards</span></button>
+      <button type="button" class="cyb-check" id="f-cc" aria-pressed="false" style="margin-top:0"><span class="cyb-box" aria-hidden="true">✓</span><span>CC the MQ Summit organisers (info@codesync.global), so they can answer your boss's questions about tickets and invoices</span></button>
     </section>
 
     <section class="cyb-step" aria-labelledby="s3">
@@ -174,6 +176,7 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
 
   <aside class="cyb-preview" aria-labelledby="pv">
     <div class="cyb-head"><h2 id="pv">Your email</h2><span>updates as you type</span></div>
+    <div class="cyb-block" id="cc-row" hidden><div class="cyb-lbl">CC</div><div id="cc">info@codesync.global</div></div>
     <div class="cyb-block"><div class="cyb-lbl">Subject</div><div id="subject"></div></div>
     <div class="cyb-block" id="body" aria-live="polite"></div>
     <div class="cyb-block cyb-actions">
@@ -245,7 +248,7 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
   ];
 
   // ---- State ----
-  var state = { mode: 'online', stack: 'all', picked: [], labs: [], ticket: 'full', session: false };
+  var state = { mode: 'online', stack: 'all', picked: [], labs: [], ticket: 'full', session: false, cc: false };
   var $ = function (id) { return document.getElementById(id); };
 
   function el(tag, cls, text) {
@@ -314,7 +317,8 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
       : '- [pick 2–3 sessions]';
     var intro = 'Most speakers are engineers from the teams that build ' + stackText + '.';
     var why = "Why it's useful for us: we're working on " + problem + ', and I believe these sessions will help me to achieve its goals:\n' + talkLines;
-    var follow = state.session ? ", and I'll run a short session for the team." : '.';
+    var follow = (state.session ? ", and I'll run a short session for the team." : '.')
+      + (state.cc ? "\n\nI've copied the MQ Summit organisers (info@codesync.global), so they can answer any questions about tickets or invoices." : '');
 
     if (state.mode === 'online') {
       return {
@@ -355,7 +359,8 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
     var e = buildEmail();
     $('subject').textContent = e.subject;
     $('body').textContent = e.body;
-    $('mailto').href = 'mailto:?subject=' + encodeURIComponent(e.subject) + '&body=' + encodeURIComponent(e.body);
+    $('cc-row').hidden = !state.cc;
+    $('mailto').href = 'mailto:?' + (state.cc ? 'cc=info%40codesync.global&' : '') + 'subject=' + encodeURIComponent(e.subject) + '&body=' + encodeURIComponent(e.body);
     $('copy').textContent = 'Copy email';
   }
 
@@ -381,10 +386,15 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
     this.setAttribute('aria-pressed', state.session ? 'true' : 'false');
     renderEmail();
   });
+  $('f-cc').addEventListener('click', function () {
+    state.cc = !state.cc;
+    this.setAttribute('aria-pressed', state.cc ? 'true' : 'false');
+    renderEmail();
+  });
   ['f-boss', 'f-name', 'f-problem', 'f-question', 'f-travel'].forEach(function (id) { $(id).addEventListener('input', renderEmail); });
   $('copy').addEventListener('click', function () {
     var e = buildEmail();
-    var text = 'Subject: ' + e.subject + '\n\n' + e.body;
+    var text = (state.cc ? 'CC: info@codesync.global\n' : '') + 'Subject: ' + e.subject + '\n\n' + e.body;
     var ok = function () { $('copy').textContent = 'Copied'; $('copy-err').hidden = true; };
     var fail = function () { $('copy-err').hidden = false; };
     try { navigator.clipboard.writeText(text).then(ok, fail); } catch (err) { fail(); }
