@@ -98,6 +98,7 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
   .cyb .cyb-faq .cyb-grid{gap:32px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
   .cyb .cyb-faq h3{font-family:'Montserrat',sans-serif;font-weight:600;font-size:17px;color:var(--white);margin:0 0 10px}
   .cyb .cyb-faq p{margin:0;font-size:16px;line-height:1.6;color:#E2DCEA}
+  .cyb #body a{color:#1A5FA8;text-decoration:underline}
 </style>
 
 <body>
@@ -247,6 +248,11 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
     { id: 'l5', title: 'End-to-End Encryption Standard', speaker: 'Matt Pavlovich (HYTE), Rob Parker (IBM MQ)' }
   ];
 
+  // Links to the session pages, used in the email
+  var SITE = 'https://mqsummit.com';
+  var URLS = {"r1": "/talks/Bringing-infinite-streaming-to-rabbitmq/", "r2": "/talks/bringing-jms-to-rabbitmq/", "r3": "/talks/the-return-of-the-message/", "k1": "/talks/controlling-the-norwegian-power-grid/", "k2": "/talks/from-api-polling-to-event-streaming/", "k3": "/talks/queues-vs-logs/", "k4": "/talks/from-queues-to-logs-and-back-again/", "i1": "/talks/resilient-messaging/", "i2": "/talks/the-quantum-threat-is-here/", "n1": "/talks/pub-sub-as-an-rpc-backbone/", "n2": "/talks/when-the-networkstops-behaving-messaging-lessons-from-autonomous-systems-at-sea/", "n3": "/talks/the-future-of-mqtt/", "o1": "/talks/the-hidden-operational-cost-of-messaging-platforms/", "o2": "/talks/panel-future-of-open-source-messaging-ecosystem/", "a1": "/talks/5%20Capabilities-your-broker-needs-for-agentic-workloads/", "a2": "/talks/mcp-over-amqp/", "l1": "/talks/get-hands-on-with-the-ibm-mq-ai-agent/", "l2": "/talks/introducing-json-structure/", "l3": "/talks/hands-on-with-agent-mesh/", "l4": "/talks/introduction-to-rabbitmq/", "l5": "/talks/end-to-end-encryption-standard/"};
+  TALKS.concat(LABS).forEach(function (t) { if (URLS[t.id]) t.url = SITE + URLS[t.id]; });
+
   // ---- State ----
   var state = { mode: 'online', stack: 'all', picked: [], labs: [], ticket: 'full', session: false, cc: false };
   var $ = function (id) { return document.getElementById(id); };
@@ -299,6 +305,12 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
 
   function val(id) { return ($(id).value || '').trim().replace(/\.$/, ''); }
 
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function link(item) { return item.url ? '<a href="' + esc(item.url) + '">' + esc(item.title) + '</a>' : esc(item.title); }
+  function talkPlain(t) { return '- ' + t.title + ' (' + t.speaker + '): ' + t.blurb + (t.url ? '\n  ' + t.url : ''); }
+  function talkHtml(t) { return '&ndash; ' + link(t) + ' (' + esc(t.speaker) + '): ' + esc(t.blurb); }
+  function para(p) { return esc(p).replace(/\n/g, '<br>'); }
+
   function buildEmail() {
     var boss = val('f-boss');
     var me = val('f-name');
@@ -313,11 +325,12 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
     if (names.length === 1) stackText = names[0];
     if (names.length > 1) stackText = names.slice(0, -1).join(', ') + ' and ' + names[names.length - 1];
     var person = state.mode === 'person';
-    var parts = [];
+    var parts = [], hparts = [];
+    function add(p, h) { parts.push(p); hparts.push(h || para(p)); }
     var about = "It's a two-day conference focused only on messaging. Most speakers are engineers who build and run " + stackText + ' in production, along with people from AWS, IBM, Microsoft and Confluent.';
 
-    parts.push(boss ? 'Hi ' + boss + ',' : 'Hi,');
-    parts.push(person
+    add(boss ? 'Hi ' + boss + ',' : 'Hi,');
+    add(person
       ? "I'd like to attend MQ Summit (21–22 October, Haarlem, near Amsterdam). " + about
       : "I'd like to join MQ Summit online (21–22 October). " + about);
 
@@ -325,45 +338,49 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
       var lead = problem
         ? "We're working on " + problem + ', and I believe these sessions will help me to achieve its goals:'
         : 'I believe these sessions will be especially useful for our work:';
-      parts.push(lead + '\n' + picked.map(function (t) { return '- ' + t.title + ' (' + t.speaker + '): ' + t.blurb; }).join('\n'));
+      add(lead + '\n' + picked.map(talkPlain).join('\n'), esc(lead) + '<br>' + picked.map(talkHtml).join('<br>'));
     } else if (problem) {
-      parts.push("We're working on " + problem + ', and I believe the conference will help me to achieve its goals.');
+      add("We're working on " + problem + ', and I believe the conference will help me to achieve its goals.');
     }
 
     if (person) {
       var labs = LABS.filter(function (l) { return state.labs.indexOf(l.id) >= 0; });
       var question = val('f-question');
-      var why = ['I think attending in person would be the best option, because:'];
-      why.push(labs.length
-        ? '- The hands-on labs are only available on site: ' + labs.map(function (l) { return l.title; }).join('; ')
-        : '- The hands-on labs are only available on site, they are not streamed');
-      why.push(question
-        ? "- I can talk to the speakers directly and bring our questions on " + question
-        : "- I can talk to the speakers directly and ask the questions the docs don't answer");
-      why.push('- I can compare approaches with teams running other brokers in production');
-      parts.push(why.join('\n'));
+      var intro = 'I think attending in person would be the best option, because:';
+      var labP = labs.length
+        ? '- The hands-on labs are only available on site: ' + labs.map(function (l) { return l.title + (l.url ? ' (' + l.url + ')' : ''); }).join('; ')
+        : '- The hands-on labs are only available on site, they are not streamed';
+      var labH = labs.length
+        ? '&ndash; The hands-on labs are only available on site: ' + labs.map(link).join('; ')
+        : '&ndash; The hands-on labs are only available on site, they are not streamed';
+      var q = question
+        ? '- I can talk to the speakers directly and bring our questions on ' + question
+        : "- I can talk to the speakers directly and ask the questions the docs don't answer";
+      var cmp = '- I can compare approaches with teams running other brokers in production';
+      add([intro, labP, q, cmp].join('\n'), [esc(intro), labH, '&ndash; ' + esc(q.slice(2)), '&ndash; ' + esc(cmp.slice(2))].join('<br>'));
       var t = PRICES[state.ticket];
       var ticketLabel = state.ticket === 'full' ? 'two-day' : 'one-day';
-      parts.push('The cost is ' + t.net + ' (' + t.vat + ' incl. VAT) for the ' + ticketLabel + ' ticket with the MQS2026 promo code (-20%), including lunch and 3 months of exclusive access to the recordings. The ticket covers the conference itself, so travel and accommodation would need to be arranged separately. If that doesn\'t fit the budget, the virtual ticket (' + PRICES.online.net + ', ' + PRICES.online.vat + ' incl. VAT) is a good fallback.');
-      parts.push("Afterwards I'll share the knowledge with the team" + (state.session ? ', for example in a short session.' : '.'));
+      add('The cost is ' + t.net + ' (' + t.vat + ' incl. VAT) for the ' + ticketLabel + ' ticket with the MQS2026 promo code (-20%), including lunch and 3 months of exclusive access to the recordings. The ticket covers the conference itself, so travel and accommodation would need to be arranged separately. If that doesn\'t fit the budget, the virtual ticket (' + PRICES.online.net + ', ' + PRICES.online.vat + ' incl. VAT) is a good fallback.');
+      add("Afterwards I'll share the knowledge with the team" + (state.session ? ', for example in a short session.' : '.'));
     } else {
-      parts.push('The cost is ' + PRICES.online.net + ' (' + PRICES.online.vat + ' incl. VAT) for the virtual ticket with the MQS2026 promo code (-20%), which includes the live stream, live Q&A with speakers and 3 months of exclusive access to the recordings.');
-      parts.push("I'll block the time for the sessions and share the knowledge with the team" + (state.session ? ', for example in a short session.' : '.'));
+      add('The cost is ' + PRICES.online.net + ' (' + PRICES.online.vat + ' incl. VAT) for the virtual ticket with the MQS2026 promo code (-20%), which includes the live stream, live Q&A with speakers and 3 months of exclusive access to the recordings.');
+      add("I'll block the time for the sessions and share the knowledge with the team" + (state.session ? ', for example in a short session.' : '.'));
     }
-    if (state.cc) parts.push("I've copied the MQ Summit organisers (info@codesync.global), so they can answer any questions about tickets or invoices.");
-    parts.push('Please let me know if you have any questions or need more details.');
-    parts.push(me ? 'Thanks,\n' + me : 'Thanks');
+    if (state.cc) add("I've copied the MQ Summit organisers (info@codesync.global), so they can answer any questions about tickets or invoices.");
+    add('Please let me know if you have any questions or need more details.');
+    add(me ? 'Thanks,\n' + me : 'Thanks');
 
     return {
       subject: person ? 'Request: MQ Summit in Haarlem, 21–22 October' : 'Request: MQ Summit online, 21–22 October',
-      body: parts.join('\n\n')
+      body: parts.join('\n\n'),
+      html: hparts.join('<br><br>')
     };
   }
 
   function renderEmail() {
     var e = buildEmail();
     $('subject').textContent = e.subject;
-    $('body').textContent = e.body;
+    $('body').innerHTML = e.html;
     $('cc-row').hidden = !state.cc;
     $('mailto').href = 'mailto:?' + (state.cc ? 'cc=info%40codesync.global&' : '') + 'subject=' + encodeURIComponent(e.subject) + '&body=' + encodeURIComponent(e.body);
     $('copy').textContent = 'Copy email';
@@ -400,9 +417,15 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
   $('copy').addEventListener('click', function () {
     var e = buildEmail();
     var text = (state.cc ? 'CC: info@codesync.global\n' : '') + 'Subject: ' + e.subject + '\n\n' + e.body;
+    var html = '<div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.5">' + (state.cc ? '<p>CC: info@codesync.global</p>' : '') + '<p>Subject: ' + esc(e.subject) + '</p><p>' + e.html.split('<br><br>').join('</p><p>') + '</p></div>';
     var ok = function () { $('copy').textContent = 'Copied'; $('copy-err').hidden = true; };
     var fail = function () { $('copy-err').hidden = false; };
-    try { navigator.clipboard.writeText(text).then(ok, fail); } catch (err) { fail(); }
+    var plainOnly = function () { navigator.clipboard.writeText(text).then(ok, fail); };
+    try {
+      if (window.ClipboardItem && navigator.clipboard.write) {
+        navigator.clipboard.write([new ClipboardItem({ 'text/plain': new Blob([text], { type: 'text/plain' }), 'text/html': new Blob([html], { type: 'text/html' }) })]).then(ok, plainOnly);
+      } else { plainOnly(); }
+    } catch (err) { fail(); }
   });
 
   // Optional deep link: /convince-your-boss/?mode=person
