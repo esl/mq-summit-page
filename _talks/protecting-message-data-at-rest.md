@@ -13,5 +13,6 @@ In this talk join Rob Parker, Security Architect for IBM MQ, as he explains: wha
 
 **Key takeaways:** 
 * Understanding the Quantum Threat and why it matters to enterprise messaging
+
 **Target Audience:** 
 * Administrators or application developers concerned about
