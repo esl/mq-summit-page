@@ -120,26 +120,27 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
       <div class="cyb-grid" style="margin-top:18px">
         <button type="button" class="cyb-card cyb-mode" data-mode="online" aria-pressed="true">
           <span class="cyb-name">Online</span>
-          <span class="cyb-price">€63.20 <small>(€76.47 incl. VAT) with MQS2026 promo code (-20%)</small></span>
+          <span class="cyb-price">€83.40 <small>(€100.08 incl. VAT) with MQS2026 promo code (-20%)</small></span>
           <span class="cyb-what">Live stream of the talks, live Q&amp;A, online networking and 3 months of recordings. The easiest yes for any budget.</span>
         </button>
         <button type="button" class="cyb-card cyb-mode" data-mode="person" aria-pressed="false">
           <span class="cyb-name">In person</span>
-          <span class="cyb-price">€880 · one day €520 <small>(€1,064.80 / €629.20 incl. VAT) with MQS2026 promo code (-20%)</small></span>
+          <span class="cyb-price">€916.60 · one day €544.83 <small>(€1,109.09 / €659.24 incl. VAT) with MQS2026 promo code (-20%)</small></span>
           <span class="cyb-what">Everything online, plus the hands-on labs (not streamed), the Code BEAM tracks, lunch and the reception on 21 October.</span>
         </button>
       </div>
     </section>
 
     <section class="cyb-step" aria-labelledby="s2">
-      <h2 id="s2" style="margin-bottom:18px"><span>02</span>Add your context</h2>
+      <h2 id="s2"><span>02</span>Add your context</h2>
+      <p class="cyb-hint">Optional. Anything you leave empty is simply left out of the email.</p>
       <div class="cyb-grid">
         <div class="cyb-field"><label for="f-boss">Your boss's first name</label><input id="f-boss" type="text" placeholder="Anna" autocomplete="off"></div>
         <div class="cyb-field"><label for="f-name">Your name</label><input id="f-name" type="text" placeholder="Sam" autocomplete="name"></div>
       </div>
       <div class="cyb-field cyb-mt">
         <label for="f-problem">What are you working on right now?</label>
-        <span class="cyb-sub" id="f-problem-hint">Finish the sentence "we're working on…". This one line is what makes the email convincing.</span>
+        <span class="cyb-sub" id="f-problem-hint">Finish the sentence "we're working on…". One line about your project makes the email much more convincing.</span>
         <textarea id="f-problem" rows="2" aria-describedby="f-problem-hint" placeholder="moving our order events from RabbitMQ classic queues to quorum queues"></textarea>
       </div>
       <div class="cyb-person-only" hidden>
@@ -148,8 +149,8 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
           <div class="cyb-field" role="group" aria-label="Ticket">
             <span class="cyb-label">Ticket</span>
             <div class="cyb-pills" style="margin:0">
-              <button type="button" class="cyb-pill" data-ticket="full" aria-pressed="true">Two days · €880 (€1,064.80 incl. VAT)</button>
-              <button type="button" class="cyb-pill" data-ticket="day" aria-pressed="false">One day · €520 (€629.20 incl. VAT)</button>
+              <button type="button" class="cyb-pill" data-ticket="full" aria-pressed="true">Two days · €916.60 (€1,109.09 incl. VAT)</button>
+              <button type="button" class="cyb-pill" data-ticket="day" aria-pressed="false">One day · €544.83 (€659.24 incl. VAT)</button>
             </div>
           </div>
           <div class="cyb-field"><label for="f-travel">Travel + hotel estimate (€)</label><input id="f-travel" type="text" inputmode="numeric" placeholder="450"></div>
@@ -184,7 +185,7 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
       <a class="cyb-btn cyb-btn-ghost" id="mailto" href="mailto:">Open in email app</a>
     </div>
     <p class="cyb-err" id="copy-err" hidden>Your browser blocked copying. Select the text above and copy it manually.</p>
-    <p class="cyb-note">Prices include the MQS2026 promo code (-20%) and 21% Dutch VAT. Eventbrite adds a small booking fee at checkout.</p>
+    <p class="cyb-note">Prices are the Eventbrite prices with the MQS2026 promo code (-20%), including the booking fee. Amounts in brackets include 21% Dutch VAT.</p>
   </aside>
 </main>
 
@@ -208,9 +209,9 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
 (function () {
   // ---- Content: edit here when the programme changes ----
   var PRICES = {
-    online: { net: '€63.20', vat: '€76.47' },
-    full:   { net: '€880', vat: '€1,064.80' },
-    day:    { net: '€520', vat: '€629.20' }
+    online: { net: '€83.40', vat: '€100.08' },
+    full:   { net: '€916.60', vat: '€1,109.09' },
+    day:    { net: '€544.83', vat: '€659.24' }
   };
   var STACKS = [
     { id: 'all', label: 'All' },
@@ -300,9 +301,9 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
   function val(id) { return ($(id).value || '').trim().replace(/\.$/, ''); }
 
   function buildEmail() {
-    var boss = val('f-boss') || '{Name}';
-    var me = val('f-name') || '{Your name}';
-    var problem = val('f-problem') || '[what we are working on]';
+    var boss = val('f-boss');
+    var me = val('f-name');
+    var problem = val('f-problem');
     var picked = TALKS.filter(function (t) { return state.picked.indexOf(t.id) >= 0; });
     var names = [];
     picked.forEach(function (t) {
@@ -312,46 +313,50 @@ description: Need sign-off to attend MQ Summit? Pick online or in person, choose
     var stackText = 'RabbitMQ, Kafka, IBM MQ and NATS';
     if (names.length === 1) stackText = names[0];
     if (names.length > 1) stackText = names.slice(0, -1).join(', ') + ' and ' + names[names.length - 1];
-    var talkLines = picked.length
-      ? picked.map(function (t) { return '- ' + t.title + ' (' + t.speaker + '): ' + t.blurb; }).join('\n')
-      : '- [pick 2–3 sessions]';
-    var intro = 'Most speakers are engineers from the teams that build ' + stackText + '.';
-    var why = "Why it's useful for us: we're working on " + problem + ', and I believe these sessions will help me to achieve its goals:\n' + talkLines;
-    var follow = (state.session ? ", and I'll run a short session for the team." : '.')
-      + (state.cc ? "\n\nI've copied the MQ Summit organisers (info@codesync.global), so they can answer any questions about tickets or invoices." : '');
+    var person = state.mode === 'person';
+    var parts = [];
 
-    if (state.mode === 'online') {
-      return {
-        subject: 'MQ Summit online: ' + PRICES.online.net + ', 21–22 Oct',
-        body: 'Hi ' + boss + ',\n\n'
-          + "I'd like to join MQ Summit online (21–22 October). It's a two-day conference focused only on messaging. " + intro + '\n\n'
-          + 'The virtual ticket is ' + PRICES.online.net + ' (' + PRICES.online.vat + ' incl. VAT) with the MQS2026 promo code (-20%) and includes the live stream, live Q&A with speakers and 3 months of recordings.\n\n'
-          + why + '\n\n'
-          + "I'll block the time for these sessions, share the recordings with the team and write up what's relevant to our setup" + follow + '\n\n'
-          + 'Thanks,\n' + me
-      };
+    parts.push(boss ? 'Hi ' + boss + ',' : 'Hi,');
+    parts.push(person
+      ? "I'd like to attend MQ Summit in person (21–22 October, Haarlem, near Amsterdam). It's a small conference (~350 people) focused only on messaging. Most speakers are engineers from the teams that build " + stackText + '.'
+      : "I'd like to join MQ Summit online (21–22 October). It's a two-day conference focused only on messaging. Most speakers are engineers from the teams that build " + stackText + '.');
+
+    if (picked.length) {
+      var lead = problem
+        ? "We're working on " + problem + ', and I believe these sessions will help me to achieve its goals:'
+        : 'I believe these sessions will be especially useful for our work:';
+      parts.push(lead + '\n' + picked.map(function (t) { return '- ' + t.title + ' (' + t.speaker + '): ' + t.blurb; }).join('\n'));
+    } else if (problem) {
+      parts.push("We're working on " + problem + ', and I believe the conference will help me to achieve its goals.');
     }
-    var t = PRICES[state.ticket];
-    var ticketLabel = state.ticket === 'full' ? 'two-day' : 'one-day';
-    var travelNum = ($('f-travel').value || '').replace(/[^0-9.,]/g, '');
-    var travel = travelNum ? '€' + travelNum : '€[estimate]';
-    var question = val('f-question') || '[our open question]';
-    var labs = LABS.filter(function (l) { return state.labs.indexOf(l.id) >= 0; });
-    var labLine = labs.length
-      ? '- Hands-on labs (not streamed): ' + labs.map(function (l) { return l.title; }).join('; ') + ', worked through with the people who built them'
-      : "- Hands-on labs, which aren't streamed, worked through with the people who built the tools";
+
+    if (person) {
+      var labs = LABS.filter(function (l) { return state.labs.indexOf(l.id) >= 0; });
+      var question = val('f-question');
+      var why = ['Why in person rather than online:'];
+      why.push(labs.length
+        ? '- Hands-on labs (not streamed): ' + labs.map(function (l) { return l.title; }).join('; ')
+        : "- Hands-on labs, which aren't streamed");
+      why.push(question
+        ? "- Direct access to the speakers: I'll prepare our questions on " + question + ' in advance'
+        : "- Direct access to the speakers, to ask questions the docs don't answer");
+      why.push('- Comparing approaches with teams running other brokers in production, without anyone selling us one');
+      parts.push(why.join('\n'));
+      var t = PRICES[state.ticket];
+      var ticketLabel = state.ticket === 'full' ? 'two-day' : 'one-day';
+      var travelNum = ($('f-travel').value || '').replace(/[^0-9.,]/g, '');
+      parts.push('Cost: ' + t.net + ' (' + t.vat + ' incl. VAT) for the ' + ticketLabel + ' ticket with the MQS2026 promo code (-20%), including lunch and recordings, plus ' + (travelNum ? 'about €' + travelNum + ' for ' : '') + "travel and hotel. If that doesn't fit the budget, the virtual ticket (" + PRICES.online.net + ', ' + PRICES.online.vat + ' incl. VAT) is a good fallback.');
+      parts.push("Afterwards I'll write up what's relevant to our setup and share the recordings with the team" + (state.session ? ", and I'll run a short session for the team." : '.'));
+    } else {
+      parts.push('The virtual ticket is ' + PRICES.online.net + ' (' + PRICES.online.vat + ' incl. VAT) with the MQS2026 promo code (-20%) and includes the live stream, live Q&A with speakers and 3 months of recordings.');
+      parts.push("I'll block the time for the sessions, share the recordings with the team and write up what's relevant to our setup" + (state.session ? ", and I'll run a short session for the team." : '.'));
+    }
+    if (state.cc) parts.push("I've copied the MQ Summit organisers (info@codesync.global), so they can answer any questions about tickets or invoices.");
+    parts.push(me ? 'Thanks,\n' + me : 'Thanks');
+
     return {
-      subject: 'MQ Summit in Haarlem, 21–22 Oct: ' + t.net + ' + travel',
-      body: 'Hi ' + boss + ',\n\n'
-        + "I'd like to attend MQ Summit in person (21–22 October, Haarlem, near Amsterdam). It's a small conference (~350 people) focused only on messaging. " + intro + '\n\n'
-        + why + '\n\n'
-        + 'Why in person rather than online:\n'
-        + labLine + '\n'
-        + "- Direct access to the speakers: I'll prepare our questions on " + question + ' in advance\n'
-        + '- Comparing approaches with teams running other brokers in production, without anyone selling us one\n\n'
-        + 'Cost: ' + t.net + ' (' + t.vat + ' incl. VAT) with the MQS2026 promo code (-20%) for the ' + ticketLabel + ' ticket, which includes lunch and recordings, plus about ' + travel + " for travel and hotel. If that doesn't fit the budget, the virtual ticket (" + PRICES.online.net + ', ' + PRICES.online.vat + ' incl. VAT) is a good fallback.\n\n'
-        + "Afterwards I'll write up what's relevant to our setup and share the recordings with the team" + follow + '\n\n'
-        + 'Thanks,\n' + me
+      subject: person ? 'Request: MQ Summit in Haarlem, 21–22 October' : 'Request: MQ Summit online, 21–22 October',
+      body: parts.join('\n\n')
     };
   }
 
