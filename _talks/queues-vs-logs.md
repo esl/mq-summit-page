@@ -6,6 +6,7 @@ level: Intermediate
 title: "Queues vs. Logs: Choosing the Right Backbone for Event-Driven Architectures"
 speakers:
 - _participants/ali-alemi.md
+- _participants/edward-berezitsky.md
 
 ---
 Not every event-driven system needs Kafka, and not every message needs a queue. In this session, we break down the architectural decision between MQ message brokers and event streaming platforms (Apache Kafka). You'll learn when point-to-point routing, dead-letter queues, and transactional messaging make queues the right choice — and when append-only logs, consumer groups, and replay capabilities demand a streaming platform. We'll walk through real-world patterns including command vs. event separation, hybrid topologies, and migration paths from legacy brokers to streaming. You'll leave with a decision framework to match your workload characteristics — ordering, throughput, retention, and coupling — to the right technology.
