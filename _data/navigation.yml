@@ -29,6 +29,8 @@
   link: "schedule"
 - name: Speakers
   link: "speakers"
+- name: Lightning Talks
+  link: "lightning-talks"
 #- name: Trainers
 #  link: "trainers"
 #- name: Training
