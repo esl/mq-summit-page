@@ -3,6 +3,7 @@
 <hr/>
   <div class="items-container">
     {% for item in site.tickets %}
+    {% unless item.title contains "In-person" %}
     <div class="ticket-item">
       <div>
         <h3>{{ item.title }}</h3>
@@ -33,6 +34,7 @@
         {% endif %}
       </div>
     </div>
+    {% endunless %}
     {% endfor %}
   </div>
 </div>
