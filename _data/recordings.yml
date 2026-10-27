@@ -1,0 +1,8 @@
+# Recordings shown on the homepage.
+# 2026: add the videos here once they are published (the section stays hidden while the list is empty).
+# Example:
+#   - id: YOUTUBE_VIDEO_ID
+#     title: Talk title
+#     speaker: Speaker name
+y2026: []
+y2026_playlist:

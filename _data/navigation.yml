@@ -2,8 +2,10 @@
   #  link: "cover"
 #- name: Welcome
 #  link: "welcome"
-- name: TICKETS
-  link: "tickets"
+- name: "2027"
+  link: "edition-2027"
+#- name: TICKETS
+#  link: "tickets"
 - name: About
   link:
   children:
@@ -29,8 +31,8 @@
   link: "schedule"
 - name: Speakers
   link: "speakers"
-- name: Lightning Talks
-  link: "lightning-talks"
+#- name: Lightning Talks
+#  link: "lightning-talks"
 #- name: Trainers
 #  link: "trainers"
 #- name: Training
@@ -55,15 +57,15 @@
   #  link: "shop"
   #- name: Blog
   #  link: "blog"
-- name: Accommodation
-  link: "accommodation"
+#- name: Accommodation
+#  link: "accommodation"
 - name: Sponsors
   link: "sponsors"
 - name: Join us
   link:
   children:
   - name: Sponsor!
-    link: "banner-1"
+    link: "sponsor-2027"
   - name: Volunteer
     link: "volunteer"
   - name: Stay informed
