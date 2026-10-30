@@ -1,443 +1,191 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MQ Summit 2026 - Presentations & Slides</title>
-  <style>
-    :root {
-      --bg: #0b0d13;
-      --card-bg: #151922;
-      --card-hover: #1c2230;
-      --border: #232936;
-      --text: #f3f4f6;
-      --muted: #9ca3af;
-      --accent: #6366f1;
-      --accent-hover: #4f46e5;
-      --badge-bg: rgba(99, 102, 241, 0.12);
+---
+layout: default
+title: Presentations from 2026 | MQ Summit
+---
+
+<style>
+  .mq-presentations-page {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 60px 20px 120px;
+    min-height: 85vh;
+    font-family: inherit;
+  }
+  .mq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .mq-header {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+  .mq-title {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0;
+  }
+  .mq-accent-bar {
+    width: 54px;
+    height: 3px;
+    margin: 16px auto 20px;
+    background: linear-gradient(to right, #2563eb 0%, #2563eb 50%, #e0ba7c 50%, #e0ba7c 100%);
+    border-radius: 3px;
+  }
+  .mq-desc {
+    color: #9ca3af;
+    font-size: 15px;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+  .mq-search-box {
+    margin: 35px auto 55px;
+    max-width: 460px;
+  }
+  .mq-search-input {
+    width: 100%;
+    background-color: #0b0d12;
+    border: 1px solid #1f242f;
+    border-radius: 9999px;
+    padding: 12px 24px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    text-align: center;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+  }
+  .mq-search-input:focus {
+    border-color: #e0ba7c;
+  }
+  .mq-search-input::placeholder {
+    color: #64748b;
+  }
+  .mq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 22px;
+  }
+  .mq-card {
+    background: #0d0f14;
+    border: 1px solid #1a1e28;
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .mq-card:hover {
+    border-color: #2b3345;
+    transform: translateY(-2px);
+  }
+  .mq-speaker {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+  }
+  .mq-role {
+    font-size: 12px;
+    color: #e0ba7c;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+    line-height: 1.4;
+  }
+  .mq-talk {
+    font-size: 15px;
+    color: #e2e8f0;
+    font-weight: 500;
+    line-height: 1.45;
+    margin-bottom: 24px;
+  }
+  .mq-btn-pdf {
+    display: block;
+    text-align: center;
+    background-color: #e0ba7c;
+    color: #000000;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+  .mq-btn-pdf:hover {
+    opacity: 0.9;
+  }
+  .mq-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #64748b;
+    padding: 40px;
+    display: none;
+  }
+  @media (max-width: 640px) {
+    .mq-grid {
+      grid-template-columns: 1fr;
     }
+  }
+</style>
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+<div class="mq-presentations-page">
+  <div class="mq-container">
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-      padding: 0 20px 80px;
-    }
+    <div class="mq-header">
+      <h1 class="mq-title">PRESENTATIONS FROM 2026</h1>
+      <div class="mq-accent-bar"></div>
+      <p class="mq-desc">Download session slides directly from the MQ Summit speakers.</p>
 
-    header {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 30px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .back-btn {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.95rem;
-      border: 1px solid var(--border);
-      padding: 8px 18px;
-      border-radius: 6px;
-      transition: all 0.2s ease;
-    }
-
-    .back-btn:hover {
-      color: #fff;
-      border-color: var(--accent);
-      background-color: rgba(99, 102, 241, 0.08);
-    }
-
-    .brand {
-      font-weight: 700;
-      letter-spacing: 1px;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .hero {
-      max-width: 800px;
-      margin: 50px auto 35px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 2.6rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      margin-bottom: 14px;
-    }
-
-    .hero p {
-      color: var(--muted);
-      font-size: 1.15rem;
-      margin-bottom: 30px;
-    }
-
-    .search-wrapper {
-      max-width: 500px;
-      margin: 0 auto 50px;
-    }
-
-    .search-input {
-      width: 100%;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 14px 18px;
-      font-size: 1rem;
-      color: #fff;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-
-    .search-input:focus {
-      border-color: var(--accent);
-    }
-
-    .search-input::placeholder {
-      color: #6b7280;
-    }
-
-    .grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 26px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-
-    .card:hover {
-      border-color: #3b4254;
-      transform: translateY(-2px);
-    }
-
-    .card-top { margin-bottom: 24px; }
-
-    .speaker-name {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 4px;
-    }
-
-    .speaker-role {
-      font-size: 0.85rem;
-      color: #818cf8;
-      margin-bottom: 14px;
-      line-height: 1.4;
-    }
-
-    .talk-title {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: #e5e7eb;
-      line-height: 1.45;
-    }
-
-    .btn-download {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      width: 100%;
-      background: #1e2433;
-      color: #ffffff;
-      border: 1px solid var(--border);
-      padding: 12px 16px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.92rem;
-      transition: all 0.2s ease;
-    }
-
-    .btn-download:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-    }
-
-    .empty-state {
-      grid-column: 1 / -1;
-      text-align: center;
-      color: var(--muted);
-      padding: 40px;
-      display: none;
-    }
-
-    @media (max-width: 640px) {
-      .grid { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 2rem; }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <a href="index.html" class="back-btn">&larr; Back to MQ Summit</a>
-    <span class="brand">MQ SUMMIT 2026</span>
-  </header>
-
-  <div class="hero">
-    <h1>Speaker Presentations & Slides</h1>
-    <p>Browse and download slide decks from the sessions in Haarlem.</p>
-
-    <div class="search-wrapper">
-      <input type="text" id="searchInput" class="search-input" placeholder="Search by speaker, topic or keyword...">
-    </div>
-  </div>
-
-  <main class="grid" id="presentationsGrid">
-
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">Adi Polak</h2>
-        <div class="speaker-role">Data & AI @ Confluent</div>
-        <p class="talk-title">Keynote: When Software Starts Talking to Itself</p>
+      <div class="mq-search-box">
+        <input type="text" id="liveSearch" class="mq-search-input" placeholder="Search by speaker, topic or company...">
       </div>
-      <a href="assets/slides/adi-polak.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
     </div>
 
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">Stefan Moser, Matt Leming & Clemens Vasters</h2>
-        <div class="speaker-role">AWS / IBM MQ / Microsoft</div>
-        <p class="talk-title">Powering Asynchronous AI Agent Communication with MCP over AMQP</p>
+    <div class="mq-grid" id="cardsGrid">
+
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">Adi Polak</div>
+          <div class="mq-role">Data &amp; AI @ Confluent</div>
+          <div class="mq-talk">Keynote: When Software Starts Talking to Itself</div>
+        </div>
+        <a href="assets/slides/adi-polak.pdf" target="_blank" class="mq-btn-pdf">Download Slides (PDF)</a>
       </div>
-      <a href="assets/slides/mcp-over-amqp.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
 
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">Johan Rhodin & Lois Soto López</h2>
-        <div class="speaker-role">84codes</div>
-        <p class="talk-title">Introduction to RabbitMQ: What Is a Message Queue and How Does It Work? (Lab)</p>
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">Stefan Moser, Matt Leming &amp; Clemens Vasters</div>
+          <div class="mq-role">AWS / IBM MQ / Microsoft</div>
+          <div class="mq-talk">Powering Asynchronous AI Agent Communication with MCP over AMQP</div>
+        </div>
+        <a href="assets/slides/mcp-over-amqp.pdf" target="_blank" class="mq-btn-pdf">Download Slides (PDF)</a>
       </div>
-      <a href="assets/slides/intro-to-rabbitmq.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
 
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">Richard Coppen & Simon Johnson</h2>
-        <div class="speaker-role">IBM MQ / HiveMQ (OASIS MQTT)</div>
-        <p class="talk-title">The Future of MQTT - An Update from the Technical Committee</p>
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">Johan Rhodin &amp; Lois Soto López</div>
+          <div class="mq-role">84codes</div>
+          <div class="mq-talk">Introduction to RabbitMQ: What Is a Message Queue and How Does It Work? (Lab)</div>
+        </div>
+        <a href="assets/slides/intro-to-rabbitmq.pdf" target="_blank" class="mq-btn-pdf">Download Slides (PDF)</a>
       </div>
-      <a href="assets/slides/future-of-mqtt.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
 
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">Vignesh Selvam</h2>
-        <div class="speaker-role">Principal Product Manager - Amazon MQ</div>
-        <p class="talk-title">5 Capabilities Your Broker Needs for Agentic Workloads</p>
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">Richard Coppen &amp; Simon Johnson</div>
+          <div class="mq-role">IBM MQ / HiveMQ</div>
+          <div class="mq-talk">The Future of MQTT - An Update from the Technical Committee</div>
+        </div>
+        <a href="assets/slides/future-of-mqtt.pdf" target="_blank" class="mq-btn-pdf">Download Slides (PDF)</a>
       </div>
-      <a href="assets/slides/vignesh-selvam.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
 
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">Michael Davis</h2>
-        <div class="speaker-role">Open Source RabbitMQ @ Amazon MQ</div>
-        <p class="talk-title">Bringing Infinite Streaming to RabbitMQ</p>
-      </div>
-      <a href="assets/slides/michael-davis.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
-
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">Richard Coppen, Jon Rumsey & Chris Leonard</h2>
-        <div class="speaker-role">IBM MQ</div>
-        <p class="talk-title">Get Hands-on with the IBM MQ AI Agent (Lab)</p>
-      </div>
-      <a href="assets/slides/ibm-mq-ai-agent.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
-
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">Lovisa Johansson</h2>
-        <div class="speaker-role">CMO @ 84codes, RabbitMQ expert</div>
-        <p class="talk-title">The Return of the Message: Why the AI Boom Needs Message Queues to Survive</p>
-      </div>
-      <a href="assets/slides/lovisa-johansson.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
-
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">Ali Alemi & Edward Berezitsky</h2>
-        <div class="speaker-role">AWS Streaming Specialists</div>
-        <p class="talk-title">Queues vs. Logs: Choosing the Right Backbone for Event-Driven Architectures</p>
-      </div>
-      <a href="assets/slides/queues-vs-logs.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
-
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">Viktor Gamov</h2>
-        <div class="speaker-role">Principal Developer Advocate @ Confluent</div>
-        <p class="talk-title">From Queues to Logs and Back Again</p>
-      </div>
-      <a href="assets/slides/viktor-gamov.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
-
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">Matt Pavlovich & Rob Parker</h2>
-        <div class="speaker-role">HYTE / IBM MQ</div>
-        <p class="talk-title">End-to-End Encryption Standard (Lab)</p>
-      </div>
-      <a href="assets/slides/end-to-end-encryption.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
-
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">Alex Kritikos</h2>
-        <div class="speaker-role">Co-Founder / CEO, MAPS Messaging BV</div>
-        <p class="talk-title">When the Network Stops Behaving: Messaging Lessons from Autonomous Systems at Sea</p>
-      </div>
-      <a href="assets/slides/alex-kritikos.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
-
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">Christopher Coco</h2>
-        <div class="speaker-role">Software Infrastructure Lead @ Verrus</div>
-        <p class="talk-title">Pub/Sub as an RPC Backbone: Rebuilding gRPC's Patterns on NATS with CloudEvents and Tower</p>
-      </div>
-      <a href="assets/slides/christopher-coco.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
-
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">Clemens Vasters</h2>
-        <div class="speaker-role">Principal Architect, Microsoft</div>
-        <p class="talk-title">Introducing JSON Structure (Lab)</p>
-      </div>
-      <a href="assets/slides/clemens-vasters-json.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
-
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">David Ansari</h2>
-        <div class="speaker-role">Technical Lead, RabbitMQ Core, Broadcom</div>
-        <p class="talk-title">Bringing JMS to RabbitMQ: AMQP 1.0 and Cross-Broker Interoperability</p>
-      </div>
-      <a href="assets/slides/david-ansari.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
-
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">Guy Hagemans & Jeroen van Disseldorp</h2>
-        <div class="speaker-role">Lead Engineer @ AppyThings / CEO @ Axual</div>
-        <p class="talk-title">From API Polling to Event Streaming: Lessons Learned at PostNL</p>
-      </div>
-      <a href="assets/slides/postnl-event-streaming.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
-
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">Hari Rangarajan</h2>
-        <div class="speaker-role">Developer Advocate @ Solace</div>
-        <p class="talk-title">Hands-on with Agent Mesh: Powering AI Coordination with Events (Lab)</p>
-      </div>
-      <a href="assets/slides/hari-rangarajan.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
-
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">Herman Jakobsen</h2>
-        <div class="speaker-role">Tech Lead @ Statnett · Senior Software Engineer @ Systek</div>
-        <p class="talk-title">Controlling the Norwegian Power Grid in Real Time with Apache Kafka</p>
-      </div>
-      <a href="assets/slides/herman-jakobsen.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
-
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">JB Onofré & Matt Pavlovich</h2>
-        <div class="speaker-role">ASF Member / CTO @ HYTE</div>
-        <p class="talk-title">Panel Discussion: The Future of the Open Source Messaging Ecosystem</p>
-      </div>
-      <a href="assets/slides/panel-future-open-source.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
-
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">John Samuel & Lajos Gerecs</h2>
-        <div class="speaker-role">Seventh State</div>
-        <p class="talk-title">How Do You Eliminate an MQ Engineer? Addressing the Elephant in the Room…</p>
-      </div>
-      <a href="assets/slides/eliminate-mq-engineer.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
-
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">Jon Rumsey</h2>
-        <div class="speaker-role">Distributed Queue Manager Architect, IBM MQ</div>
-        <p class="talk-title">Resilient Messaging... How Hard Can It Be?</p>
-      </div>
-      <a href="assets/slides/jon-rumsey.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
-
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">Rob Parker</h2>
-        <div class="speaker-role">Security Architect, IBM MQ</div>
-        <p class="talk-title">The Quantum Threat Is Here... Is Your Messaging Ready?</p>
-      </div>
-      <a href="assets/slides/rob-parker-quantum.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
-
-    <div class="card">
-      <div class="card-top">
-        <h2 class="speaker-name">Scott Corrigan</h2>
-        <div class="speaker-role">Vice President, Technology Services @ meshIQ</div>
-        <p class="talk-title">The Hidden Operational Cost of Messaging Platforms</p>
-      </div>
-      <a href="assets/slides/scott-corrigan.pdf" target="_blank" class="btn-download">Download Slides (PDF)</a>
-    </div>
-
-    <p class="empty-state" id="emptyState">No presentations found matching your search.</p>
-
-  </main>
-
-  <script>
-    const searchInput = document.getElementById('searchInput');
-    const cards = document.querySelectorAll('.card');
-    const emptyState = document.getElementById('emptyState');
-
-    searchInput.addEventListener('input', (e) => {
-      const term = e.target.value.toLowerCase().trim();
-      let visibleCount = 0;
-
-      cards.forEach(card => {
-        const text = card.textContent.toLowerCase();
-        if (text.includes(term)) {
-          card.style.display = 'flex';
-          visibleCount++;
-        } else {
-          card.style.display = 'none';
-        }
-      });
-
-      emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
-    });
-  </script>
-
-</body>
-</html>
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">Vignesh Selvam</div>
+          <div class="mq-role">Principal Product Manager - Amazon MQ</div>
+          <div class="mq-talk">5 Capabilities Your Broker Needs for Agentic Workloads</div>
+        </div>
+        <a href="assets/slides/vignesh-selvam.pdf" target="_
