@@ -1,9 +1,17 @@
 ---
+# ==============================================================================
+# KONFIGURACJA JEKYLL (FRONT-MATTER)
+# ==============================================================================
 layout: default
 title: Presentations from 2026 | MQ Summit
+permalink: /presentations.html
 ---
 
+<!-- ==============================================================================
+     STYLE CSS (SPÓJNE Z MOTYWEM MQ SUMMIT: CZARNE TŁO, ZŁOTE I NIEBIESKIE AKCENTY)
+     ============================================================================== -->
 <style>
+  /* Główny kontener całej podstrony */
   .mq-presentations-page {
     background-color: #000000;
     color: #ffffff;
@@ -11,14 +19,19 @@ title: Presentations from 2026 | MQ Summit
     min-height: 85vh;
     font-family: inherit;
   }
+
+  /* Wyśrodkowana szerokość strony */
   .mq-container {
     max-width: 1200px;
     margin: 0 auto;
   }
+
+  /* Nagłówek sekcji */
   .mq-header {
     text-align: center;
     margin-bottom: 45px;
   }
+
   .mq-title {
     font-size: 26px;
     font-weight: 700;
@@ -27,6 +40,8 @@ title: Presentations from 2026 | MQ Summit
     color: #ffffff;
     margin: 0;
   }
+
+  /* Dwukolorowy pasek pod tytułem: lewa strona niebieska, prawa złota */
   .mq-accent-bar {
     width: 54px;
     height: 3px;
@@ -34,16 +49,20 @@ title: Presentations from 2026 | MQ Summit
     background: linear-gradient(to right, #2563eb 0%, #2563eb 50%, #e0ba7c 50%, #e0ba7c 100%);
     border-radius: 3px;
   }
+
   .mq-desc {
     color: #9ca3af;
     font-size: 15px;
     max-width: 580px;
     margin: 0 auto;
   }
+
+  /* Wyszukiwarka na żywo */
   .mq-search-box {
     margin: 35px auto 55px;
     max-width: 460px;
   }
+
   .mq-search-input {
     width: 100%;
     background-color: #0b0d12;
@@ -57,17 +76,23 @@ title: Presentations from 2026 | MQ Summit
     box-sizing: border-box;
     transition: border-color 0.2s ease;
   }
+
   .mq-search-input:focus {
     border-color: #e0ba7c;
   }
+
   .mq-search-input::placeholder {
     color: #64748b;
   }
+
+  /* Siatka kafelków prezentacji */
   .mq-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 22px;
   }
+
+  /* Pojedynczy kafelek prezentacji */
   .mq-card {
     background: #0d0f14;
     border: 1px solid #1a1e28;
@@ -78,16 +103,19 @@ title: Presentations from 2026 | MQ Summit
     justify-content: space-between;
     transition: border-color 0.2s ease, transform 0.2s ease;
   }
+
   .mq-card:hover {
     border-color: #2b3345;
     transform: translateY(-2px);
   }
+
   .mq-speaker {
     font-size: 18px;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 4px;
   }
+
   .mq-role {
     font-size: 12px;
     color: #e0ba7c;
@@ -95,6 +123,7 @@ title: Presentations from 2026 | MQ Summit
     margin-bottom: 14px;
     line-height: 1.4;
   }
+
   .mq-talk {
     font-size: 15px;
     color: #e2e8f0;
@@ -102,7 +131,9 @@ title: Presentations from 2026 | MQ Summit
     line-height: 1.45;
     margin-bottom: 24px;
   }
-  .mq-btn-pdf {
+
+  /* 1. Przycisk AKTYWNY (pobieranie PDF / PPTX) w kolorze złotym */
+  .mq-btn-download {
     display: block;
     text-align: center;
     background-color: #e0ba7c;
@@ -114,9 +145,26 @@ title: Presentations from 2026 | MQ Summit
     text-decoration: none;
     transition: opacity 0.2s ease;
   }
-  .mq-btn-pdf:hover {
+
+  .mq-btn-download:hover {
     opacity: 0.9;
   }
+
+  /* 2. Przycisk NIEAKTYWNY dla brakujących prezentacji (Not available yet) */
+  .mq-btn-disabled {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    color: #6b7280;
+    border: 1px dashed #262b35;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 9px 20px;
+    border-radius: 9999px;
+    cursor: not-allowed;
+    user-select: none;
+  }
+
   .mq-empty {
     grid-column: 1 / -1;
     text-align: center;
@@ -124,6 +172,7 @@ title: Presentations from 2026 | MQ Summit
     padding: 40px;
     display: none;
   }
+
   @media (max-width: 640px) {
     .mq-grid {
       grid-template-columns: 1fr;
@@ -131,29 +180,114 @@ title: Presentations from 2026 | MQ Summit
   }
 </style>
 
+<!-- ==============================================================================
+     STRUKTURA TREŚCI PODSTRONY
+     ============================================================================== -->
 <div class="mq-presentations-page">
   <div class="mq-container">
 
+    <!-- Blok tytułowy podstrony -->
     <div class="mq-header">
       <h1 class="mq-title">PRESENTATIONS FROM 2026</h1>
       <div class="mq-accent-bar"></div>
       <p class="mq-desc">Download session slides directly from the MQ Summit speakers.</p>
 
+      <!-- Pole wyszukiwarki -->
       <div class="mq-search-box">
         <input type="text" id="liveSearch" class="mq-search-input" placeholder="Search by speaker, topic or company...">
       </div>
     </div>
 
+    <!-- Kontener na wszystkie kafelki prelegentów -->
     <div class="mq-grid" id="cardsGrid">
 
+      <!-- ==========================================================================
+           CZĘŚĆ 1: PRELEGENCI Z WGRANYMI PREZENTACJAMI (DAY 1 ORAZ DAY 2)
+           ========================================================================== -->
+
+      <!-- [DAY 1] Adi Polak -->
       <div class="mq-card">
         <div>
           <div class="mq-speaker">Adi Polak</div>
           <div class="mq-role">Data &amp; AI @ Confluent</div>
           <div class="mq-talk">Keynote: When Software Starts Talking to Itself</div>
         </div>
-        <a href="assets/slides/adi-polak.pdf" target="_blank" class="mq-btn-pdf">Download Slides (PDF)</a>
+        <a href="/assets/Speakers_%20Slides/Day%201/%5BSHARED%5DAdi_Polak_Keynote_2026_MQSummit_When%20Software%20Starts%20Talking%20to%20Itself.pdf" target="_blank" class="mq-btn-download">Download Slides</a>
       </div>
+
+      <!-- [DAY 1] Michael Davis -->
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">Michael Davis</div>
+          <div class="mq-role">Open Source RabbitMQ @ Amazon MQ</div>
+          <div class="mq-talk">Bringing Infinite Streaming to RabbitMQ</div>
+        </div>
+        <a href="/assets/Speakers_%20Slides/Day%201/michael-davis-slides-mq-summit-26.pptx" target="_blank" class="mq-btn-download">Download Slides (PPTX)</a>
+      </div>
+
+      <!-- [DAY 1] Alex Kritikos -->
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">Alex Kritikos</div>
+          <div class="mq-role">Co-Founder / CEO, MAPS Messaging BV</div>
+          <div class="mq-talk">When the Network Stops Behaving: Messaging Lessons from Autonomous Systems at Sea</div>
+        </div>
+        <a href="/assets/Speakers_%20Slides/Day%201/mq_summit_2026_alex_kritikos_When_the_Network_Stops_Behaving.pdf" target="_blank" class="mq-btn-download">Download Slides</a>
+      </div>
+
+      <!-- [DAY 1] Matt Pavlovich & Rob Parker (Lab) -->
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">Matt Pavlovich &amp; Rob Parker</div>
+          <div class="mq-role">HYTE / IBM MQ</div>
+          <div class="mq-talk">End-to-End Encryption Standard (Lab)</div>
+        </div>
+        <a href="/assets/Speakers_%20Slides/Day%201/2026-mqsummit-e2e-encryption-standard-pavlovich-parker-FINAL.pdf" target="_blank" class="mq-btn-download">Download Slides</a>
+      </div>
+
+      <!-- [DAY 2] Herman Jakobsen -->
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">Herman Jakobsen</div>
+          <div class="mq-role">Tech Lead @ Statnett · Senior Software Engineer @ Systek</div>
+          <div class="mq-talk">Controlling the Norwegian Power Grid in Real Time with Apache Kafka</div>
+        </div>
+        <a href="/assets/Speakers_%20Slides/Day%202/mq_summit_2026_herman_kolstad_jakobsen.pptx" target="_blank" class="mq-btn-download">Download Slides (PPTX)</a>
+      </div>
+
+      <!-- [DAY 2] Jon Rumsey -->
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">Jon Rumsey</div>
+          <div class="mq-role">Distributed Queue Manager Architect, IBM MQ</div>
+          <div class="mq-talk">Resilient Messaging... How Hard Can It Be?</div>
+        </div>
+        <a href="/assets/Speakers_%20Slides/Day%202/MQ%20Summit%202026%20-%20Resilient%20Messaging.pptx" target="_blank" class="mq-btn-download">Download Slides (PPTX)</a>
+      </div>
+
+      <!-- [DAY 2] Rob Parker -->
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">Rob Parker</div>
+          <div class="mq-role">Security Architect, IBM MQ</div>
+          <div class="mq-talk">The Quantum Threat Is Here... Is Your Messaging Ready?</div>
+        </div>
+        <a href="/assets/Speakers_%20Slides/Day%202/TheQuantumThreatIsHere_RobParker.pptx" target="_blank" class="mq-btn-download">Download Slides (PPTX)</a>
+      </div>
+
+      <!-- [DAY 2] Scott Corrigan -->
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">Scott Corrigan</div>
+          <div class="mq-role">Vice President, Technology Services @ meshIQ</div>
+          <div class="mq-talk">The Hidden Operational Cost of Messaging Platforms</div>
+        </div>
+        <a href="/assets/Speakers_%20Slides/Day%202/Hidden_Operational_Cost_of_Messaging_Platforms_NO_FONTS.pdf" target="_blank" class="mq-btn-download">Download Slides</a>
+      </div>
+
+      <!-- ==========================================================================
+           CZĘŚĆ 2: PRELEGENCI BEZ WGRANYCH PREZENTACJI ("NOT AVAILABLE YET")
+           ========================================================================== -->
 
       <div class="mq-card">
         <div>
@@ -161,7 +295,7 @@ title: Presentations from 2026 | MQ Summit
           <div class="mq-role">AWS / IBM MQ / Microsoft</div>
           <div class="mq-talk">Powering Asynchronous AI Agent Communication with MCP over AMQP</div>
         </div>
-        <a href="assets/slides/mcp-over-amqp.pdf" target="_blank" class="mq-btn-pdf">Download Slides (PDF)</a>
+        <span class="mq-btn-disabled">Not available yet</span>
       </div>
 
       <div class="mq-card">
@@ -170,7 +304,7 @@ title: Presentations from 2026 | MQ Summit
           <div class="mq-role">84codes</div>
           <div class="mq-talk">Introduction to RabbitMQ: What Is a Message Queue and How Does It Work? (Lab)</div>
         </div>
-        <a href="assets/slides/intro-to-rabbitmq.pdf" target="_blank" class="mq-btn-pdf">Download Slides (PDF)</a>
+        <span class="mq-btn-disabled">Not available yet</span>
       </div>
 
       <div class="mq-card">
@@ -179,7 +313,7 @@ title: Presentations from 2026 | MQ Summit
           <div class="mq-role">IBM MQ / HiveMQ</div>
           <div class="mq-talk">The Future of MQTT - An Update from the Technical Committee</div>
         </div>
-        <a href="assets/slides/future-of-mqtt.pdf" target="_blank" class="mq-btn-pdf">Download Slides (PDF)</a>
+        <span class="mq-btn-disabled">Not available yet</span>
       </div>
 
       <div class="mq-card">
@@ -188,4 +322,131 @@ title: Presentations from 2026 | MQ Summit
           <div class="mq-role">Principal Product Manager - Amazon MQ</div>
           <div class="mq-talk">5 Capabilities Your Broker Needs for Agentic Workloads</div>
         </div>
-        <a href="assets/slides/vignesh-selvam.pdf" target="_
+        <span class="mq-btn-disabled">Not available yet</span>
+      </div>
+
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">Richard Coppen, Jon Rumsey &amp; Chris Leonard</div>
+          <div class="mq-role">IBM MQ</div>
+          <div class="mq-talk">Get Hands-on with the IBM MQ AI Agent (Lab)</div>
+        </div>
+        <span class="mq-btn-disabled">Not available yet</span>
+      </div>
+
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">Lovisa Johansson</div>
+          <div class="mq-role">CMO @ 84codes</div>
+          <div class="mq-talk">The Return of the Message: Why the AI Boom Needs Message Queues to Survive</div>
+        </div>
+        <span class="mq-btn-disabled">Not available yet</span>
+      </div>
+
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">Ali Alemi &amp; Edward Berezitsky</div>
+          <div class="mq-role">AWS Streaming Specialists</div>
+          <div class="mq-talk">Queues vs. Logs: Choosing the Right Backbone for Event-Driven Architectures</div>
+        </div>
+        <span class="mq-btn-disabled">Not available yet</span>
+      </div>
+
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">Viktor Gamov</div>
+          <div class="mq-role">Principal Developer Advocate @ Confluent</div>
+          <div class="mq-talk">From Queues to Logs and Back Again</div>
+        </div>
+        <span class="mq-btn-disabled">Not available yet</span>
+      </div>
+
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">Christopher Coco</div>
+          <div class="mq-role">Software Infrastructure Lead @ Verrus</div>
+          <div class="mq-talk">Pub/Sub as an RPC Backbone: Rebuilding gRPC's Patterns on NATS with CloudEvents and Tower</div>
+        </div>
+        <span class="mq-btn-disabled">Not available yet</span>
+      </div>
+
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">Clemens Vasters</div>
+          <div class="mq-role">Principal Architect, Microsoft</div>
+          <div class="mq-talk">Introducing JSON Structure (Lab)</div>
+        </div>
+        <span class="mq-btn-disabled">Not available yet</span>
+      </div>
+
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">David Ansari</div>
+          <div class="mq-role">Technical Lead, RabbitMQ Core, Broadcom</div>
+          <div class="mq-talk">Bringing JMS to RabbitMQ: AMQP 1.0 and Cross-Broker Interoperability</div>
+        </div>
+        <span class="mq-btn-disabled">Not available yet</span>
+      </div>
+
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">Guy Hagemans &amp; Jeroen van Disseldorp</div>
+          <div class="mq-role">AppyThings &amp; Axual</div>
+          <div class="mq-talk">From API Polling to Event Streaming: Lessons Learned at PostNL</div>
+        </div>
+        <span class="mq-btn-disabled">Not available yet</span>
+      </div>
+
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">Hari Rangarajan</div>
+          <div class="mq-role">Developer Advocate @ Solace</div>
+          <div class="mq-talk">Hands-on with Agent Mesh: Powering AI Coordination with Events (Lab)</div>
+        </div>
+        <span class="mq-btn-disabled">Not available yet</span>
+      </div>
+
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">JB Onofré &amp; Matt Pavlovich</div>
+          <div class="mq-role">ASF Member / CTO @ HYTE</div>
+          <div class="mq-talk">Panel Discussion: The Future of the Open Source Messaging Ecosystem</div>
+        </div>
+        <span class="mq-btn-disabled">Not available yet</span>
+      </div>
+
+      <div class="mq-card">
+        <div>
+          <div class="mq-speaker">John Samuel &amp; Lajos Gerecs</div>
+          <div class="mq-role">Seventh State</div>
+          <div class="mq-talk">How Do You Eliminate an MQ Engineer? Addressing the Elephant in the Room…</div>
+        </div>
+        <span class="mq-btn-disabled">Not available yet</span>
+      </div>
+
+      <!-- Komunikat, gdy wyszukiwarka nic nie znajdzie -->
+      <p class="mq-empty" id="emptyMsg">No presentations match your search.</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- ==============================================================================
+     SKRYPT JS DO FILTROWANIA KAFELKÓW NA ŻYWO PO NAZWISKU I TEMACIE
+     ============================================================================== -->
+<script>
+  const input = document.getElementById('liveSearch');
+  const items = document.querySelectorAll('.mq-card');
+  const empty = document.getElementById('emptyMsg');
+
+  input.addEventListener('input', (e) => {
+    const val = e.target.value.toLowerCase().trim();
+    let matches = 0;
+    items.forEach(card => {
+      const match = card.textContent.toLowerCase().includes(val);
+      card.style.display = match ? 'flex' : 'none';
+      if (match) matches++;
+    });
+    empty.style.display = matches === 0 ? 'block' : 'none';
+  });
+</script>
