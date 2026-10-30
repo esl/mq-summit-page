@@ -74,5 +74,7 @@
 #    link: "diversity"
 #  - name: Student Programme
 #    link: "student"
+- name: Presentations
+  link: "presentations.html"
 - name: Contact
   link: "contact"
