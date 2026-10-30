@@ -21,25 +21,41 @@ image: assets/images/MQS26 - website banner.png
 {% include photos-2026.html %}
 <!-- end of photos-2026 (hidden until _data/photos_2026.yml has photos) -->
 <!-- start of presentations section -->
-<section id="presentations" style="background-color: #000000; color: #ffffff; padding: 60px 20px; text-align: center;">
+{% include photos-2026.html %}
+<!-- end of photos-2026 -->
+
+<!-- ==============================================================================
+     START: SEKCJA PREZENTACJI (DOPASOWANA WIZUALNIE DO PHOTOS FROM 2026)
+     ============================================================================== -->
+<section id="presentations" style="background-color: #000000; color: #ffffff; padding: 60px 20px 80px; text-align: center;">
   <div style="max-width: 900px; margin: 0 auto;">
-    <h2 style="font-size: 26px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin: 0; color: #ffffff;">
-      PRESENTATIONS &amp; SLIDES
+    
+    <!-- Tytuł sekcji w stylu nagłówków MQ Summit -->
+    <h2 style="font-size: 26px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin: 0; color: #ffffff; font-family: inherit;">
+      PRESENTATIONS FROM 2026
     </h2>
     
-    <!-- Dwukolorowy pasek (niebiesko-złoty jak w Photos i About) -->
-    <div style="width: 50px; height: 3px; margin: 15px auto 25px; background: linear-gradient(to right, #2563eb 0%, #2563eb 50%, #f2be7e 50%, #f2be7e 100%); border-radius: 2px;"></div>
+    <!-- Dwukolorowy pasek podziału (50% niebieski / 50% piaskowo-złoty) -->
+    <div style="width: 54px; height: 3px; margin: 16px auto 28px; background: linear-gradient(to right, #2563eb 0%, #2563eb 50%, #e0ba7c 50%, #e0ba7c 100%); border-radius: 3px;"></div>
     
-    <p style="color: #cccccc; font-size: 16px; line-height: 1.6; max-width: 640px; margin: 0 auto 30px;">
-      Explore and download the official presentation slide decks directly from our MQ Summit 2026 speakers.
+    <!-- Krótki opis zachęcający -->
+    <p style="color: #9ca3af; font-size: 15px; line-height: 1.6; max-width: 580px; margin: 0 auto 35px;">
+      Explore and download the official slide decks directly from the speaker sessions and labs in Haarlem.
     </p>
 
-    <!-- Przycisk identyczny jak 'See all photos' -->
-    <a href="presentations.html" style="display: inline-block; background-color: #f2be7e; color: #000000; font-size: 14px; font-weight: 600; padding: 12px 32px; border-radius: 30px; text-decoration: none; transition: opacity 0.2s ease;">
+    <!-- Zaokrąglony przycisk kierujący do podstrony presentations.html -->
+    <a href="/presentations.html" style="display: inline-block; background-color: #e0ba7c; color: #000000; font-size: 14px; font-weight: 600; padding: 12px 36px; border-radius: 9999px; text-decoration: none; transition: opacity 0.2s ease;">
       See all presentations
     </a>
+
   </div>
 </section>
+<!-- ==============================================================================
+     END: SEKCJA PREZENTACJI
+     ============================================================================== -->
+
+{% include welcome.html %}
+<!-- end of welcome -->
 <!-- end of presentations section -->
 {% include welcome.html %}
 <!-- end of welcome -->
