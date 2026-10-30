@@ -31,8 +31,8 @@
   link: "schedule"
 - name: Speakers
   link: "speakers"
-- name: Slides
-  link: "presentations"
+#- name: Slides
+#  link: "presentations"
 #- name: Lightning Talks
 #  link: "lightning-talks"
 #- name: Trainers
