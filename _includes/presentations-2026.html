@@ -1,10 +1,12 @@
 <!-- Speaker slides from 2026. Decks are listed in _data/presentations_2026.yml; only talks with a deck belong there. The section stays hidden while the list is empty. -->
 {% if site.data.presentations_2026 and site.data.presentations_2026.size > 0 %}
-<div class="section mqs-slides" id="presentations">
+<div class="section mqs-slides{% if include.page %} mqs-slides-page{% endif %}" id="presentations-2026">
   <style>
     .mqs-slides{background:#000101;color:#EEEEEE;padding:72px 24px;text-align:center;font-family:'Lato',sans-serif}
+    .mqs-slides.mqs-slides-page{padding-top:140px;min-height:85vh}
+    .mqs-slides .mqs-slides-back{display:inline-block;margin-top:48px;color:#1E90FF;font-family:'Montserrat',sans-serif;font-weight:600;font-size:15px;text-decoration:underline}
     .mqs-slides .mqs-slides-inner{width:100%;max-width:1240px;margin:0 auto}
-    .mqs-slides h2{font-family:'Montserrat',sans-serif;font-weight:600;font-size:32px;letter-spacing:.1em;text-transform:uppercase;color:#FFFFFF;margin:0}
+    .mqs-slides h1,.mqs-slides h2{font-family:'Montserrat',sans-serif;font-weight:600;font-size:32px;letter-spacing:.1em;text-transform:uppercase;color:#FFFFFF;margin:0}
     .mqs-slides .mqs-slides-divider{width:80px;height:5px;margin:22px auto 24px;background:linear-gradient(to right,#80C0FA 50%,#C8A465 50%)}
     .mqs-slides .mqs-slides-desc{font-size:17px;line-height:26px;color:#B9B4C7;max-width:640px;margin:0 auto 40px}
     .mqs-slides .mqs-slides-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;text-align:center}
@@ -20,10 +22,10 @@
     .mqs-slides .mqs-slides-btn{display:inline-flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;letter-spacing:.04em;background:#C8A465;color:#10202F;text-decoration:none;border-radius:10px;padding:12px 22px;min-height:44px;line-height:20px;box-sizing:border-box}
     .mqs-slides .mqs-slides-btn:hover{background:#D6B67D;color:#10202F;text-decoration:none}
     .mqs-slides .mqs-slides-btn:focus-visible{outline:3px solid #80C0FA;outline-offset:2px}
-    @media (max-width:640px){.mqs-slides{padding:56px 16px}.mqs-slides h2{font-size:26px}.mqs-slides .mqs-slides-grid{grid-template-columns:1fr}}
+    @media (max-width:640px){.mqs-slides{padding:56px 16px}.mqs-slides.mqs-slides-page{padding-top:110px}.mqs-slides h2{font-size:26px}.mqs-slides .mqs-slides-grid{grid-template-columns:1fr}}
   </style>
   <div class="mqs-slides-inner">
-    <h2>Presentations from 2026</h2>
+    {% if include.page %}<h1>Presentations from 2026</h1>{% else %}<h2>Presentations from 2026</h2>{% endif %}
     <div class="mqs-slides-divider" aria-hidden="true"></div>
     <p class="mqs-slides-desc">Download the slides shared by MQ Summit 2026 speakers.</p>
     <div class="mqs-slides-grid">
@@ -42,6 +44,7 @@
       </div>
       {% endfor %}
     </div>
+    {% if include.page %}<a class="mqs-slides-back" href="{{ '/' | relative_url }}">Back to the MQ Summit homepage</a>{% endif %}
   </div>
 </div>
 {% endif %}
