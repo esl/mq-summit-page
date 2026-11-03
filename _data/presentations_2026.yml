@@ -1,0 +1,64 @@
+# Speaker slides from MQ Summit 2026, shown in _includes/presentations-2026.html.
+# Only talks with a deck are listed. "people" can hold one or two speakers.
+- talk: "Keynote: When Software Starts Talking to Itself"
+  people:
+    - { name: "Adi Polak", photo: "/assets/images/speakers/adi-polak.jpeg" }
+  company: "Confluent"
+  file: "/assets/Speakers_ Slides /Day 1/[SHARED]Adi_Polak_Keynote_2026_MQSummit_When Software Starts Talking to Itself.pptx.pdf"
+  format: PDF
+- talk: "The Future of MQTT: An Update from the Technical Committee"
+  people:
+    - { name: "Richard Coppen", photo: "/assets/images/speakers/richard-coppen.png" }
+    - { name: "Simon Johnson", photo: "/assets/images/speakers/Simon_Johnson.png" }
+  company: "IBM MQ & HiveMQ"
+  file: "/assets/slides-2026/coppen-johnson-future-of-mqtt-mq-summit-2026.pdf"
+  format: PDF
+- talk: "Bringing Infinite Streaming to RabbitMQ"
+  people:
+    - { name: "Michael Davis", photo: "/assets/images/speakers/Michael_Davis.jpg" }
+  company: "Amazon MQ"
+  file: "/assets/Speakers_ Slides /Day 1/michael-davis-slides-mq-summit-26.pptx"
+  format: PPTX
+- talk: "End-to-End Encryption Standard (lab)"
+  people:
+    - { name: "Matt Pavlovich", photo: "/assets/images/speakers/Matt Pavlovich.jpeg" }
+    - { name: "Rob Parker", photo: "/assets/images/speakers/Rob_Parker.png" }
+  company: "HYTE & IBM MQ"
+  file: "/assets/Speakers_ Slides /Day 1/2026-mqsummit-e2e-encryption-standard-pavlovich-parker-FINAL.pdf"
+  format: PDF
+- talk: "When the Network Stops Behaving: Messaging Lessons from Autonomous Systems at Sea"
+  people:
+    - { name: "Alex Kritikos", photo: "/assets/images/speakers/Alex_Kritikos.png" }
+  company: "MAPS Messaging"
+  file: "/assets/Speakers_ Slides /Day 1/mq_summit_2026_alex_kritikos_When_the_Network_Stops_Behaving.pptx"
+  format: PPTX
+- talk: "Pub/Sub as an RPC Backbone: Rebuilding gRPC's Patterns on NATS with CloudEvents and Tower"
+  people:
+    - { name: "Christopher Coco", photo: "/assets/images/speakers/Christopher_Coco.jpg" }
+  company: "Verrus"
+  file: "/assets/slides-2026/christopher-coco-mq-summit-2026-rpc-on-pubsub.pptx"
+  format: PPTX
+- talk: "Resilient Messaging... How Hard Can It Be?"
+  people:
+    - { name: "Jon Rumsey", photo: "/assets/images/speakers/Jon_Rumsey.jpg" }
+  company: "IBM MQ"
+  file: "/assets/Speakers_ Slides /Day 2/MQ Summit 2026 - Resilient Messaging.pptx"
+  format: PPTX
+- talk: "The Quantum Threat Is Here... Is Your Messaging Ready?"
+  people:
+    - { name: "Rob Parker", photo: "/assets/images/speakers/Rob_Parker.png" }
+  company: "IBM MQ"
+  file: "/assets/Speakers_ Slides /Day 2/TheQuantumThreatIsHere_RobParker.pptx"
+  format: PPTX
+- talk: "The Hidden Operational Cost of Messaging Platforms"
+  people:
+    - { name: "Scott Corrigan", photo: "/assets/images/speakers/scott-corrigan.jpg" }
+  company: "meshIQ"
+  file: "/assets/Speakers_ Slides /Day 2/Hidden_Operational_Cost_of_Messaging_Platforms_NO_FONTS_OK_FOR_MAC.pptx"
+  format: PPTX
+- talk: "Controlling the Norwegian Power Grid in Real Time with Apache Kafka"
+  people:
+    - { name: "Herman Kolstad Jakobsen", photo: "/assets/images/speakers/Herman_Jakobsen.jpg" }
+  company: "Statnett"
+  file: "/assets/Speakers_ Slides /Day 2/mq_summit_2026_herman_kolstad_jakobsen.pptx"
+  format: PPTX
