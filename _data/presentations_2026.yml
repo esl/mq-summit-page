@@ -11,7 +11,7 @@
     - { name: "Richard Coppen", photo: "/assets/images/speakers/richard-coppen.png" }
     - { name: "Simon Johnson", photo: "/assets/images/speakers/Simon_Johnson.png" }
   company: "IBM MQ & HiveMQ"
-  file: "/assets/slides-2026/coppen-johnson-future-of-mqtt-mq-summit-2026.pdf"
+  file: "/assets/slides-2026/MQTT-MQSummit-2026.pdf"
   format: PDF
 - talk: "Bringing Infinite Streaming to RabbitMQ"
   people:
